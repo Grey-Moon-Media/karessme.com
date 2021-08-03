@@ -43,6 +43,8 @@
         "drupal/file_delete": "^1.0",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/google_analytics": "^2.5",
+        "drupal/google_tag": "^1.4",
         "drupal/image_delta_formatter": "^1.1",
         "drupal/jquery_colorpicker": "^2.0@RC",
         "drupal/mailsystem": "^4.3",
@@ -55,6 +57,7 @@
         "drupal/swiftmailer": "^2.0",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/weight": "^3.3",
+        "drupal/xmlsitemap": "^1.0",
         "drush/drush": "10.*"
     },
     "conflict": {
