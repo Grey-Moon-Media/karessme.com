@@ -1,0 +1,28 @@
+uuid: 4db465e4-6416-43de-932f-472edfda7c0d
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access cart'
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'flag compare'
+  - 'flag wishlist'
+  - 'flag wishlist own items'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'unflag compare'
+  - 'unflag wishlist'
+  - 'unflag wishlist own items'
+  - 'use text format basic_html'
+  - 'view commerce_product'
+  - 'view files'

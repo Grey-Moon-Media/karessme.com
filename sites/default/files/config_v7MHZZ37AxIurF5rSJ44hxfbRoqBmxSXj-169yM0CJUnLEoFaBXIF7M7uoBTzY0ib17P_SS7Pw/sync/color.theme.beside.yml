@@ -1,0 +1,10 @@
+palette:
+  color: '#ffa500'
+  bg: '#ffffff'
+  text: '#555555'
+logo: 'public://color/beside-74946ee4/logo.svg'
+stylesheets:
+  - 'public://color/beside-74946ee4/colors.css'
+files:
+  - 'public://color/beside-74946ee4/logo.svg'
+  - 'public://color/beside-74946ee4/colors.css'

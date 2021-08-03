@@ -1,0 +1,52 @@
+uuid: 98576b24-ab00-4232-a0fe-83ad6853ceba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+  content:
+    - 'block_content:call_to_action:0501b135-3732-406b-997a-10542d01d0cc'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: text-light
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/cta-bg.jpg
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: home01_cta
+theme: wosh
+region: content_wide
+weight: -36
+provider: null
+plugin: 'block_content:0501b135-3732-406b-997a-10542d01d0cc'
+settings:
+  id: 'block_content:0501b135-3732-406b-997a-10542d01d0cc'
+  label: 'Call To Action 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

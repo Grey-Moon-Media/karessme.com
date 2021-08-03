@@ -1,0 +1,56 @@
+uuid: 0c6ce67b-52fa-4e13-8bfe-c4a80dbc0120
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e246b99b-a73a-45dc-8c31-bc1067e95114'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: payment_method
+theme: wosh
+region: footer_forth
+weight: -37
+provider: null
+plugin: 'block_content:e246b99b-a73a-45dc-8c31-bc1067e95114'
+settings:
+  id: 'block_content:e246b99b-a73a-45dc-8c31-bc1067e95114'
+  label: 'Payment Method'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about"
+    negate: true
+    context_mapping: {  }

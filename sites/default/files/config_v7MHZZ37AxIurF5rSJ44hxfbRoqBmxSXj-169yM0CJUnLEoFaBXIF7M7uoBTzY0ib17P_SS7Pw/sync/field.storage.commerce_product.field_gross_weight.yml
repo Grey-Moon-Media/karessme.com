@@ -1,0 +1,20 @@
+uuid: 71c0018d-8545-4ae6-b8d7-83ff4ce2b9e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - physical
+id: commerce_product.field_gross_weight
+field_name: field_gross_weight
+entity_type: commerce_product
+type: physical_measurement
+settings:
+  measurement_type: weight
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

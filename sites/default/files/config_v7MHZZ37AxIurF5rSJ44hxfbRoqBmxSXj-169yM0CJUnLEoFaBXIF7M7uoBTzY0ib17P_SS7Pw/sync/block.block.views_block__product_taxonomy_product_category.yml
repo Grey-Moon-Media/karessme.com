@@ -1,0 +1,50 @@
+uuid: 44ddd799-8a33-4acc-a3a1-a7998f03140c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_02
+    - views.view.product_taxonomy
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: padding-bottom-0
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__product_taxonomy_product_category
+theme: wosh
+region: content_wide_top
+weight: -44
+provider: null
+plugin: 'views_block:product_taxonomy-product_category'
+settings:
+  id: 'views_block:product_taxonomy-product_category'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_02
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 9b8abb47-0102-406e-ac84-e97c32fb744b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_q
+id: commerce_product.hp_novelty.field_q
+field_name: field_q
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Quantity Available'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

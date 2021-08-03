@@ -1,0 +1,19 @@
+uuid: 84b1ca48-c0f0-4d15-ae40-f5c69b51ea61
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_price
+    - commerce_product
+id: commerce_product.field_who
+field_name: field_who
+entity_type: commerce_product
+type: commerce_price
+settings: {  }
+module: commerce_price
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

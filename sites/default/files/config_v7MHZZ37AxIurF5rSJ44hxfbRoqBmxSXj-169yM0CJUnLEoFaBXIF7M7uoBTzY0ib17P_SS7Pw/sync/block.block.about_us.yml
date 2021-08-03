@@ -1,0 +1,56 @@
+uuid: 41f4df42-3ed6-4a73-bfb1-a8318d6cce46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about
+  content:
+    - 'block_content:basic:3d07c4b4-06e4-4add-a853-f8b2391e1351'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: 'Who we are is too long to be described here alone'
+    block_title_style: block-title-2
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_animation: ''
+    block_animation_easing: ''
+    block_animation_anchor: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+    block_overlay: ''
+id: about_us
+theme: wosh
+region: content
+weight: -29
+provider: null
+plugin: 'block_content:3d07c4b4-06e4-4add-a853-f8b2391e1351'
+settings:
+  id: 'block_content:3d07c4b4-06e4-4add-a853-f8b2391e1351'
+  label: 'we the biggest online shop everywhere both locally and internationally'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about
+    context_mapping: {  }

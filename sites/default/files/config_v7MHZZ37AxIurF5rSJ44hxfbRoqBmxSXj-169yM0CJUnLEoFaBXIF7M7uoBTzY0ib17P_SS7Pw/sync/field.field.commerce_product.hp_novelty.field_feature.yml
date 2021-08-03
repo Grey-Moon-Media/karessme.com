@@ -1,0 +1,29 @@
+uuid: ec982516-84f8-479c-b714-2ed838a42f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_feature
+    - taxonomy.vocabulary.feature
+id: commerce_product.hp_novelty.field_feature
+field_name: field_feature
+entity_type: commerce_product
+bundle: hp_novelty
+label: Feature
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      feature: feature
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

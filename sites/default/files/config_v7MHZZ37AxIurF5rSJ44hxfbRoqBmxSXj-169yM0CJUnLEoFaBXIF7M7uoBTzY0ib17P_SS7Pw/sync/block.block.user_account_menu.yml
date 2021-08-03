@@ -1,0 +1,54 @@
+uuid: dbaf37bd-7096-46c5-866c-377e97f39f7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - block_visibility_groups
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_animation: ''
+    block_animation_easing: ''
+    block_animation_anchor: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+    block_overlay: ''
+id: user_account_menu
+theme: wosh
+region: user_account
+weight: -15
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

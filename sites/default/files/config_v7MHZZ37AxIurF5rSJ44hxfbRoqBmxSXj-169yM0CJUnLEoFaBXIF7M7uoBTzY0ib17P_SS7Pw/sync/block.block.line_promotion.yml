@@ -1,0 +1,52 @@
+uuid: a7c87504-7dac-4931-8974-c0e92d5e7519
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_04
+  content:
+    - 'block_content:basic:04d7e041-1a37-48a9-b7d3-963c98ae55b3'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: text-light
+    block_bg_color: b0a0a0
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: line_promotion
+theme: wosh
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:04d7e041-1a37-48a9-b7d3-963c98ae55b3'
+settings:
+  id: 'block_content:04d7e041-1a37-48a9-b7d3-963c98ae55b3'
+  label: 'Line Promotion'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_04
+    context_mapping: {  }

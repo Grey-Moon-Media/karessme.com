@@ -1,0 +1,55 @@
+uuid: 7f79a9e0-538d-4143-a079-8b991f5abef7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - hsblock
+    - search
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_bg_size: ''
+    block_parallax_bg: ''
+_core:
+  default_config_hash: 5qFps3xbK-EVu-vKVjU3-iEwZhjgwqFb1DMoHmCk7oI
+id: wosh_search
+theme: wosh
+region: search
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/home-02\r\n/home-03\r\n/home-04\r\n/products\r\n/products/*\r\n/product/*\r\n/catalog"
+    negate: true
+    context_mapping: {  }

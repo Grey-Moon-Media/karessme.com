@@ -1,0 +1,19 @@
+uuid: 8026e2ab-fad5-4bc4-859f-d04c29ec0f8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_special_features
+field_name: field_special_features
+entity_type: commerce_product
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

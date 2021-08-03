@@ -1,0 +1,51 @@
+uuid: c3119e39-79cb-4a32-835b-af030e65115b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_04
+  module:
+    - block_visibility_groups
+    - hsblock
+    - simplenews
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'Subscribe for our latest deals, promotions and news'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: title-light
+    block_bg_color: b0a0a0
+    block_bg_image_path: themes/wosh/assets/images/bg/cta-bg3.jpg
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: newsletter_subscription
+theme: wosh
+region: content_wide
+weight: -23
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Sign Up to Newsletter'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: ''
+  unique_id: 04977fec-3539-4f9d-a840-07bab7acd479
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_04
+    context_mapping: {  }

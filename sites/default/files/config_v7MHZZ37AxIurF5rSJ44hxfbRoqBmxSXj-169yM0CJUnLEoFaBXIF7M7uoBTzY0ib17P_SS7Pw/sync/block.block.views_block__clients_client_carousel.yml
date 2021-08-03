@@ -1,0 +1,50 @@
+uuid: 269489ee-9a41-434f-9119-c8353b5f7193
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about
+    - views.view.clients
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: f5f5f5
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__clients_client_carousel
+theme: wosh
+region: content_wide
+weight: -27
+provider: null
+plugin: 'views_block:clients-client_carousel'
+settings:
+  id: 'views_block:clients-client_carousel'
+  label: 'Our Partners'
+  provider: views
+  label_display: visible
+  views_label: 'Our Partners'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about
+    context_mapping: {  }

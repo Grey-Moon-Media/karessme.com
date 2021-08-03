@@ -1,0 +1,50 @@
+uuid: c41f1bca-9911-436c-ba7c-c3849d5158f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_06
+    - views.view.testimonial
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/bg4.jpg
+    block_bg_repeat: no-repeat
+    block_bg_position: 'center center'
+    block_parallax_bg: parallax-bg
+id: views_block__testimonial_testimonial_carousel_one_2
+theme: wosh
+region: content_wide
+weight: -10
+provider: null
+plugin: 'views_block:testimonial-testimonial_carousel_one'
+settings:
+  id: 'views_block:testimonial-testimonial_carousel_one'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_06
+    context_mapping: {  }

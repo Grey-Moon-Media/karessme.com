@@ -1,0 +1,298 @@
+uuid: de02992d-e714-48b7-8006-bfad4ba8b389
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - core.entity_view_display.comment.reviews.default
+    - facets.facet.product_brand
+    - field.field.commerce_product.hp_novelty.body
+    - field.field.commerce_product.hp_novelty.field_coun
+    - field.field.commerce_product.hp_novelty.field_date_released
+    - field.field.commerce_product.hp_novelty.field_feature
+    - field.field.commerce_product.hp_novelty.field_featured_product
+    - field.field.commerce_product.hp_novelty.field_gross_weight
+    - field.field.commerce_product.hp_novelty.field_how_to_clean
+    - field.field.commerce_product.hp_novelty.field_how_to_use
+    - field.field.commerce_product.hp_novelty.field_map
+    - field.field.commerce_product.hp_novelty.field_msrp
+    - field.field.commerce_product.hp_novelty.field_power
+    - field.field.commerce_product.hp_novelty.field_preffered_asin
+    - field.field.commerce_product.hp_novelty.field_price
+    - field.field.commerce_product.hp_novelty.field_product_brand
+    - field.field.commerce_product.hp_novelty.field_product_category
+    - field.field.commerce_product.hp_novelty.field_product_review
+    - field.field.commerce_product.hp_novelty.field_purpose
+    - field.field.commerce_product.hp_novelty.field_q
+    - field.field.commerce_product.hp_novelty.field_short_description
+    - field.field.commerce_product.hp_novelty.field_size
+    - field.field.commerce_product.hp_novelty.field_size_ci
+    - field.field.commerce_product.hp_novelty.field_size_len
+    - field.field.commerce_product.hp_novelty.field_sku
+    - field.field.commerce_product.hp_novelty.field_special_features
+    - field.field.commerce_product.hp_novelty.field_upc
+    - field.field.commerce_product.hp_novelty.field_updated_at
+    - field.field.commerce_product.hp_novelty.field_video
+    - field.field.commerce_product.hp_novelty.field_who
+  module:
+    - comment
+    - commerce_price
+    - commerce_product
+    - datetime
+    - entity_reference_facet_link
+    - physical
+    - text
+_core:
+  default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
+id: commerce_product.hp_novelty.default
+targetEntityType: commerce_product
+bundle: hp_novelty
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_coun:
+    weight: 31
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_released:
+    weight: 15
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_feature:
+    weight: 32
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_gross_weight:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_how_to_clean:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_how_to_use:
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_map:
+    weight: 22
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_msrp:
+    weight: 14
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    type: commerce_price_default
+    region: content
+  field_power:
+    weight: 30
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_preffered_asin:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_price:
+    weight: 29
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    type: commerce_price_default
+    region: content
+  field_product_brand:
+    weight: 5
+    label: hidden
+    settings:
+      facet: product_brand
+    third_party_settings: {  }
+    type: entity_reference_facet_link
+    region: content
+  field_product_review:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_purpose:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_q:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_short_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_size:
+    weight: 19
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_size_ci:
+    weight: 20
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_size_len:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: physical_measurement_default
+    region: content
+  field_sku:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_special_features:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_upc:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_updated_at:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_video:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_who:
+    weight: 21
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    type: commerce_price_default
+    region: content
+  flag_compare:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_wishlist:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 3
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_featured_product: true
+  field_product_category: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

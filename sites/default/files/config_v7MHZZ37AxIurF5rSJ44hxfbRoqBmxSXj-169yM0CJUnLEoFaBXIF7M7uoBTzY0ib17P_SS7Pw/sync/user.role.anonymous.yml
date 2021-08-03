@@ -1,0 +1,26 @@
+uuid: 5e573dcb-3dff-4d6f-9e41-65342ba7de76
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access cart'
+  - 'access checkout'
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'flag compare'
+  - 'flag wishlist'
+  - 'flag wishlist own items'
+  - 'post comments'
+  - 'search content'
+  - 'subscribe to newsletters'
+  - 'unflag compare'
+  - 'unflag wishlist'
+  - 'unflag wishlist own items'
+  - 'use text format restricted_html'
+  - 'view commerce_product'
+  - 'view files'

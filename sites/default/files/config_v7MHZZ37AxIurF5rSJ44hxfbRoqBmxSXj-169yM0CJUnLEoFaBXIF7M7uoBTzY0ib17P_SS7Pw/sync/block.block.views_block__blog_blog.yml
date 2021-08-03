@@ -1,0 +1,54 @@
+uuid: 455840f4-3f4c-4665-9dcd-e80d6ebadda9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.blog
+    - views.view.blog
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_animation: ''
+    block_animation_easing: ''
+    block_animation_anchor: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+    block_overlay: ''
+id: views_block__blog_blog
+theme: wosh
+region: content
+weight: -39
+provider: null
+plugin: 'views_block:blog-blog'
+settings:
+  id: 'views_block:blog-blog'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: blog
+    context_mapping: {  }

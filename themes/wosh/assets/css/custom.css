@@ -1,0 +1,62 @@
+/**
+    Google Fonts
+**/
+
+
+/** 
+    Custom Styles 
+**/
+
+.product-attributes .field-label,
+.product-attributes .field-item {
+    display: inline;
+}
+.product-teaser-wrap .field-field-q,
+.product-teaser-wrap .field-field-gross-weight,
+.product-teaser-wrap .field-field-size-len,
+.product-teaser-wrap .field-field-size-ci,
+.product-teaser-wrap .field-field-manufacturer,
+.product-teaser-wrap .field-field-category,
+.product-teaser-wrap .field-field-size,
+.product-teaser-wrap .field-field-material,
+.product-teaser-wrap .field-field-power,
+.product-teaser-wrap .field-field-packaging,
+.product-teaser-wrap .field-field-flavor,
+.product-teaser-wrap .field-field-purpose,
+.product-teaser-wrap .field-field-display,
+.product-teaser-wrap .field-field-included,
+.product-teaser-wrap .field-field-video,
+.product-teaser-wrap .field-field-feature, 
+.product-teaser-wrap .field-field-how-to-use,
+.product-teaser-wrap .field-field-how-to-clean {
+    display: none;
+}
+.product-teaser-wrap .product-manufacturer-main {
+    display: block;
+}
+.product-teaser-wrap .product-title {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 600;
+}
+.product-teaser-wrap .product-manufacturer .taxonomy-term.vocabulary-brand h2{
+    line-height: normal;
+    font-size: 22px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.product-teaser-wrap .product-flag-icon i, .product-flag-icon a {
+    color: #e42555;
+}
+.product-attributes-heading h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.post-image .bootstrap-basic-image-gallery .thumbnails .thumb img {
+    max-width: 40%;
+    height: auto;
+}
+/*.owl-carousel .owl-item img{
+	width: 75%!important;
+}*/

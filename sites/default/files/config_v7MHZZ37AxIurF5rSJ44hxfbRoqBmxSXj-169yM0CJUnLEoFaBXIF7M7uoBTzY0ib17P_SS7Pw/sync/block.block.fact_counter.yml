@@ -1,0 +1,52 @@
+uuid: 963ccda1-2b06-4b0c-a1b6-82fa8bb5c5f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about
+  content:
+    - 'block_content:basic:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: colored-bg
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: text-light
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/cta-bg.jpg
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: fact_counter
+theme: wosh
+region: content_wide
+weight: -31
+provider: null
+plugin: 'block_content:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
+settings:
+  id: 'block_content:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
+  label: 'Fact Counter'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about
+    context_mapping: {  }

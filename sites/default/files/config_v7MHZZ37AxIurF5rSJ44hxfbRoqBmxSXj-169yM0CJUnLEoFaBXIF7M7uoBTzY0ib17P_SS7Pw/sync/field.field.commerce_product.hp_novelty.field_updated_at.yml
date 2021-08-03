@@ -1,0 +1,21 @@
+uuid: 3e6abf21-8ece-4912-8dbd-4d7ec898cd7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_updated_at
+  module:
+    - datetime
+id: commerce_product.hp_novelty.field_updated_at
+field_name: field_updated_at
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Updated At'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

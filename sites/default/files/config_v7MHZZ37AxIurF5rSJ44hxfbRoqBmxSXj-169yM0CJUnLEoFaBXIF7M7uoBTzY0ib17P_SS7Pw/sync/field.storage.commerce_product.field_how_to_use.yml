@@ -1,0 +1,19 @@
+uuid: 19783475-9676-4c92-9eec-162bb8b577b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_how_to_use
+field_name: field_how_to_use
+entity_type: commerce_product
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

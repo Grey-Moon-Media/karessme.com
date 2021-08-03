@@ -1,0 +1,54 @@
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  logo: true
+  name: false
+  node_user_picture: true
+  slogan: false
+preloader: 1
+scrolltop: 1
+single_page_menu: 0
+parallax: '0'
+site_layout: wide-layout
+header_nav: default-header
+sidenav_style: sidenav-left
+sidenav_color: sidenav-light
+sidenav_logo: 1
+sidenav_logo_type: sidenav-logo-default
+sidenav_text: 0
+footer_responsive: 0
+footer_theme: 'dark-footer text-light'
+team_style: team_1
+header_social_icon: 0
+facebook_url: ''
+twitter_url: ''
+google_plus_url: ''
+linkedin_url: ''
+pinterest_url: ''
+rss_url: ''
+_core:
+  default_config_hash: nV_mgIx__zDOIFaMhE7QmtK1GC41-h04rNNYTkHiyrI
+sidenav_logo_value: ''
+sidenav_text_content: ''
+footer_first_size: col-md-12
+footer_second_size: col-md-12
+footer_third_size: col-md-12
+footer_forth_size: col-md-12
+tracking_code: ''
+custom_css: ''
+instagram_url: ''
+youtube_url: ''
+vimeo_url: ''
+dribbble_url: ''
+logo:
+  use_default: false
+  path: 'public://png1.jpeg'
+favicon:
+  use_default: true
+commerce_layout: commerce-layout1
+product_layout: product-layout1
+fixed_header: 0
+nav_align: text-md-center
+sticky_header: non-sticky-header
+header_style: header-default

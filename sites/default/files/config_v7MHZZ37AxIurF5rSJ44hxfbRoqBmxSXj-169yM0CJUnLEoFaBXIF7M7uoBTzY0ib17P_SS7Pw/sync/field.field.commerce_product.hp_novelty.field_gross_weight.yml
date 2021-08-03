@@ -1,0 +1,21 @@
+uuid: 466cc8ff-2c5a-41a2-8208-67c3af336726
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_gross_weight
+  module:
+    - physical
+id: commerce_product.hp_novelty.field_gross_weight
+field_name: field_gross_weight
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Gross Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement
