@@ -63,7 +63,7 @@
         "drupal/weight": "^3.3",
         "drush/drush": "10.*",
         "matt/honeys_place": "^1.0",
-        "drupal/xmlsitemap": "^1.0",
+        "drupal/xmlsitemap": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
