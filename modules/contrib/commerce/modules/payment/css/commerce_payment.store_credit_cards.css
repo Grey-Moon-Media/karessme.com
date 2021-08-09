@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Styles for the credit card icons in store.
+ */
+
+#edit-accepted-credit-cards .form-item {
+  padding-top: 5px;
+}
+
+#edit-accepted-credit-cards .form-item label {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#edit-accepted-credit-cards .form-item label::before {
+  content: '';
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  padding: 0;
+  width: 40px;
+  height: 25px;
+  background-size: 40px 25px;
+  vertical-align: top;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+  border-radius: 4px;
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-visa"]::before {
+  background-image: url(../../payment/images/visa.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-mastercard"]::before {
+  background-image: url(../../payment/images/mastercard.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-maestro"]::before {
+  background-image: url(../../payment/images/maestro.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-amex"]::before {
+  background-image: url(../../payment/images/amex.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-dinersclub"]::before {
+  background-image: url(../../payment/images/dinersclub.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-discover"]::before {
+  background-image: url(../../payment/images/discover.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-jcb"]::before {
+  background-image: url(../../payment/images/jcb.svg);
+}
+
+#edit-accepted-credit-cards .form-item label[for="edit-accepted-credit-cards-unionpay"]::before {
+  background-image: url(../../payment/images/unionpay.svg);
+}

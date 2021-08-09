@@ -175,3 +175,41 @@ function commerce_payment_update_8208() {
   $definition_update_manager->updateFieldStorageDefinition($definition_update_manager->getFieldStorageDefinition('remote_id', 'commerce_payment'));
   $definition_update_manager->updateFieldStorageDefinition($definition_update_manager->getFieldStorageDefinition('remote_id', 'commerce_payment_method'));
 }
+
+/**
+ * Adds fields necessary for adding logos on the checkout form.
+ */
+function commerce_payment_update_8209() {
+  $field_storage_definition = BaseFieldDefinition::create('list_string')
+    ->setLabel(t('Accepted credit cards'))
+    ->setDescription(t('Select the store supported credit cards. If none is selected it is assumed that all card types are supported'))
+    ->setCardinality(BaseFieldDefinition::CARDINALITY_UNLIMITED)
+    ->setSetting('allowed_values_function', [
+      '\Drupal\commerce_payment\CreditCard',
+      'getTypeLabels',
+    ])
+    ->setDisplayOptions('form', [
+      'type' => 'options_buttons',
+      'weight' => 20,
+    ])
+    ->setDisplayConfigurable('view', TRUE)
+    ->setDisplayConfigurable('form', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('accepted_credit_cards', 'commerce_store', 'commerce_payment', $field_storage_definition);
+
+  $field_storage_definition = BaseFieldDefinition::create('boolean')
+    ->setLabel(t('Show credit card logos'))
+    ->setDescription(t('Allow displaying credit card logos on the payment method add form.'))
+    ->setDefaultValue(FALSE)
+    ->setDisplayConfigurable('view', TRUE)
+    ->setDisplayOptions('form', [
+      'settings' => ['display_label' => TRUE],
+      'weight' => 19,
+    ])
+    ->setDisplayConfigurable('form', TRUE);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('show_credit_card_logos', 'commerce_store', 'commerce_payment', $field_storage_definition);
+}
+
