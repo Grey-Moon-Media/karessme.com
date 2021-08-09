@@ -21,7 +21,7 @@
   Drupal.behaviors.commerceSquareForm = {
     attach: function (context) {
       var settings = drupalSettings.commerceSquare;
-      if (context === document) {
+      if (typeof settings !== 'undefined' && context === document || $('.square-form').length > 0) {
         var script = document.createElement('script');
         var scriptHostname = settings.apiMode === 'sandbox' ? 'squareupsandbox' : 'squareup';
         script.src = 'https://js.' + scriptHostname + '.com/v2/paymentform';
@@ -166,16 +166,21 @@
     function requestCardNonce(event) {
       // This prevents the Submit button from submitting its associated form.
       // Instead, clicking the Submit button should tell the SqPaymentForm to generate
-      // a card nonce, which the next line does.
+      // a card nonce, which we do below.
       event.preventDefault();
 
-      // Grab postal code.
-      if (typeof drupalSettings.commerceSquare.customerPostalCode !== 'undefined') {
-        paymentForm.setPostalCode(drupalSettings.commerceSquare.customerPostalCode);
+      // First try to grab postal code from billing or shipping postal code field on the page.
+      // This selector prefers the billing postal code which is the appropriate one to send to square.  
+      // But if "My billing information is the same as my shipping information" is enabled,
+      // then it will pick up the shipping postal code field.
+      var postalCode = $parentDrupalSelector.closest('.layout-checkout-form').find('input.postal-code').val();
+
+      // If neither billing nor shipping postal code field is present, try to use the postal code 
+      // from the user's address profile.
+      if (!postalCode && typeof drupalSettings.commerceSquare.customerPostalCode !== 'undefined') {
+        postalCode = paymentForm.setPostalCode(drupalSettings.commerceSquare.customerPostalCode);
       }
-      else {
-        paymentForm.setPostalCode($parentDrupalSelector.parent().find('input.postal-code').val());
-      }
+      paymentForm.setPostalCode(postalCode);
 
       paymentForm.requestCardNonce();
     }

@@ -73,7 +73,11 @@
         "patches": {
           "drupal/tamper":{
 		  "Rewrite for multiple images": "https://git.drupalcode.org/project/tamper/-/merge_requests/4.diff"
-          }
+          },
+	  "drupal/commerce_square" :{
+              "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
+              "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
+            }
 	},
         "drupal-scaffold": {
             "locations": {
