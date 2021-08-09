@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11087b357735839fcfc821d639c84d7a",
+    "content-hash": "3ab0bf7797544b8c1518b0eb97e93f44",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2593,7 +2593,8 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
-                }
+                },
+                "patches_applied": []
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -5369,6 +5370,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Rewrite for multiple images": "https://git.drupalcode.org/project/tamper/-/merge_requests/4.diff"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6941,6 +6945,41 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.7.4"
             },
             "time": "2020-10-01T13:52:52+00:00"
+        },
+        {
+            "name": "matt/honeys_place",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattc321/honeys_place.git",
+                "reference": "87e1349bb5f026c103c2bbb5353e3b05efdd545d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattc321/honeys_place/zipball/87e1349bb5f026c103c2bbb5353e3b05efdd545d",
+                "reference": "87e1349bb5f026c103c2bbb5353e3b05efdd545d",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/commerce": "^2.20",
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Campbell",
+                    "email": "cascadiamatt@gmail.com"
+                }
+            ],
+            "description": "A Drupal 8/9 Module for connecting to Honey's Place API",
+            "support": {
+                "source": "https://github.com/mattc321/honeys_place/tree/1.0",
+                "issues": "https://github.com/mattc321/honeys_place/issues"
+            },
+            "time": "2021-08-09T14:36:11+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",

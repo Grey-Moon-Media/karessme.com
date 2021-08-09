@@ -8,12 +8,16 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "matt/honeys_place": {
+            "type": "vcs",
+            "url": "https://github.com/mattc321/honeys_place.git"
         }
-    ],
+    },
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "~1.0",
@@ -55,7 +59,8 @@
         "drupal/swiftmailer": "^2.0",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/weight": "^3.3",
-        "drush/drush": "10.*"
+        "drush/drush": "10.*",
+        "matt/honeys_place": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
