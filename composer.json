@@ -47,6 +47,8 @@
         "drupal/file_delete": "^1.0",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/google_analytics": "^2.5",
+        "drupal/google_tag": "^1.4",
         "drupal/image_delta_formatter": "^1.1",
         "drupal/jquery_colorpicker": "^2.0@RC",
         "drupal/mailsystem": "^4.3",
@@ -60,7 +62,8 @@
         "drupal/views_bulk_operations": "^4.0",
         "drupal/weight": "^3.3",
         "drush/drush": "10.*",
-        "matt/honeys_place": "^1.0"
+        "matt/honeys_place": "^1.0",
+        "drupal/xmlsitemap": "^1.0",
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -75,7 +78,11 @@
         "patches": {
           "drupal/tamper":{
 		  "Rewrite for multiple images": "https://git.drupalcode.org/project/tamper/-/merge_requests/4.diff"
-          }
+          },
+	  "drupal/commerce_square" :{
+              "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
+              "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
+            }
 	},
         "drupal-scaffold": {
             "locations": {
