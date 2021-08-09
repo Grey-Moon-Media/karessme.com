@@ -24,3 +24,18 @@ offsite_redirect:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+    -
+creditcard_type_detection:
+  version: VERSION
+  js:
+    js/credit-card-type-detection.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+credit_card_icons:
+  version: VERSION
+  css:
+    theme:
+      css/commerce_payment.store_credit_cards.css: {}
