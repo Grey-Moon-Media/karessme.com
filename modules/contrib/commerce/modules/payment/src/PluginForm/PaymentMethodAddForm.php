@@ -124,35 +124,10 @@ class PaymentMethodAddForm extends PaymentMethodFormBase {
       '#type' => 'hidden',
       '#value' => '',
     ];
-
-    if ($this->currentStore->getStore()->get('show_credit_card_logos')->getValue()[0]['value']) {
-      // Display credit card logos in checkout form.
-      $element['#attached']['library'][] = 'commerce_payment/payment_method_icons';
-      $element['#attached']['library'][] = 'commerce_payment/creditcard_type_detection';
-
-      $supported_credit_cards = [];
-      foreach ($this->currentStore->getStore()->get('accepted_credit_cards') as $store_credit_card) {
-        $supported_credit_cards[] = $store_credit_card->value;
-      }
-
-      // If no credit cards are set in store we assume that all are supported.
-      if (!$supported_credit_cards) {
-        $supported_credit_cards = array_keys(CreditCard::getTypeLabels());
-      }
-
-      $element['credit_card_logo'] = [
-        '#theme' => 'commerce_payment_method__credit_card_logos',
-        '#credit_cards' => $supported_credit_cards,
-      ];
-    }
-
     $element['number'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Card number'),
-      '#attributes' => [
-        'autocomplete' => 'off',
-        'class' => ['commerce-payment-credit-card-number'],
-      ],
+      '#attributes' => ['autocomplete' => 'off'],
       '#required' => TRUE,
       '#maxlength' => 19,
       '#size' => 20,

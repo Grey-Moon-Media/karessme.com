@@ -129,7 +129,6 @@ class PaymentMethodTest extends CommerceBrowserTestBase {
       'add_payment_method[payment_details][expiration][year]' => date('Y') + 1,
       'add_payment_method[payment_details][security_code]' => '111',
     ];
-
     $this->submitForm($form_values, 'Save');
     $this->assertSession()->addressEquals($this->collectionUrl);
     $this->assertSession()->pageTextContains('Visa ending in 1111 saved to your payment methods.');
@@ -298,28 +297,6 @@ class PaymentMethodTest extends CommerceBrowserTestBase {
 
     $payment_gateway = PaymentMethod::load($payment_method->id());
     $this->assertNull($payment_gateway);
-  }
-
-  /**
-   * Tests the credit card logo visibility.
-   */
-  public function testPaymentMethodCreditCardLogosDisplay() {
-    /** @var \Drupal\commerce_payment_example\Plugin\Commerce\PaymentGateway\OnsiteInterface $plugin */
-    $this->drupalGet($this->collectionUrl);
-    $this->getSession()->getPage()->clickLink('Add payment method');
-
-    // Ensure that credit card icon is not displayed in the form.
-    $this->assertSession()->elementNotExists('css', 'span.payment-method-icon.payment-method-icon--visa');
-
-    $this->store->set('show_credit_card_logos', TRUE);
-    $this->store->save();
-
-    /** @var \Drupal\commerce_payment_example\Plugin\Commerce\PaymentGateway\OnsiteInterface $plugin */
-    $this->drupalGet($this->collectionUrl);
-    $this->getSession()->getPage()->clickLink('Add payment method');
-
-    // Ensure that credit card icon is displayed in the form.
-    $this->assertSession()->elementExists('css', 'span.payment-method-icon.payment-method-icon--visa');
   }
 
 }

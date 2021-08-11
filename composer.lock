@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cea8a3da4a980835c80cfdff048d174d",
+    "content-hash": "c114e4e05cc8865e5756c45a27ba26cf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1457,26 +1457,26 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.7",
+            "version": "1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a"
+                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/55f8b799269a1a472457bd1a41b4f379d4cfba4a",
-                "reference": "55f8b799269a1a472457bd1a41b4f379d4cfba4a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1958a744696c6bb3bb0d28db2611dc11610e78af",
+                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan-shim": "^0.9.2",
-                "phpunit/phpunit": "^7.0",
-                "vimeo/psalm": "^3.8.1"
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.1.5",
+                "vimeo/psalm": "^4.2.1"
             },
             "type": "library",
             "autoload": {
@@ -1520,9 +1520,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.6.7"
+                "source": "https://github.com/doctrine/collections/tree/1.6.8"
             },
-            "time": "2020-07-27T17:53:49+00:00"
+            "time": "2021-08-10T18:51:53+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2406,6 +2406,84 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_feeds",
                 "issues": "https://www.drupal.org/project/issues/commerce_feeds"
+            }
+        },
+        {
+            "name": "drupal/commerce_google_tag_manager",
+            "version": "2.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_google_tag_manager.git",
+                "reference": "8.x-2.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_google_tag_manager-8.x-2.0-beta1.zip",
+                "reference": "8.x-2.0-beta1",
+                "shasum": "50d181c6f8d3e993b079d93739f6a03572f9abe8"
+            },
+            "require": {
+                "drupal/commerce": "^2.8",
+                "drupal/core": "^8.8 || ^9",
+                "drupal/google_tag": "^1.1"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3.1",
+                "squizlabs/php_codesniffer": "^3.0.1",
+                "wapmorgan/php-code-fixer": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-beta1",
+                    "datestamp": "1595592068",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gridonic",
+                    "homepage": "https://gridonic.ch",
+                    "email": "hello@gridonic.ch",
+                    "role": "Sponsor"
+                },
+                {
+                    "name": "Antistatique",
+                    "homepage": "https://antistatique.net",
+                    "email": "info@antistatique.net",
+                    "role": "Sponsor"
+                },
+                {
+                    "name": "Stefan Wanzenried",
+                    "homepage": "https://www.drupal.org/u/schtifu",
+                    "email": "stefan.wanzenried@gridonic.ch",
+                    "role": "Author & Maintainer"
+                },
+                {
+                    "name": "Kevin Wenger",
+                    "homepage": "https://www.drupal.org/u/wengerk",
+                    "email": "contact@kevin-wenger.ch",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides Commerce integration for Enhanced Ecommerce events via Google Tag Manager",
+            "homepage": "https://www.drupal.org/project/commerce_google_tag_manager",
+            "keywords": [
+                "commerce",
+                "drupal",
+                "enhanced ecommerce",
+                "google tag manager"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_google_tag_manager",
+                "issues": "https://www.drupal.org/project/issues/commerce_google_tag_manager"
             }
         },
         {
@@ -4520,6 +4598,106 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flexslider",
                 "issues": "https://drupal.org/project/issues/flexslider"
+            }
+        },
+        {
+            "name": "drupal/ga",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ga.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ga-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "c15b53a274a4bb0822b9fd6516322f4b613618ee"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/csp": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1590283156",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "gapple",
+                    "homepage": "https://www.drupal.org/user/490940"
+                }
+            ],
+            "description": "Google Analytics Support",
+            "homepage": "https://www.drupal.org/project/ga",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/ga",
+                "issues": "http://drupal.org/project/issues/ga"
+            }
+        },
+        {
+            "name": "drupal/ga_commerce",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ga_commerce.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ga_commerce-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "0fb7d6efb2dc8a26c76a99986eef362c67cf1d52"
+            },
+            "require": {
+                "drupal/commerce": "~2.18",
+                "drupal/commerce_order": "*",
+                "drupal/core": "^8.8.3 || ^9",
+                "drupal/ga": "~1.8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1590741503",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mag. Andreas Mayr (agoradesign)",
+                    "homepage": "https://www.drupal.org/u/agoradesign",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides integration for Drupal Commerce into Googalytics module, using the analytics.js Ecommerce plugin (https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce.",
+            "homepage": "https://drupal.org/project/ga_commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ga_commerce",
+                "issues": "https://www.drupal.org/project/issues/ga_commerce?version=8.x"
             }
         },
         {
@@ -7216,16 +7394,16 @@
         },
         {
             "name": "matt/honeys_place",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattc321/honeys_place.git",
-                "reference": "fb7b941580c4166217e00220521fdd57cdb1c1d7"
+                "reference": "7398e673e3d50be30a2c083da635bd8f9ab8b1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattc321/honeys_place/zipball/fb7b941580c4166217e00220521fdd57cdb1c1d7",
-                "reference": "fb7b941580c4166217e00220521fdd57cdb1c1d7",
+                "url": "https://api.github.com/repos/mattc321/honeys_place/zipball/7398e673e3d50be30a2c083da635bd8f9ab8b1c0",
+                "reference": "7398e673e3d50be30a2c083da635bd8f9ab8b1c0",
                 "shasum": ""
             },
             "require": {
@@ -7244,10 +7422,10 @@
             ],
             "description": "A Drupal 8/9 Module for connecting to Honey's Place API",
             "support": {
-                "source": "https://github.com/mattc321/honeys_place/tree/1.1",
+                "source": "https://github.com/mattc321/honeys_place/tree/1.2",
                 "issues": "https://github.com/mattc321/honeys_place/issues"
             },
-            "time": "2021-08-09T15:54:55+00:00"
+            "time": "2021-08-09T20:13:11+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -11578,6 +11756,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/commerce_feeds": 15,
+        "drupal/commerce_google_tag_manager": 10,
         "drupal/commerce_paypal": 5,
         "drupal/empty_fields": 10,
         "drupal/feeds": 15,

@@ -27,7 +27,6 @@ function commerce_payment_commerce_checkout_pane_info_alter(&$definitions) {
  * Implements hook_entity_base_field_info().
  */
 function commerce_payment_entity_base_field_info(EntityTypeInterface $entity_type) {
-  $fields = [];
   if ($entity_type->id() === 'commerce_order') {
     $fields['payment_gateway'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Payment gateway'))
@@ -38,32 +37,9 @@ function commerce_payment_entity_base_field_info(EntityTypeInterface $entity_typ
       ->setLabel(t('Payment method'))
       ->setDescription(t('The payment method.'))
       ->setSetting('target_type', 'commerce_payment_method');
-  }
 
-  if ($entity_type->id() === 'commerce_store') {
-    $fields['accepted_credit_cards'] = BaseFieldDefinition::create('list_string')
-      ->setLabel(t('Accepted credit cards'))
-      ->setDescription(t('Select the store supported credit cards. If none is selected it is assumed that all card types are supported'))
-      ->setCardinality(BaseFieldDefinition::CARDINALITY_UNLIMITED)
-      ->setSetting('allowed_values_function', [
-        '\Drupal\commerce_payment\CreditCard',
-        'getTypeLabels',
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'options_buttons',
-        'weight' => 20,
-      ])
-      ->setDisplayConfigurable('view', TRUE)
-      ->setDisplayConfigurable('form', TRUE);
-
-    $fields['show_credit_card_logos'] = BaseFieldDefinition::create('boolean')
-      ->setLabel(t('Show credit card logos'))
-      ->setDescription(t('Allow displaying credit card logos on the payment method add form.'))
-      ->setDefaultValue(FALSE)
-      ->setDisplayConfigurable('view', TRUE)
-      ->setDisplayConfigurable('form', TRUE);
+    return $fields;
   }
-  return $fields;
 }
 
 /**
@@ -100,11 +76,6 @@ function commerce_payment_theme() {
     'commerce_payment_total_summary' => [
       'variables' => [
         'order_entity' => NULL,
-      ],
-    ],
-    'commerce_payment_method__credit_card_logos' => [
-      'variables' => [
-        'credit_cards' => [],
       ],
     ],
   ];
@@ -239,21 +210,4 @@ function commerce_payment_validate_checkout_flow(array $form, FormStateInterface
   if ($payment_information_step !== '_disabled' && $payment_information_step === $payment_process_step) {
     $form_state->setError($form, t('<em>Payment information</em> and <em>Payment process</em> panes need to be on separate steps.'));
   }
-}
-
-/**
- * Implements hook_form_alter().
- */
-function commerce_payment_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Determine that we are on the store edit or add form.
-  if (substr($form_id, 0, strlen('commerce_store_')) !== 'commerce_store_') {
-    return;
-  }
-
-  if (substr($form_id, -strlen('_edit_form')) !== '_edit_form' &&
-    substr($form_id, -strlen('_add_form')) !== '_add_form') {
-    return;
-  }
-
-  $form['#attached']['library'][] = 'commerce_payment/credit_card_icons';
 }

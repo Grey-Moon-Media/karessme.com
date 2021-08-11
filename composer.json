@@ -24,12 +24,13 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/block_visibility_groups": "^1.4",
         "drupal/bootstrap": "^3.23",
-        "drupal/bootstrap_basic_image_gallery": "^1.5",
+        "drupal/bootstrap_basic_image_gallery": "1.5",
         "drupal/color_field": "^2.4",
         "drupal/colorapi": "^1.1",
         "drupal/colorbox": "^1.7",
         "drupal/commerce": "^2.20",
         "drupal/commerce_feeds": "^1.0@alpha",
+        "drupal/commerce_google_tag_manager": "^2.0@beta",
         "drupal/commerce_paypal": "^1.0@RC",
         "drupal/commerce_shipping": "^2.1",
         "drupal/commerce_square": "^1.4",
@@ -48,6 +49,7 @@
         "drupal/file_delete": "^1.0",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/ga_commerce": "^2.0",
         "drupal/google_analytics": "^2.5",
         "drupal/google_tag": "^1.4",
         "drupal/image_delta_formatter": "^1.1",
@@ -84,9 +86,9 @@
               "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
               "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
            },
-	  "drupal/commerce":{
-	    "Credit Card Icons":"https://www.drupal.org/files/issues/2021-05-20/display-credit-card-icons-in-the-checkout-form-3183931-35.patch"
-	  }
+	    "drupal/commerce_shipping": {
+		    "Error: Call to a member function getPlugin() on null":"https://www.drupal.org/files/issues/2020-03-07/commerce_shipping-3118351-2.patch"
+	    }
 	},
         "drupal-scaffold": {
             "locations": {

@@ -1,0 +1,12 @@
+name: 'Googalytics Commerce'
+type: module
+description: 'Provides integration for Drupal Commerce into Googalytics module, using the analytics.js Ecommerce plugin (https://developers.google.com/analytics/devguides/collection/analyticsjs/ecommerce.'
+core_version_requirement: ^8.8.3 || ^9
+dependencies:
+  - commerce:commerce_order
+  - ga:ga
+
+# Information added by Drupal.org packaging script on 2020-05-29
+version: '2.0.0'
+project: 'ga_commerce'
+datestamp: 1590741506
