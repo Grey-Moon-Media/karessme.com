@@ -7405,16 +7405,16 @@
         },
         {
             "name": "matt/honeys_place",
-            "version": "1.3",
+            "version": "1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mattc321/honeys_place.git",
-                "reference": "de11fb14aecb100ead5e12ce9cb5b304c2693b04"
+                "reference": "e7cb10463c44b07d5696189ee19840e928366e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mattc321/honeys_place/zipball/de11fb14aecb100ead5e12ce9cb5b304c2693b04",
-                "reference": "de11fb14aecb100ead5e12ce9cb5b304c2693b04",
+                "url": "https://api.github.com/repos/mattc321/honeys_place/zipball/e7cb10463c44b07d5696189ee19840e928366e47",
+                "reference": "e7cb10463c44b07d5696189ee19840e928366e47",
                 "shasum": ""
             },
             "require": {
@@ -7433,10 +7433,10 @@
             ],
             "description": "A Drupal 8/9 Module for connecting to Honey's Place API",
             "support": {
-                "source": "https://github.com/mattc321/honeys_place/tree/1.3",
+                "source": "https://github.com/mattc321/honeys_place/tree/1.4",
                 "issues": "https://github.com/mattc321/honeys_place/issues"
             },
-            "time": "2021-08-12T18:26:20+00:00"
+            "time": "2021-08-12T20:15:02+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -11781,5 +11781,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
