@@ -48,9 +48,13 @@
 .km_block_title h2 {
     font-size: 20px!important;
 }
+.km_facet_block_title h2 {
+    font-size: 15px!important;
+}
 .km_block_title h1,
 .km_block_title h2,
-.km_block_tile h3 {
+.km_block_tile h3,
+.km_facet_block_title h2 {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -75,6 +79,17 @@
     padding: 17 10%;
     display: block;
 }
+#block-wosh-branding .brand.logo img{   
+    max-width: 60%;
+}
+#block-wosh-branding .brand.logo{   
+    max-width: 240px;
+    line-height: 96px;
+    position: relative;
+    z-index: 11;
+    left: 0px;
+    top: -2px;
+}
 /********************************
     Custom Styles - Fields
 *********************************/
@@ -85,6 +100,10 @@ span.fieldset-legend  {
 }
 span.fieldset-legend {
   font-size: 1.3rem;
+}
+.faq-heading h4{
+    font-weight: 600;
+    letter-spacing: .1rem;
 }
 .field--widget-commerce-product-variation-attributes span.fieldset-legend {
     font-size: 0.79rem;
@@ -98,7 +117,7 @@ span.fieldset-legend {
 .product-teaser-wrap .field-field-size-len,
 .product-teaser-wrap .field-field-size-ci,
 .product-teaser-wrap .field-field-manufacturer,
-.product-teaser-wrap .field-field-category,
+/*.product-teaser-wrap .field-field-category,*/
 .product-teaser-wrap .field-field-size,
 .product-teaser-wrap .field-field-material,
 .product-teaser-wrap .field-field-power,
@@ -269,6 +288,14 @@ ul.social-icons {
 div.bootstrap-basic-image-gallery .thumbnails{
   margin: 20px 0;
 }
+.product-post .post-image .image-carousel .bootstrap-basic-image-gallery .main-image img{
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .product-post .post-image .image-carousel .bootstrap-basic-image-gallery .main-image {
+    min-height: 300px;
+}
 .product-layout1 .product-teaser .product-image {
     min-height: 250px;
 }
@@ -278,6 +305,9 @@ div.field.field-field-responsive-background-imag.field-type-image.field-label-hi
 }
 .km_bg_img_1557 {
     padding: 75% 2%;
+}
+.color_field__swatch--circle {
+    border: 1px solid #B0B0B0;
 }
 
 /********************************
@@ -353,4 +383,79 @@ label[for^=edit-payment-information-payment-method-new-credit-card-square-]  {
 .webform-submission-form .form-date{
     background: #FFFFFF;
     border: 1px solid #ececec;
+}
+
+/********************************
+    Custom Styles - Login/User Registration Forms
+*********************************/
+.page-user-login,
+body.path-user .page-user-login{
+    background-image: url(../images/bg/login_background.jpg);
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: auto; /* You must set a specified height */
+    background-position: 0px -70px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.login-page .site_logo img{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+.login-page .site_logo{
+    width: 70%;
+    margin: 0 auto;
+}
+.login-page .login_form .description{
+   font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.login-page h3{
+    color: #F5F5F5;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
+.login-page .login_form .form-text {
+    background: #F5F5F5;
+}
+.login-page .form_container{
+    background: #333333;
+    padding: 2%;
+    right: 0;
+    height: 100%;
+    top: 0;
+    margin: 50px auto 0;
+}
+.login-page .user-login-form, .user-form, .user-pass {
+    border: none;
+    margin: 20px auto;
+}
+.login-page .login_form .btn,
+.login_form input#edit-submit.button.js-form-submit.form-submit {   
+    width: 100%;
+    background: #CE76B2;
+}
+.login-page .login_form{
+    padding: 0;
+    margin: 0 auto;
+}
+
+/********************************
+    Custom Styles - Facet Colors
+*********************************/
+#variations-product-variation-color-17 {
+    background: #999999;
+}
+div.slimScrollBar {
+    width: 12px!important;
+}
+/********************************
+    Custom Styles - Tables
+*********************************/
+.km_featured_table td.views-field.views-field-variations-target-id.views-align-left{
+    width: 50%;
 }
