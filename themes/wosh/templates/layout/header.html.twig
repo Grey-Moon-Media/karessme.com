@@ -16,6 +16,30 @@
   </div>
 </div>
 {% endif %}
+<!-- Promotion Banner Start -->
+<div class="promotion_banner">
+  <div class="row">
+
+	  {% if page.social_banner %}
+	    <div class="col-md-3 mx-auto prom_social">
+		  {{ page.social_banner }}
+		</div>
+	  {% endif %}
+
+	  {% if page.shipping_banner %}
+	    <div class="col-md-4 mx-auto prom_shipping">
+		  {{ page.shipping_banner }}
+		</div>
+	  {% endif %}
+
+	  {% if page.user_banner %}
+	    <div class="col-md-3 mx-auto prom_user">
+		  {{ page.user_banner }}
+		</div>
+	  {% endif %}
+
+  </div>
+</div>
 	
 <!-- Header Start -->
 <header class="header">

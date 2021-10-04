@@ -7,6 +7,31 @@
 /********************************
     Custom Styles - Header
 *********************************/
+.header {
+    background-color: #FAFAFA!important;
+}
+
+.prom_shipping {
+    text-align: center;
+}
+.prom_social,
+.prom_shipping,
+.prom_user,
+.promotion_banner a {
+    display: inline-block;
+    color: #FFFFFF;
+    line-height:35px;
+    font-weight: 600
+}
+.promotion_banner {
+    background: #e42555;
+    padding: 0rem;
+    border: none;
+    color: #FFFFFF;
+    vertical-align: middle;
+    position: relative;
+    height: 35px;
+}
 .km_main-menu  li a,
 .km_main-menu a{
     text-transform: uppercase;
@@ -45,6 +70,16 @@
     background: #f5f5f5;
     padding: 3%;
 }
+.km_block_title_hp h2.block-title
+ {
+    text-align: right;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.km_block_title_hp h5.block-subtitle {
+    text-align: right;
+    font-weight: 600;
+}
 .km_block_title h2 {
     font-size: 20px!important;
 }
@@ -54,10 +89,16 @@
 .km_block_title h1,
 .km_block_title h2,
 .km_block_tile h3,
-.km_facet_block_title h2 {
+.km_facet_block_title h2,
+.km_block_title_hp h2  {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .1rem;
+}
+.km_slider .heading-text .field-field-heading-text .heading-text-content {
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 .toy_2{
     margin-bottom: 10px;
@@ -79,10 +120,10 @@
     padding: 17 10%;
     display: block;
 }
-#block-wosh-branding .brand.logo img{   
+#block-wosh-branding .brand.logo img{
     max-width: 60%;
 }
-#block-wosh-branding .brand.logo{   
+#block-wosh-branding .brand.logo{
     max-width: 240px;
     line-height: 96px;
     position: relative;
@@ -93,12 +134,16 @@
 /********************************
     Custom Styles - Fields
 *********************************/
-
+article h2 {
+    color: #e42555;
+}
 .product-info h2,
-span.fieldset-legend  {
+span.fieldset-legend,
+article h2  {
   font-weight: 600;
 }
-span.fieldset-legend {
+span.fieldset-legend,
+article h2 {
   font-size: 1.3rem;
 }
 .faq-heading h4{
@@ -129,15 +174,23 @@ span.fieldset-legend {
 .product-teaser-wrap .field-field-video,
 .product-teaser-wrap .field-field-feature,
 .product-teaser-wrap .field-field-how-to-use,
-.product-teaser-wrap .field-field-how-to-clean {
+.product-teaser-wrap .field-field-how-to-clean,
+.product-teaser-wrap .field-field-recommended,
+.product-teaser-wrap .field-overall-rating
+/*.product-teaser-wrap .field-overall-rating,
+.field-overall-rating a*/
+ {
     display: none;
 }
-.product-teaser-wrap .product-manufacturer-main {
+
+.product-teaser-wrap .product-manufacturer-main,
+.product-title-review-wrap div.product-rating_1
+{
     display: block;
 }
-.product-teaser-wrap .product-title {
-    text-transform: uppercase;
-    font-size: 35px;
+.product-title-review-wrap  .product-title {
+    text-transform: capitalize;
+    font-size: 20px;
     font-weight: 600;
 }
 .product-teaser-wrap .product-manufacturer .taxonomy-term.vocabulary-brand h2{
@@ -154,6 +207,11 @@ span.fieldset-legend {
     text-transform: capitalize;
     font-weight: 600;
 }
+.product-post .product-price-wrap .product-price {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
 .post-image .bootstrap-basic-image-gallery .thumbnails .thumb img {
     max-width: 40%;
     height: auto;
@@ -161,7 +219,56 @@ span.fieldset-legend {
 div.block.block-layout-builder.block-field-blocknodepagebody {
     padding:10%;
 }
+.km_block_title_hp .product-add-cart.product-add-cart .form-actions {
+    margin-top: 20px;
+}
+.km_product_crumbs ul li a{
+    font-size: .75rem!important;
+}
+.km_product_crumbs {
+    line-height: 50px;
+    /*text-align: right;
+    padding-right: 235px!important;*/
+    text-transform: uppercase;
+    font-size: .75rem;
+}
 
+
+/*.front_page_collections .km_couples {
+
+}
+.front_page_collections .km_vibrators {
+
+}
+.front_page_collections .km_massagers {
+
+}*/
+.front_page_collections .km_massagers,
+.front_page_collections .km_stimlulators,
+.front_page_collections .km_vibrators,
+.front_page_collections .km_couples {
+    padding: 10% 2%;
+}
+.front_page_collections h1,
+.front_page_collections a {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.front_page_collections {
+    margin: 10px 0!important;
+    width: 100%;
+}
+.overall-rating a {
+    color: #e42555;
+}
+.overall-rating div,
+.overall-rating div a,
+.overall-rating a {
+    margin-right: 25px;
+}
 /********************************
     Custom Styles - Footer
 *********************************/
@@ -435,7 +542,7 @@ body.path-user .page-user-login{
     margin: 20px auto;
 }
 .login-page .login_form .btn,
-.login_form input#edit-submit.button.js-form-submit.form-submit {   
+.login_form input#edit-submit.button.js-form-submit.form-submit {
     width: 100%;
     background: #CE76B2;
 }
@@ -459,3 +566,44 @@ div.slimScrollBar {
 .km_featured_table td.views-field.views-field-variations-target-id.views-align-left{
     width: 50%;
 }
+/********************************
+    Custom Styles - Payment Submission Loader
+*********************************/
+#overlay {
+    background: #ffffff;
+    color: #666666;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    opacity: .80;
+  }
+  /*button {
+    margin: 40px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }*/
+  .spinner {
+      margin: 0 auto;
+      height: 64px;
+      width: 64px;
+      animation: rotate 0.8s infinite linear;
+      border: 5px solid firebrick;
+      border-right-color: transparent;
+      border-radius: 50%;
+  }
+  @keyframes rotate {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  
+ 

@@ -4224,11 +4224,3 @@ function webform_update_8622() {
 function webform_update_8212() {
   _webform_update_admin_settings();
 }
-
-/**
- * Issue #3220703: Add support for bulk operations on webform entities.
- */
-function webform_update_8213() {
-  _webform_update_actions();
-  _webform_update_admin_settings();
-}

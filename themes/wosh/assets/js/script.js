@@ -12,28 +12,28 @@ var $ = jquery = jQuery;
 /*--------------------------------------------------*/
 /*	MISC
 /*--------------------------------------------------*/
-	$('.path-taxonomy .views-element-container').addClass('row');	
+	$('.path-taxonomy .views-element-container').addClass('row');
 	$('.path-taxonomy .sidebar .views-element-container').removeClass('row');
 	$('.fullwidth .row-wrap').removeClass('row');
 	$('.cta-style3').addClass('container');
-	
+
 	if ( $(window).width() < 767) {
 		//Mobile Bootstrap Grid
 		$('.grid-wrapper').removeClass('grid');
 	}
-	
+
 //MAIN MENU
 	$('.primary-navbar .menu-parent').smartmenus();
 	$('.primary-navbar .menu-parent').addClass('sm sm-menu');
-	
+
 /*	FEAT BLOCK  */
 	$('.feat-block-content-alt .field-field-block').addClass('row');
 	$(".feat-block-content-alt .feat-item").parent().addClass('col-md-6');
 
 /*	PRODUCT  */
 	$(".product-teaser .form-item").remove();
-	
-/*	FACET  */	
+
+/*	FACET  */
     $('.facet-list').slimScroll({
           height: '200px',
 		  width: '100%',
@@ -43,10 +43,10 @@ var $ = jquery = jQuery;
 		  wheelStep: 15
     });
 
-/*	TAB  */	
+/*	TAB  */
 	$(".tab-content .my-group:first").addClass("active");
 
-/*	OWL SLIDER  */	  
+/*	OWL SLIDER  */
     $('.slide-carousel').each( function() {
         var $carousel = $(this);
         $carousel.owlCarousel({
@@ -65,7 +65,7 @@ var $ = jquery = jQuery;
 			animateOut: $carousel.data("animateout"),
         });
     });
-	
+
   // Declare Carousel jquery object
   var owl = $('.hero');
 
@@ -108,13 +108,13 @@ var $ = jquery = jQuery;
 	dots: false,
 	slideBy: 1,
     });
-  
+
 	$(".ui-dialog-buttonpane, #drupal-modal .product-info, .ui-dialog .ui-dialog-titlebar-close span").remove();
 	$(".ui-dialog .ui-dialog-titlebar-close").removeClass('ui-button');
 
 	$(".product-teaser .form-item").remove();
 	$(".ui-dialog .ui-dialog-buttonpane").remove();
-	
+
 	$('.deal-carousel').owlCarousel({
 		loop: true,
 		margin: 30,
@@ -131,7 +131,7 @@ var $ = jquery = jQuery;
                items: 4
                }
         }
-	});    
+	});
 
 /*	SEARCH & FORM  */
  	//SEARCH TOGGLE
@@ -141,7 +141,7 @@ var $ = jquery = jQuery;
 	// SEARCH PLACHOLDER
 	$("#search-modal .form-search").attr("placeholder", "Search..");
 	$(".search-content .form-search").attr("placeholder", "Search...");
-	
+
     // LABEL TO PLACEHOLDER
     $("form.contact-form :input, .contact-form form :input, form.user-login-form :input, form.user-register-form :input, form.user-pass :input, form.comment-form :input, .search-page-form :input, #views-exposed-form-blog-blog-page :input, #toggle-sidebar .block-search :input, .block-simplenews :input, #toggle-sidebar :input").not(':checkbox, :radio').each(function (index, elem) {
 		var eId = $(elem).attr("id");
@@ -183,7 +183,7 @@ var $ = jquery = jQuery;
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
       });
-	  
+
 	  $('.product-post .quantity-nav').slice(1).remove();
 
     });
@@ -217,7 +217,7 @@ var $ = jquery = jQuery;
 					return;
 				} else {
 					$(this).countTo().addClass('counted');
-				}	
+				}
 			});
 		});
 	}
@@ -229,7 +229,7 @@ var $ = jquery = jQuery;
 			//var count = 0 ;
 			//var colors = ['#4D91BA', '#5FCCA3', '#FFBB19'];
 			$('.chart').each(function(){
-					
+
 				var imagePos = $(this).offset().top;
 				var topOfWindow = $(window).scrollTop();
 				if (imagePos < topOfWindow+900) {
@@ -258,7 +258,7 @@ var $ = jquery = jQuery;
 	$(window).on('scroll', function () {
 		/*	PIE CHART  */
 		pieChart();
-		
+
 		/*	BACK TO TOP & STICKY HEADER  */
 		if($(this).scrollTop() != 0) {
 			$(".back-to-top").fadeIn();
@@ -279,7 +279,7 @@ var $ = jquery = jQuery;
     };
 
   })(jQuery);
-  
+
   $(function() {
 
 /*	PROMOTION  */
@@ -290,14 +290,14 @@ var $ = jquery = jQuery;
 	$(".promotion-layout2 .grid-item:nth-child(3n+1)").addClass('col-md-7');
 	$('.promotion-layout2 .promotion-item-field:odd').after('<div class="clearfix"></div>');
 	$(".promotion-layout3 .promotion-item-field").addClass('col-md-6');
-	
+
 /*	DEALS  */
 	$('.deals-grid .field-field-product-block').addClass('row');
 	$(".deals-grid .field-field-product-block .product-teaser").parent().addClass('col-md-3 grid-item');
 	$('.deals-carousel .field-field-product-block').addClass('deal-carousel owl-carousel');
-	  
+
   	$('.product-teaser .product-add-cart .form-submit').before('<i class="fa fa-shopping-cart cart-link-icon"></i>');
-	
+
 /*	FLIPPED TABLE  */
     $(".flipped-table table").each(function() {
         var $this = $(this);
@@ -309,22 +309,56 @@ var $ = jquery = jQuery;
                 if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
                 newrows[i].append($(this));
             });
-			
+
             $(this).find("th").each(function(){
                 i++;
                 if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
                 newrows[i].append($(this));
             });
-			
+
         });
         $this.find("tr").remove();
         $.each(newrows, function(){
             $this.append(this);
         });
     });
-	
+
   });
-  
+
   $(document).ajaxComplete(function(){
 	$('#drupal-modal .owl-item .field-item').css({'width' : $('.owl-carousel').width()});
   });
+
+   $(document).ready(function() {
+    $('.field-overall-rating').each(function() {
+      $(this).insertAfter($(this).parent().find('.product-title'));
+    });
+  });
+
+
+  /* Payment Processing Loader */
+  /*$(document).ready(function() {
+    var spinner = $('#loader');
+    $(function() {
+      $('form').submit(function(e) {
+        e.preventDefault();
+        spinner.show();
+        $.ajax({
+          url: 't2228.php',
+          data: $(this).serialize(),
+          method: 'post',
+          dataType: 'JSON'
+        }).done(function(resp) {
+          spinner.hide();
+          alert(resp.status);
+        });
+      });
+    });
+});*/
+
+$(document).ready(function() {
+	$('#edit-actions-next').click(function(){
+		$('#overlay').fadeIn().delay(2000).fadeOut();
+	});
+});
+

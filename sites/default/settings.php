@@ -756,7 +756,7 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'km2021_test_db',
+  'database' => 'git_karessme_db',
   'username' => 'root',
   'password' => 'admin!$',
   'prefix' => '',

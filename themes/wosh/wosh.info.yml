@@ -27,6 +27,9 @@ stylesheets-remove:
 
 #Regions
 regions:
+  social_banner:  'Social Banner'
+  shipping_banner:  'Shipping Banner'
+  user_banner:  'User Banner'
   branding: 'Branding'
   primary_menu: 'Primary Menu'
   user_account: 'User Account'
