@@ -67,6 +67,7 @@
         "drupal/module_filter": "^3.2",
         "drupal/physical": "^1.1",
         "drupal/responsive_background_image": "^1.0@alpha",
+        "drupal/rules": "3.x-dev@dev",
         "drupal/search_api": "^1.19",
         "drupal/simplenews": "^2.0@beta",
         "drupal/slick": "^2.3",
