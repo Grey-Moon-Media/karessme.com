@@ -117,34 +117,35 @@ class AfterCheckout implements EventSubscriberInterface
           $cofutnquery->fields('cofutn', ['entity_id']);
           $cofutnquery->condition('cofutn.entity_id', $order_id);
           $hastrackingno = $cofutnquery->execute()->fetchAssoc();
-
-          if($hastrackingno){
-            \Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $rackingnumber1))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
-          }else{
-            $cofutnresult = $connection->insert('commerce_order__field_usps_tracking_number')->fields(['bundle' => 'default','deleted' => 0,'entity_id' => $order_id,'revision_id' => $order_id,'langcode' => 'und','delta' => 0,'field_usps_tracking_number_value' => $trackingnumber1])->execute();
-
-            if($order_query){
-              $cust_email = $order_query['mail'];
+          if($trackingnumber1){
+            if($hastrackingno){
+              \Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $trackingnumber1))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
             }else{
-              $cust_email = "";
-            }
+              $cofutnresult = $connection->insert('commerce_order__field_usps_tracking_number')->fields(['bundle' => 'default','deleted' => 0,'entity_id' => $order_id,'revision_id' => $order_id,'langcode' => 'und','delta' => 0,'field_usps_tracking_number_value' => $trackingnumber1])->execute();
 
-            if($cust_email){
-              $mailManager = \Drupal::service('plugin.manager.mail');
-              $module = 'honeys_place';
-              $key = 'OrderTrackNumber';
-              $to = $cust_email;
-              $params['message'] = "<p>Your Order with #".$order_id." has been shipped through USGS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
-              $params['subject'] = "Your Order #".$order_id." is shipped";
-              $langcode = \Drupal::currentUser()->getPreferredLangcode();
-              $send = true;
-
-              $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-              if ($result['result'] !== true) {
-                drupal_set_message(t('There was a problem sending tracking number, mail not sent.'), 'error');
+              if($order_query){
+                $cust_email = $order_query['mail'];
+              }else{
+                $cust_email = "";
               }
-              else {
-                drupal_set_message(t('Tracking Number has been sent.'));
+
+              if($cust_email){
+                $mailManager = \Drupal::service('plugin.manager.mail');
+                $module = 'honeys_place';
+                $key = 'OrderTrackNumber';
+                $to = $cust_email;
+                $params['message'] = "<p>Your Order with #".$order_id." has been shipped through USGS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
+                $params['subject'] = "Your Order #".$order_id." is shipped";
+                $langcode = \Drupal::currentUser()->getPreferredLangcode();
+                $send = true;
+
+                $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+                if ($result['result'] !== true) {
+                  drupal_set_message(t('There was a problem sending tracking number, mail not sent.'), 'error');
+                }
+                else {
+                  drupal_set_message(t('Tracking Number has been sent.'));
+                }
               }
             }
           }
