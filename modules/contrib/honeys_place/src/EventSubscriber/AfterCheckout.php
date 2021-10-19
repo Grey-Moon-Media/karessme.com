@@ -140,12 +140,12 @@ class AfterCheckout implements EventSubscriberInterface
                 $send = true;
 
                 $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-                if ($result['result'] !== true) {
+                /*if ($result['result'] !== true) {
                   drupal_set_message(t('There was a problem sending tracking number, mail not sent.'), 'error');
                 }
                 else {
                   drupal_set_message(t('Tracking Number has been sent.'));
-                }
+                }*/
               }
             }
           }
