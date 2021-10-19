@@ -94,8 +94,8 @@ class AfterCheckout implements EventSubscriberInterface
   public function respondToOdrderStatusChange(OrderEvent $event)
   {
     try {
-      $honeyOrder = $this->honeyOrderManagementService->createOrderInHoneysPlace($event->getOrder());
-      if ($honeyOrder) {
+      //$honeyOrder = $this->honeyOrderManagementService->createOrderInHoneysPlace($event->getOrder());
+      //if ($honeyOrder) {
         $order_id = $event->getOrder()->id();
 
         $response = $this->honeyOrderManagementService->getHoneyOrderStatus($order_id);
@@ -150,7 +150,7 @@ class AfterCheckout implements EventSubscriberInterface
             }
           }
         }
-      }
+      //}
     } catch (Exception $e) {
       watchdog_exception('honeys_place', $e);
     } catch (Throwable $t) {
