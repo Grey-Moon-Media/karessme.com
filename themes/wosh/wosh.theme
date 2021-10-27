@@ -126,6 +126,7 @@ function wosh_preprocess_html(&$variables) {
  */
 function wosh_preprocess_commerce_product(&$variables) {
   $variables['product_layout'] = theme_get_setting('product_layout');
+  $variables['stock'] = views_embed_view('add_to_cart_form_according_to_stock', 'block_1');
 }
 
 /**
