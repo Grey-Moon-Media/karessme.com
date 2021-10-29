@@ -68,7 +68,6 @@ class AfterCheckout implements EventSubscriberInterface
   {
     $events[CheckoutEvents::COMPLETION] = ['respondToCheckoutComplete', 0];
 //    $events[OrderEvents::ORDER_LOAD] = ['respondToCheckoutComplete', 0]; //get status
-    $events[OrderEvents::ORDER_UPDATE] = ['respondToOdrderStatusChange', 0];
     return $events;
   }
 
@@ -84,73 +83,6 @@ class AfterCheckout implements EventSubscriberInterface
         $order->set('field_honey_order_created', 1);
         $order->save();
       }
-    } catch (Exception $e) {
-      watchdog_exception('honeys_place', $e);
-    } catch (Throwable $t) {
-      $this->loggerChannelFactory->get('honeys_place')->error($t->getMessage());
-    }
-  }
-  
-  public function respondToOdrderStatusChange(OrderEvent $event)
-  {
-    try {
-      //$honeyOrder = $this->honeyOrderManagementService->createOrderInHoneysPlace($event->getOrder());
-      //if ($honeyOrder) {
-        $order_id = $event->getOrder()->id();
-
-        $response = $this->honeyOrderManagementService->getHoneyOrderStatus($order_id);
-        $order_data_response = $response->getData();
-        
-        if($response->getStatus() == "Shipped" && $order_data_response['shipagent'] == "USPS"){
-          $trackingnumber1 = $order_data_response['trackingnumber1'];
-          //$order = Order::load($order_id);
-          //$order->set('field_usps_tracking_number', $trackingnumber1);
-          //$order->save();
-          $connection = \Drupal::service('database');
-
-          $coquery = \Drupal::database()->select('commerce_order', 'co');
-          $coquery->fields('co', ['mail']);
-          $coquery->condition('co.order_id', $order_id);
-          $order_query = $coquery->execute()->fetchAssoc();
-
-          $cofutnquery = \Drupal::database()->select('commerce_order__field_usps_tracking_number', 'cofutn');
-          $cofutnquery->fields('cofutn', ['entity_id']);
-          $cofutnquery->condition('cofutn.entity_id', $order_id);
-          $hastrackingno = $cofutnquery->execute()->fetchAssoc();
-          if($trackingnumber1){
-            if($hastrackingno){
-              \Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $trackingnumber1))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
-            }else{
-              $cofutnresult = $connection->insert('commerce_order__field_usps_tracking_number')->fields(['bundle' => 'default','deleted' => 0,'entity_id' => $order_id,'revision_id' => $order_id,'langcode' => 'und','delta' => 0,'field_usps_tracking_number_value' => $trackingnumber1])->execute();
-
-              if($order_query){
-                $cust_email = $order_query['mail'];
-              }else{
-                $cust_email = "";
-              }
-
-              if($cust_email){
-                $mailManager = \Drupal::service('plugin.manager.mail');
-                $module = 'honeys_place';
-                $key = 'OrderTrackNumber';
-                $to = $cust_email;
-                $params['message'] = "<p>Your Order with #".$order_id." has been shipped through USGS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
-                $params['subject'] = "Your Order #".$order_id." is shipped";
-                $langcode = \Drupal::currentUser()->getPreferredLangcode();
-                $send = true;
-
-                $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-                /*if ($result['result'] !== true) {
-                  drupal_set_message(t('There was a problem sending tracking number, mail not sent.'), 'error');
-                }
-                else {
-                  drupal_set_message(t('Tracking Number has been sent.'));
-                }*/
-              }
-            }
-          }
-        }
-      //}
     } catch (Exception $e) {
       watchdog_exception('honeys_place', $e);
     } catch (Throwable $t) {

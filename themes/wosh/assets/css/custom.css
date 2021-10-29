@@ -157,7 +157,8 @@ article h2 {
 .product-attributes .field-item {
     display: inline;
 }
-.product-teaser-wrap .field-field-q,
+/*.product-teaser-wrap .field-field-q,*/
+.product-teaser-wrap .field-field-product-title,
 .product-teaser-wrap .field-field-gross-weight,
 .product-teaser-wrap .field-field-size-len,
 .product-teaser-wrap .field-field-size-ci,
@@ -199,8 +200,12 @@ article h2 {
     padding: 5px;
     margin-bottom: 5px;
 }
-.product-teaser-wrap .product-flag-icon i, .product-flag-icon a {
+.product-teaser-wrap .product-flag-icon i, .product-flag-icon a, .field-field-q .field-item {
     color: #e42555;
+}
+.product-teaser-wrap .field-field-q,
+.product-teaser-wrap .field-field-category {
+    margin: 20px 0px;
 }
 .product-attributes-heading h2 {
     font-size: 20px;

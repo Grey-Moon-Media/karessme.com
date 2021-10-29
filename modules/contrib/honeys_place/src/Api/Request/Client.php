@@ -8,7 +8,6 @@ use Drupal\honeys_place\Api\Response\Model\CreateOrderResponse;
 use Drupal\honeys_place\Api\Response\Model\OrderStatusResponse;
 use Drupal\honeys_place\Api\Response\Model\ResponseInterface;
 use Drupal\honeys_place\Api\Response\Model\StockStatusResponse;
-use Drupal\honeys_place\Api\Response\Model\TrackingNumberResponse;
 use Drupal\honeys_place\Exception\ApiConnectionException;
 use Drupal\honeys_place\Exception\MissingConfigurationException;
 use GuzzleHttp\Client as GuzzleClient;
@@ -165,30 +164,5 @@ class Client
     {
       throw new MissingConfigurationException('Missing configuration. Cannot connect to Honeys Place.');
     }
-  }
-
-  /**
-   * @param string $trackingnumber1
-   * @return StockStatusResponse|ResponseInterface
-   * @throws ApiConnectionException
-   * @throws GuzzleException
-   * @throws MissingConfigurationException
-   */
-  public function getTrackingNumber(string $trackingnumber1)
-  {
-
-    $this->validateConfig();
-
-      $xml = '<?xml version="1.0" encoding="UTF-8"?>
-          <HPEnvelope>
-          <account>'.$this->config->get('honeys_place_api_username').'</account>
-          <password>'.$this->config->get('honeys_place_api_password').'</password>
-          <stockcheck>
-           <sku>'.$sku.'</sku>
-           </stockcheck>
-        </HPEnvelope>';
-
-      return $this->request($xml, StockStatusResponse::class);
-
   }
 }

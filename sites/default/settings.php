@@ -759,8 +759,8 @@ $settings['entity_update_backup'] = TRUE;
 # }
 $databases['default']['default'] = array (
   'database' => 'git_karessme_db',
-  'username' => 'root',
-  'password' => 'admin!$',
+  'username' => 'dbmaster',
+  'password' => 'admin$$$$',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '',

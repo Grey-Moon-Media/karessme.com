@@ -32,6 +32,7 @@
         "drupal/colorapi": "^1.1",
         "drupal/colorbox": "^1.7",
         "drupal/commerce": "^2.27",
+        "drupal/commerce_email": "1.x-dev@dev",
         "drupal/commerce_feeds": "^1.0@alpha",
         "drupal/commerce_google_tag_manager": "^2.0@beta",
         "drupal/commerce_paypal": "^1.0@RC",
