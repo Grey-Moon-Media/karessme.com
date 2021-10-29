@@ -1,0 +1,19 @@
+uuid: 694c1f17-5e2a-469c-9659-c014e29786ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_upc
+id: commerce_product.hp_novelty.field_upc
+field_name: field_upc
+entity_type: commerce_product
+bundle: hp_novelty
+label: UPC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

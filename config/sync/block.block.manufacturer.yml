@@ -1,0 +1,53 @@
+uuid: 16b96569-e329-44f1-9de7-ff9779295b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.shop_sidebar
+    - facets.facet.product_manufacturer
+  module:
+    - block_visibility_groups
+    - facets
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_facet_block_title
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: manufacturer
+theme: wosh
+region: sidebar_first
+weight: -43
+provider: null
+plugin: 'facet_block:product_manufacturer'
+settings:
+  id: 'facet_block:product_manufacturer'
+  label: Manufacturer
+  provider: facets
+  label_display: visible
+  block_id: manufacturer
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: shop_sidebar
+  request_path:
+    id: request_path
+    pages: "/products\r\n/products/*"
+    negate: false

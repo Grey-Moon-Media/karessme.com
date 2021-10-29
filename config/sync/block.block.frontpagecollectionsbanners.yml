@@ -1,0 +1,51 @@
+uuid: 5080bfe1-e2dc-4f69-ac47-8f5dc98cf249
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_frontpage_collections
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: frontpagecollectionsbanners
+theme: wosh
+region: slider
+weight: -38
+provider: null
+plugin: 'block_content:b5cebb9b-f261-4bd8-a5fc-5519a6b8f9eb'
+settings:
+  id: 'block_content:b5cebb9b-f261-4bd8-a5fc-5519a6b8f9eb'
+  label: Collections
+  provider: core
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

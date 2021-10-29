@@ -1,0 +1,29 @@
+uuid: fff2a0f9-5298-49a4-a595-ad14b3aae60f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_coun
+    - taxonomy.vocabulary.country_of_origin
+id: commerce_product.hp_novelty.field_coun
+field_name: field_coun
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Country of Origin'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country_of_origin: country_of_origin
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

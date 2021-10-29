@@ -1,0 +1,8 @@
+uuid: 59ee1cc5-581e-4c1e-9567-c19cb2106c70
+langcode: en
+status: true
+dependencies: {  }
+name: Power
+vid: power
+description: ''
+weight: 0

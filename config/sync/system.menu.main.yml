@@ -1,0 +1,14 @@
+uuid: eca9de95-fd57-492b-b000-acec9697ea06
+langcode: en
+status: true
+dependencies:
+  module:
+    - workbench_menu_access
+third_party_settings:
+  workbench_menu_access:
+    access_scheme:
+      main: main
+id: main
+label: 'Main navigation'
+description: 'Site section links'
+locked: true

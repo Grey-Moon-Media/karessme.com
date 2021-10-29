@@ -1,0 +1,52 @@
+uuid: 7f631268-b58c-4f5f-b97f-c75c5d5de736
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+  content:
+    - 'block_content:pricing_table_display:b735a851-fe00-49e1-9392-df73cd504b16'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: 'Start your business'
+    block_title_style: block-title-2
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: title-light
+    block_bg_color: 2e282e
+    block_bg_image_path: themes/wosh/assets/images/bg/bg3.jpg
+    block_bg_repeat: no-repeat
+    block_bg_position: 'center top'
+    block_parallax_bg: parallax-bg
+id: pricing_table
+theme: wosh
+region: content_wide
+weight: -44
+provider: null
+plugin: 'block_content:b735a851-fe00-49e1-9392-df73cd504b16'
+settings:
+  id: 'block_content:b735a851-fe00-49e1-9392-df73cd504b16'
+  label: 'Pricing Plan'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

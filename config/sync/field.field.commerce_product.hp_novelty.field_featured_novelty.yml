@@ -1,0 +1,21 @@
+uuid: 9caed6d0-2df9-4942-9ca6-972b8163c859
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_featured_novelty
+id: commerce_product.hp_novelty.field_featured_novelty
+field_name: field_featured_novelty
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Featured Novelty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

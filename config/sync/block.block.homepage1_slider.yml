@@ -1,0 +1,52 @@
+uuid: 36fa8c01-cb6c-4588-888d-e3b00fec0133
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+  content:
+    - 'block_content:slider:60685f58-c8ed-4ffe-9635-64e9038b7858'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: fullwidth
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: 40px
+    block_padding_bottom: ''
+    block_padding_left: 40px
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: homepage1_slider
+theme: wosh
+region: slider
+weight: -44
+provider: null
+plugin: 'block_content:60685f58-c8ed-4ffe-9635-64e9038b7858'
+settings:
+  id: 'block_content:60685f58-c8ed-4ffe-9635-64e9038b7858'
+  label: 'Home Page Slider 01'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

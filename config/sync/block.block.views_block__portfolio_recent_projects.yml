@@ -1,0 +1,50 @@
+uuid: 1319a46f-9cc8-411e-b265-e5d89430ae1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+    - views.view.portfolio
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: 'An array of creative projects for your viewing pleasure'
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__portfolio_recent_projects
+theme: wosh
+region: content_wide
+weight: -45
+provider: null
+plugin: 'views_block:portfolio-recent_projects'
+settings:
+  id: 'views_block:portfolio-recent_projects'
+  label: 'Projects Showcase'
+  provider: views
+  label_display: visible
+  views_label: 'Projects Showcase'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

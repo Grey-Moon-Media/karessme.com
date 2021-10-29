@@ -1,0 +1,21 @@
+uuid: b217891d-d9f1-49bf-919a-cb9340c572e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_preffered_asin
+field_name: field_preffered_asin
+entity_type: commerce_product
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

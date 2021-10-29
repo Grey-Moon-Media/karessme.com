@@ -1,0 +1,52 @@
+uuid: 396ba419-3a2b-483d-ad98-4737600a2c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_06
+  content:
+    - 'block_content:basic:62e7d8f1-56d1-4fe0-a1f6-5e1c01c66a64'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: footer_about2
+theme: wosh
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:62e7d8f1-56d1-4fe0-a1f6-5e1c01c66a64'
+settings:
+  id: 'block_content:62e7d8f1-56d1-4fe0-a1f6-5e1c01c66a64'
+  label: 'About Us 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_06
+    context_mapping: {  }

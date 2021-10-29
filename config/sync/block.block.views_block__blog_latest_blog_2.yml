@@ -1,0 +1,50 @@
+uuid: 08cf7c6d-6588-4c66-bf6b-3f517e45a79e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_04
+    - views.view.blog
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'As insipidity so unsatiable increasing attachment motionless.'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__blog_latest_blog_2
+theme: wosh
+region: content_wide
+weight: -39
+provider: null
+plugin: 'views_block:blog-latest_blog'
+settings:
+  id: 'views_block:blog-latest_blog'
+  label: 'Fashion Blog'
+  provider: views
+  label_display: visible
+  views_label: 'Fashion Blog'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_04
+    context_mapping: {  }

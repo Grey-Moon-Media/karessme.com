@@ -1,0 +1,615 @@
+uuid: 06f2229f-bca9-4e62-a0ed-46f111094b8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.field.commerce_product.hp_novelty.field_bulk
+    - field.field.commerce_product.hp_novelty.field_category
+    - field.field.commerce_product.hp_novelty.field_coun
+    - field.field.commerce_product.hp_novelty.field_date_released
+    - field.field.commerce_product.hp_novelty.field_display
+    - field.field.commerce_product.hp_novelty.field_features
+    - field.field.commerce_product.hp_novelty.field_flavor
+    - field.field.commerce_product.hp_novelty.field_gross_weight
+    - field.field.commerce_product.hp_novelty.field_how_to_clean
+    - field.field.commerce_product.hp_novelty.field_how_to_use
+    - field.field.commerce_product.hp_novelty.field_included
+    - field.field.commerce_product.hp_novelty.field_itemlanguage
+    - field.field.commerce_product.hp_novelty.field_manufacturer
+    - field.field.commerce_product.hp_novelty.field_map
+    - field.field.commerce_product.hp_novelty.field_material
+    - field.field.commerce_product.hp_novelty.field_msrp
+    - field.field.commerce_product.hp_novelty.field_packaging
+    - field.field.commerce_product.hp_novelty.field_power
+    - field.field.commerce_product.hp_novelty.field_preffered_asin
+    - field.field.commerce_product.hp_novelty.field_price
+    - field.field.commerce_product.hp_novelty.field_product_category
+    - field.field.commerce_product.hp_novelty.field_product_title
+    - field.field.commerce_product.hp_novelty.field_prop_65
+    - field.field.commerce_product.hp_novelty.field_purpose
+    - field.field.commerce_product.hp_novelty.field_q
+    - field.field.commerce_product.hp_novelty.field_short_description
+    - field.field.commerce_product.hp_novelty.field_size
+    - field.field.commerce_product.hp_novelty.field_size_ci
+    - field.field.commerce_product.hp_novelty.field_size_len
+    - field.field.commerce_product.hp_novelty.field_special_features
+    - field.field.commerce_product.hp_novelty.field_upc
+    - field.field.commerce_product.hp_novelty.field_updated_at
+    - field.field.commerce_product.hp_novelty.field_video
+    - field.field.commerce_product.hp_novelty.field_who
+  module:
+    - commerce_feeds
+    - commerce_product
+    - feeds_ex
+    - feeds_tamper
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      bdfadb12-e4a7-4890-837c-6e0363cfb003:
+        plugin: html_entity_decode
+        source: description
+        weight: 0
+        label: 'HTML entity decode'
+        uuid: bdfadb12-e4a7-4890-837c-6e0363cfb003
+id: hp_products
+label: 'HP Products'
+description: ''
+help: ''
+import_period: 86400
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: xml
+parser_configuration:
+  context:
+    value: //Items//Item
+  sources:
+    name:
+      label: name
+      value: name
+    description:
+      label: description
+      value: description
+    updated_at:
+      label: updated_at
+      value: updated_at
+    upc:
+      label: upc
+      value: upc
+    msrp:
+      label: msrp
+      value: msrp
+    date_released:
+      label: date_released
+      value: date_released
+    qty_avail:
+      label: qty_avail
+      value: qty_avail
+    size_length:
+      label: size_length
+      value: size_length
+    gross_weight:
+      label: gross_weight
+      value: gross_weight
+    size_width:
+      label: size_width
+      value: size_width
+    size_circumference:
+      label: size_circumference
+      value: size_circumference
+    wholesale_price:
+      label: wholesale_price
+      value: wholesale_price
+    map:
+      label: MAP
+      value: MAP
+    special_features:
+      label: special_features
+      value: special_features
+    how_to_use:
+      label: how_to_use
+      value: how_to_use
+    how_to_clean:
+      label: how_to_clean
+      value: how_to_clean
+    purpose:
+      label: purpose
+      value: purpose
+    preferred_asin:
+      label: preferred_asin
+      value: preferred_asin
+    video:
+      label: video
+      value: video
+    price:
+      label: price
+      value: price
+    manufacturer:
+      label: manufacturer
+      value: manufacturer
+    categories_category_name:
+      label: Categories//Category//name
+      value: Categories//Category//name
+    attributes_attribute_power:
+      label: Attributes//Attribute//Power
+      value: Attributes//Attribute//Power
+    attributes_attribute_included:
+      label: Attributes//Attribute//Included
+      value: Attributes//Attribute//Included
+    attributes_attribute_flavor:
+      label: Attributes//Attribute//Flavor
+      value: Attributes//Attribute//Flavor
+    attributes_attribute_display:
+      label: Attributes//Attribute//Display
+      value: Attributes//Attribute//Display
+    attributes_attribute_material:
+      label: Attributes//Attribute//Material
+      value: Attributes//Attribute//Material
+    attributes_attribute_packaging:
+      label: Attributes//Attribute//Packaging
+      value: Attributes//Attribute//Packaging
+    attributes_attribute_itemlanguage:
+      label: Attributes//Attribute//ItemLanguage
+      value: Attributes//Attribute//ItemLanguage
+    attributes_attribute_countryoforigin:
+      label: Attributes//Attribute//CountryofOrigin
+      value: Attributes//Attribute//CountryofOrigin
+    attributes_attribute_prop65:
+      label: Attributes//Attribute//Prop65
+      value: Attributes//Attribute//Prop65
+    attributes_attribute_bulk:
+      label: Attributes//Attribute//Bulk
+      value: Attributes//Attribute//Bulk
+    karess_me:
+      label: '1'
+      value: '1'
+    259:
+      label: '259'
+      value: '259'
+    sku:
+      label: sku
+      value: sku
+    attributes_attribute_feature:
+      label: Attributes/Attribute/Feature
+      value: Attributes/Attribute/Feature
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:commerce_product'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _delete
+  expire: -1
+  owner_feed_author: false
+  owner_id: 259
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: hp_novelty
+custom_sources:
+  name:
+    label: name
+    value: name
+    machine_name: name
+  description:
+    label: description
+    value: description
+    machine_name: description
+  updated_at:
+    label: updated_at
+    value: updated_at
+    machine_name: updated_at
+  upc:
+    label: upc
+    value: upc
+    machine_name: upc
+  msrp:
+    label: msrp
+    value: msrp
+    machine_name: msrp
+  date_released:
+    label: date_released
+    value: date_released
+    machine_name: date_released
+  qty_avail:
+    label: qty_avail
+    value: qty_avail
+    machine_name: qty_avail
+  size_length:
+    label: size_length
+    value: size_length
+    machine_name: size_length
+  gross_weight:
+    label: gross_weight
+    value: gross_weight
+    machine_name: gross_weight
+  size_width:
+    label: size_width
+    value: size_width
+    machine_name: size_width
+  size_circumference:
+    label: size_circumference
+    value: size_circumference
+    machine_name: size_circumference
+  wholesale_price:
+    label: wholesale_price
+    value: wholesale_price
+    machine_name: wholesale_price
+  map:
+    label: MAP
+    value: MAP
+    machine_name: map
+  special_features:
+    label: special_features
+    value: special_features
+    machine_name: special_features
+  how_to_use:
+    label: how_to_use
+    value: how_to_use
+    machine_name: how_to_use
+  how_to_clean:
+    label: how_to_clean
+    value: how_to_clean
+    machine_name: how_to_clean
+  purpose:
+    label: purpose
+    value: purpose
+    machine_name: purpose
+  preferred_asin:
+    label: preferred_asin
+    value: preferred_asin
+    machine_name: preferred_asin
+  video:
+    label: video
+    value: video
+    machine_name: video
+  price:
+    label: price
+    value: price
+    machine_name: price
+  manufacturer:
+    label: manufacturer
+    value: manufacturer
+    machine_name: manufacturer
+  categories_category_name:
+    label: Categories//Category//name
+    value: Categories//Category//name
+    machine_name: categories_category_name
+  attributes_attribute_power:
+    label: Attributes//Attribute//Power
+    value: Attributes//Attribute//Power
+    machine_name: attributes_attribute_power
+  attributes_attribute_included:
+    label: Attributes//Attribute//Included
+    value: Attributes//Attribute//Included
+    machine_name: attributes_attribute_included
+  attributes_attribute_feature:
+    label: Attributes/Attribute/Feature
+    value: Attributes/Attribute/Feature
+    machine_name: attributes_attribute_feature
+  attributes_attribute_flavor:
+    label: Attributes//Attribute//Flavor
+    value: Attributes//Attribute//Flavor
+    machine_name: attributes_attribute_flavor
+  attributes_attribute_display:
+    label: Attributes//Attribute//Display
+    value: Attributes//Attribute//Display
+    machine_name: attributes_attribute_display
+  attributes_attribute_material:
+    label: Attributes//Attribute//Material
+    value: Attributes//Attribute//Material
+    machine_name: attributes_attribute_material
+  attributes_attribute_packaging:
+    label: Attributes//Attribute//Packaging
+    value: Attributes//Attribute//Packaging
+    machine_name: attributes_attribute_packaging
+  attributes_attribute_itemlanguage:
+    label: Attributes//Attribute//ItemLanguage
+    value: Attributes//Attribute//ItemLanguage
+    machine_name: attributes_attribute_itemlanguage
+  attributes_attribute_countryoforigin:
+    label: Attributes//Attribute//CountryofOrigin
+    value: Attributes//Attribute//CountryofOrigin
+    machine_name: attributes_attribute_countryoforigin
+  attributes_attribute_prop65:
+    label: Attributes//Attribute//Prop65
+    value: Attributes//Attribute//Prop65
+    machine_name: attributes_attribute_prop65
+  attributes_attribute_bulk:
+    label: Attributes//Attribute//Bulk
+    value: Attributes//Attribute//Bulk
+    machine_name: attributes_attribute_bulk
+  '':
+    label: ''
+    value: ''
+    machine_name: ''
+  default:
+    label: default
+    value: default
+    machine_name: default
+  karess_me:
+    label: '1'
+    value: '1'
+    machine_name: karess_me
+  sku:
+    label: sku
+    value: sku
+    machine_name: sku
+  259:
+    label: '259'
+    value: '259'
+    machine_name: '259'
+mappings:
+  -
+    target: title
+    map:
+      value: name
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_short_description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_updated_at
+    map:
+      value: updated_at
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_upc
+    map:
+      value: upc
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_msrp
+    map:
+      number: msrp
+    settings:
+      currency_code: USD
+  -
+    target: field_date_released
+    map:
+      value: date_released
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_q
+    map:
+      value: qty_avail
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_size_len
+    map:
+      number: size_length
+    settings:
+      unit: in
+  -
+    target: field_gross_weight
+    map:
+      number: gross_weight
+    settings:
+      unit: oz
+  -
+    target: field_size
+    map:
+      value: size_width
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_size_ci
+    map:
+      value: size_circumference
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_who
+    map:
+      number: wholesale_price
+    settings:
+      currency_code: USD
+  -
+    target: field_map
+    map:
+      value: map
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_special_features
+    map:
+      value: special_features
+    settings:
+      language: null
+  -
+    target: field_how_to_use
+    map:
+      value: how_to_use
+    settings:
+      language: null
+  -
+    target: field_how_to_clean
+    map:
+      value: how_to_clean
+    settings:
+      language: null
+  -
+    target: field_purpose
+    map:
+      value: purpose
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_preffered_asin
+    map:
+      value: preferred_asin
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_video
+    map:
+      value: video
+    settings:
+      language: ''
+      format: restricted_html
+  -
+    target: field_price
+    map:
+      number: price
+    settings:
+      currency_code: USD
+  -
+    target: field_manufacturer
+    map:
+      target_id: manufacturer
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_category
+    map:
+      target_id: categories_category_name
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_power
+    map:
+      target_id: attributes_attribute_power
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_included
+    map:
+      value: attributes_attribute_included
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_flavor
+    map:
+      value: attributes_attribute_flavor
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_display
+    map:
+      value: attributes_attribute_display
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_material
+    map:
+      value: attributes_attribute_material
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_packaging
+    map:
+      value: attributes_attribute_packaging
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_itemlanguage
+    map:
+      value: attributes_attribute_itemlanguage
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_coun
+    map:
+      target_id: attributes_attribute_countryoforigin
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_prop_65
+    map:
+      value: attributes_attribute_prop65
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_bulk
+    map:
+      value: attributes_attribute_bulk
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: stores
+    map:
+      target_id: karess_me
+    settings:
+      reference_by: store_id
+      autocreate: 0
+  -
+    target: field_product_category
+    map:
+      target_id: '259'
+    settings:
+      language: ''
+      reference_by: tid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: variations
+    map:
+      target_id: sku
+    settings:
+      reference_by: sku
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_features
+    map:
+      value: attributes_attribute_feature
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_product_title
+    map:
+      value: name
+    unique:
+      value: '1'
+    settings:
+      language: null

@@ -1,0 +1,23 @@
+uuid: 478004ba-402d-40e8-bd7d-af030690078b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_msrp
+  module:
+    - commerce_price
+id: commerce_product.hp_novelty.field_msrp
+field_name: field_msrp
+entity_type: commerce_product
+bundle: hp_novelty
+label: MSRP
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - USD
+field_type: commerce_price

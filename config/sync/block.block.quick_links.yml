@@ -1,0 +1,50 @@
+uuid: d6f77355-d0a0-4d07-96ff-98aeca9a63ac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a43b38b3-91e8-44f4-a2a2-7ad381baad91'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_footer
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: quick_links
+theme: wosh
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:a43b38b3-91e8-44f4-a2a2-7ad381baad91'
+settings:
+  id: 'block_content:a43b38b3-91e8-44f4-a2a2-7ad381baad91'
+  label: 'Customer Service'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

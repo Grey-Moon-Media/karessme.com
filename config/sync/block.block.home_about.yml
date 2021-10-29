@@ -1,0 +1,56 @@
+uuid: 951e4c88-ef77-48b2-b3d2-e5382f1034c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+  content:
+    - 'block_content:feature_block:540de843-233b-4d75-b156-59da38fc12c1'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: 'creative agency with a difference'
+    block_title_style: block-title-2
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_animation: ''
+    block_animation_easing: ''
+    block_animation_anchor: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+    block_overlay: ''
+id: home_about
+theme: wosh
+region: content_wide
+weight: -47
+provider: null
+plugin: 'block_content:540de843-233b-4d75-b156-59da38fc12c1'
+settings:
+  id: 'block_content:540de843-233b-4d75-b156-59da38fc12c1'
+  label: 'Biggest online commerce development agency'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

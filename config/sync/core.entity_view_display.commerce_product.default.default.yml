@@ -1,0 +1,90 @@
+uuid: dc01e496-08e5-4377-8f76-c4d3fc940424
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - core.entity_view_display.comment.reviews.default
+    - facets.facet.product_brand
+    - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_featured_product
+    - field.field.commerce_product.default.field_product_brand
+    - field.field.commerce_product.default.field_product_category
+    - field.field.commerce_product.default.field_product_review
+    - field.field.commerce_product.default.field_short_description
+  module:
+    - comment
+    - commerce_product
+    - entity_reference_facet_link
+    - text
+_core:
+  default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
+id: commerce_product.default.default
+targetEntityType: commerce_product
+bundle: default
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_brand:
+    weight: 5
+    label: hidden
+    settings:
+      facet: product_brand
+    third_party_settings: {  }
+    type: entity_reference_facet_link
+    region: content
+  field_product_review:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_short_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  flag_compare:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_wishlist:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 3
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_featured_product: true
+  field_product_category: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

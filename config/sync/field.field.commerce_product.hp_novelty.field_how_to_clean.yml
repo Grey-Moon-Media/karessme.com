@@ -1,0 +1,19 @@
+uuid: afec3e8d-efee-49f1-b479-da943e2de931
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_how_to_clean
+id: commerce_product.hp_novelty.field_how_to_clean
+field_name: field_how_to_clean
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'How to Clean'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

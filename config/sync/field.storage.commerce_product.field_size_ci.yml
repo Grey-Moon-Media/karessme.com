@@ -1,0 +1,20 @@
+uuid: 725c31da-ef84-4a6d-a086-b59cf4b87d7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_size_ci
+field_name: field_size_ci
+entity_type: commerce_product
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

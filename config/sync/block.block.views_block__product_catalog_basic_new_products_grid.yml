@@ -1,0 +1,53 @@
+uuid: e68fb441-5cdf-43e6-a503-a3918e727a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_catalog_basic
+  module:
+    - block_visibility_groups
+    - hsblock
+    - system
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_block_title_hp
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__product_catalog_basic_new_products_grid
+theme: wosh
+region: content_wide
+weight: -27
+provider: null
+plugin: 'views_block:product_catalog_basic-new_products_grid'
+settings:
+  id: 'views_block:product_catalog_basic-new_products_grid'
+  label: 'New Products'
+  provider: views
+  label_display: visible
+  views_label: 'New Products'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

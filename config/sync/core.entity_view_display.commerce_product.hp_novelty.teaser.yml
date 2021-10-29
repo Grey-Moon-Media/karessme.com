@@ -1,0 +1,343 @@
+uuid: ed49e67a-e066-4ab7-8177-8ee2652bc1bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - core.entity_view_display.comment.reviews.default
+    - core.entity_view_mode.commerce_product.teaser
+    - facets.facet.product_brand
+    - field.field.commerce_product.hp_novelty.body
+    - field.field.commerce_product.hp_novelty.feeds_item
+    - field.field.commerce_product.hp_novelty.field_bulk
+    - field.field.commerce_product.hp_novelty.field_category
+    - field.field.commerce_product.hp_novelty.field_coun
+    - field.field.commerce_product.hp_novelty.field_date_released
+    - field.field.commerce_product.hp_novelty.field_display
+    - field.field.commerce_product.hp_novelty.field_featured_novelty
+    - field.field.commerce_product.hp_novelty.field_featured_product
+    - field.field.commerce_product.hp_novelty.field_features
+    - field.field.commerce_product.hp_novelty.field_flavor
+    - field.field.commerce_product.hp_novelty.field_gross_weight
+    - field.field.commerce_product.hp_novelty.field_how_to_clean
+    - field.field.commerce_product.hp_novelty.field_how_to_use
+    - field.field.commerce_product.hp_novelty.field_included
+    - field.field.commerce_product.hp_novelty.field_itemlanguage
+    - field.field.commerce_product.hp_novelty.field_manufacturer
+    - field.field.commerce_product.hp_novelty.field_map
+    - field.field.commerce_product.hp_novelty.field_material
+    - field.field.commerce_product.hp_novelty.field_msrp
+    - field.field.commerce_product.hp_novelty.field_packaging
+    - field.field.commerce_product.hp_novelty.field_power
+    - field.field.commerce_product.hp_novelty.field_preffered_asin
+    - field.field.commerce_product.hp_novelty.field_price
+    - field.field.commerce_product.hp_novelty.field_product_brand
+    - field.field.commerce_product.hp_novelty.field_product_category
+    - field.field.commerce_product.hp_novelty.field_product_review
+    - field.field.commerce_product.hp_novelty.field_product_title
+    - field.field.commerce_product.hp_novelty.field_prop_65
+    - field.field.commerce_product.hp_novelty.field_purpose
+    - field.field.commerce_product.hp_novelty.field_q
+    - field.field.commerce_product.hp_novelty.field_short_description
+    - field.field.commerce_product.hp_novelty.field_size
+    - field.field.commerce_product.hp_novelty.field_size_ci
+    - field.field.commerce_product.hp_novelty.field_size_len
+    - field.field.commerce_product.hp_novelty.field_special_features
+    - field.field.commerce_product.hp_novelty.field_upc
+    - field.field.commerce_product.hp_novelty.field_updated_at
+    - field.field.commerce_product.hp_novelty.field_video
+    - field.field.commerce_product.hp_novelty.field_who
+  module:
+    - comment
+    - commerce_product
+    - ds
+    - empty_fields
+    - entity_reference_facet_link
+    - layout_builder
+    - physical
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
+id: commerce_product.hp_novelty.teaser
+targetEntityType: commerce_product
+bundle: hp_novelty
+mode: teaser
+content:
+  body:
+    type: text_default
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_category:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_display:
+    type: string
+    weight: 25
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+      ds:
+        ds_limit: ''
+  field_featured_novelty:
+    weight: 27
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_flavor:
+    type: string
+    weight: 20
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  field_gross_weight:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: physical_measurement_default
+    region: content
+  field_how_to_clean:
+    type: basic_string
+    weight: 19
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  field_how_to_use:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: basic_string
+    region: content
+  field_included:
+    type: string
+    weight: 21
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+      ds:
+        ds_limit: ''
+  field_manufacturer:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: entity_reference_label
+    region: content
+  field_material:
+    type: string
+    weight: 22
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  field_packaging:
+    type: string
+    weight: 24
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  field_power:
+    weight: 13
+    label: inline
+    settings:
+      link: true
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+      ds:
+        ds_limit: ''
+    type: entity_reference_label
+    region: content
+  field_product_brand:
+    weight: 4
+    label: hidden
+    settings:
+      facet: product_brand
+    third_party_settings: {  }
+    type: entity_reference_facet_link
+    region: content
+  field_product_review:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_purpose:
+    type: string
+    weight: 26
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  field_q:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ','
+      prefix_suffix: true
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: number_integer
+    region: content
+  field_short_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_size:
+    type: number_decimal
+    weight: 18
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_size_ci:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: number_decimal
+    region: content
+  field_size_len:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+    type: physical_measurement_default
+    region: content
+  field_video:
+    type: text_default
+    weight: 23
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
+  flag_compare:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_recommended_products:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  flag_wishlist:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  stores:
+    type: entity_reference_entity_id
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: 17
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 16
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  field_bulk: true
+  field_coun: true
+  field_date_released: true
+  field_featured_product: true
+  field_features: true
+  field_itemlanguage: true
+  field_map: true
+  field_msrp: true
+  field_preffered_asin: true
+  field_price: true
+  field_product_category: true
+  field_product_title: true
+  field_prop_65: true
+  field_special_features: true
+  field_upc: true
+  field_updated_at: true
+  field_who: true
+  overall_rating: true
+  search_api_excerpt: true
+  uid: true

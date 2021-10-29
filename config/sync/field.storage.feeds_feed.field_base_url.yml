@@ -1,0 +1,21 @@
+uuid: 83b4804a-823e-44bd-bf4f-6b4a3ac5918f
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+id: feeds_feed.field_base_url
+field_name: field_base_url
+entity_type: feeds_feed
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

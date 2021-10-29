@@ -1,0 +1,23 @@
+uuid: 3d04bfa8-8ba0-48ca-b7c4-8e80e8ade4ec
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_paypal
+id: paypal_express
+label: 'PayPal Express'
+weight: -9
+plugin: paypal_express_checkout
+configuration:
+  api_username: kenyon.johnston_api1.gmoonmedia.com
+  api_password: UEUYBCXYKJW25J7G
+  shipping_prompt: shipping_skip
+  signature: ApmxFvT7jIahAT4FkW-Y5bXUqrB2A41t2U31bIJsS1cmHYaXRhbi71Hb
+  solution_type: SoleBilling
+  display_label: 'PayPal Express'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

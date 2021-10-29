@@ -1,0 +1,34 @@
+uuid: f234ce03-cb2f-436a-aaf9-04d59adbd897
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_paypal
+id: paypal_checkout
+label: 'PayPal Checkout'
+weight: -8
+plugin: paypal_checkout
+configuration:
+  payment_solution: smart_payment_buttons
+  client_id: ASTKWIbv77HYjZn8jX4F1d3L97eFliZ1tEbdZS1Bjt5JjinEbwHFzxqvlCND90vpxkeOepXZ61f4Uiez
+  secret: EK6iQoxT5Nnhj-YINFr-T_D2-y7F-TMMOjakvT52cNiiN5Shqb5QRuzNawT-p5FLS6jK37XRNlaSLy2M
+  intent: authorize
+  disable_funding: {  }
+  disable_card: {  }
+  shipping_preference: get_from_file
+  update_billing_profile: false
+  update_shipping_profile: true
+  style:
+    layout: vertical
+    color: blue
+    shape: pill
+    label: checkout
+    tagline: false
+  enable_on_cart: false
+  collect_billing_information: true
+  display_label: PayPal
+  mode: test
+  payment_method_types:
+    - paypal_checkout
+conditions: {  }
+conditionOperator: AND

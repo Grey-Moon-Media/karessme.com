@@ -1,0 +1,19 @@
+uuid: 3400a647-5e21-4194-a5a3-02298a7cf6c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_product_title
+id: commerce_product.hp_novelty.field_product_title
+field_name: field_product_title
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Product Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

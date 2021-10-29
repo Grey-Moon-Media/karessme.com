@@ -1,0 +1,56 @@
+uuid: 7aae7c32-14d9-4c68-b772-c0323362a920
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about
+  content:
+    - 'block_content:feature_block:451fca03-14ca-472a-9103-7b3dd2801510'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_animation: ''
+    block_animation_easing: ''
+    block_animation_anchor: ''
+    block_text_color: ''
+    block_bg_color: f8f8f8
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+    block_overlay: ''
+id: about_feature
+theme: wosh
+region: content_wide
+weight: -20
+provider: null
+plugin: 'block_content:451fca03-14ca-472a-9103-7b3dd2801510'
+settings:
+  id: 'block_content:451fca03-14ca-472a-9103-7b3dd2801510'
+  label: 'We go the extra mile to ensure we deliver on our promises'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about
+    context_mapping: {  }

@@ -1,0 +1,19 @@
+uuid: 9f4a8d22-8ce4-40de-a133-6438a5e4248d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_itemlanguage
+id: commerce_product.hp_novelty.field_itemlanguage
+field_name: field_itemlanguage
+entity_type: commerce_product
+bundle: hp_novelty
+label: 'Item Language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

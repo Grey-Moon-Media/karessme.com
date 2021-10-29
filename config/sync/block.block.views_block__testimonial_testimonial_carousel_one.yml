@@ -1,0 +1,50 @@
+uuid: 1ae17350-25b0-4158-97fd-10e158042810
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_05
+    - views.view.testimonial
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'Considered frequently entreaties knew four are rendered calm.'
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/bg2.jpg
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__testimonial_testimonial_carousel_one
+theme: wosh
+region: content_wide
+weight: -30
+provider: null
+plugin: 'views_block:testimonial-testimonial_carousel_one'
+settings:
+  id: 'views_block:testimonial-testimonial_carousel_one'
+  label: '1000+ Happy Clients'
+  provider: views
+  label_display: visible
+  views_label: '1000+ Happy Clients'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_05
+    context_mapping: {  }

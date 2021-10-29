@@ -1,0 +1,52 @@
+uuid: 393dac49-3ebd-4680-b9bb-fdded8807b16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+  content:
+    - 'block_content:feature_block:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: fullwidth
+    block_subtitle: 'Packed with unbeatable features for seamless development.'
+    block_title_style: block-title-2
+    block_title_align: ''
+    classes: nopadding
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/dotted-bg.png
+    block_bg_repeat: repeat
+    block_bg_position: 'center top'
+    block_parallax_bg: ''
+id: choose_us_features
+theme: wosh
+region: content_wide
+weight: -46
+provider: null
+plugin: 'block_content:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
+settings:
+  id: 'block_content:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
+  label: 'So many reasons to choose WOSH'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }
