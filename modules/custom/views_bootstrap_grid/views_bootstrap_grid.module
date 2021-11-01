@@ -60,7 +60,9 @@ function views_bootstrap_grid_build_classes($options) {
   return $css;
 }
 
-
+/**
+*Added code for in stock.
+*/
 function views_bootstrap_grid_views_pre_render(\Drupal\views\ViewExecutable $view) {
   if($view->id() == 'product_catalog'){
     foreach($view->result as $key => $value){
