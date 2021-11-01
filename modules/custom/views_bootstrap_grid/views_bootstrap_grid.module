@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
 
 /**
  * Implements hook_theme().
@@ -56,4 +58,17 @@ function views_bootstrap_grid_build_classes($options) {
     }
   }
   return $css;
+}
+
+
+function views_bootstrap_grid_views_pre_render(\Drupal\views\ViewExecutable $view) {
+  if($view->id() == 'product_catalog'){
+    foreach($view->result as $key => $value){
+      $stock =  $value->_entity;
+      $quan = $stock->get('field_q')->getValue()[0]['value'];
+      if($quan == 0 ){
+         unset($view->result[$key]);
+      }
+    }
+  }
 }
