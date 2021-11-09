@@ -5,8 +5,3 @@ package: Commerce (contrib)
 core_version_requirement: ^8.8 || ^9
 dependencies:
   - commerce:commerce_payment
-
-# Information added by Drupal.org packaging script on 2021-06-07
-version: '8.x-1.0-rc5'
-project: 'commerce_stripe'
-datestamp: 1623055951

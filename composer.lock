@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45ec1aa6fbc4f8eceda1ddfa816ef058",
+    "content-hash": "96eb46666685d1e808c46f0e9e645c6b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2448,6 +2448,77 @@
             }
         },
         {
+            "name": "drupal/commerce_avatax",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_avatax.git",
+                "reference": "910abc1b8d4acba2924fe60cd54d8f54cf97df12"
+            },
+            "require": {
+                "drupal/commerce": "^2.16 || ^3",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_store": "*",
+                "drupal/commerce_tax": "*",
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/commerce_shipping": "^2.0@rc"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc1+9-dev",
+                    "datestamp": "1635839067",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "steveoliver",
+                    "homepage": "https://www.drupal.org/user/42327"
+                }
+            ],
+            "description": "Provides integration between Drupal Commerce and Avalara AvaTax.",
+            "homepage": "https://www.drupal.org/project/commerce_avatax",
+            "keywords": [
+                "AvaTax",
+                "Avalara",
+                "Commerce",
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/commerce_avatax",
+                "issues": "http://drupal.org/project/issues/commerce_avatax"
+            }
+        },
+        {
             "name": "drupal/commerce_email",
             "version": "dev-1.x",
             "source": {
@@ -3289,6 +3360,58 @@
             "homepage": "http://drupal.org/project/commerce_stripe",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_stripe"
+            }
+        },
+        {
+            "name": "drupal/commerce_tax",
+            "version": "2.27.0",
+            "require": {
+                "drupal/commerce": "*",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.27",
+                    "datestamp": "1632333931",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides tax functionality.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
             }
         },
         {
@@ -12770,6 +12893,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/commerce_avatax": 20,
         "drupal/commerce_email": 20,
         "drupal/commerce_feeds": 15,
         "drupal/commerce_google_tag_manager": 10,
