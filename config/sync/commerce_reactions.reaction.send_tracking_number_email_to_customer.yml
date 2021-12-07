@@ -14,7 +14,7 @@ configuration:
   to_mail: '[commerce_order:mail]'
   cc_mail: ''
   bcc_mail: ''
-  from_mail: '[site:name] <[site:mail]>'
+  from_mail: '[site:name]'
   reply_mail: ''
   subject: 'A shipment from order [commerce_order:order_number] is on the way'
   body:

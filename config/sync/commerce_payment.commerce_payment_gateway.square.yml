@@ -1,6 +1,6 @@
 uuid: ba27af1f-629d-4fcd-bbbe-f0b0fb4473dc
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - commerce_square

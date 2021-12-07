@@ -62,8 +62,12 @@ content:
     weight: 11
     label: above
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
+      link_to_entity: true
+    third_party_settings:
+      empty_fields:
+        handler: text
+        settings:
+          empty_text: 'A tracking number will be issued once your order is prepared for transport.'
     type: string
     region: content
   ip_address:

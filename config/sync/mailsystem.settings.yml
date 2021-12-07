@@ -28,4 +28,4 @@ modules:
   commerce_reactions:
     none:
       formatter: mime_mail
-      sender: SMTPMailSystem
+      sender: mime_mail
