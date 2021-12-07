@@ -45,6 +45,8 @@
         "drupal/commerce_shipping": "^2.2",
         "drupal/commerce_square": "^1.4",
         "drupal/commerce_stripe": "^1.0@RC",
+        "drupal/config_ignore": "^3.0@beta",
+        "drupal/config_split": "^2.0@beta",
         "drupal/config_suite": "^2.0",
         "drupal/console": "~1.9",
         "drupal/core-composer-scaffold": "^9",
