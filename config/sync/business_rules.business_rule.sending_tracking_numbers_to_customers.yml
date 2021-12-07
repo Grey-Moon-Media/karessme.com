@@ -1,0 +1,29 @@
+uuid: af47e8ca-16d6-4f65-bdc2-ff84b5091a1a
+langcode: en
+status: false
+dependencies:
+  config:
+    - business_rules.action.sending_tracking_numbers_to_customers_2
+    - business_rules.condition.not_equal_to_default_tracking_number
+    - business_rules.condition.original_value_not_equal_to_current_value
+description: 'Send Email to Customer with Tracking Number'
+id: sending_tracking_numbers_to_customers
+label: 'Sending tracking numbers to Customers'
+enabled: null
+reacts_on: form_field_alter
+items:
+  original_value_not_equal_to_current_value:
+    id: original_value_not_equal_to_current_value
+    type: condition
+    weight: -100
+  not_equal_to_default_tracking_number:
+    id: not_equal_to_default_tracking_number
+    type: condition
+    weight: -99
+  sending_tracking_numbers_to_customers_2:
+    id: sending_tracking_numbers_to_customers_2
+    type: action
+    weight: -98
+tags: {  }
+target_bundle: default
+target_entity_type: commerce_order

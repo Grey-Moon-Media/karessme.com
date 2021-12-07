@@ -1,0 +1,58 @@
+uuid: 96f51cbb-43df-47c7-ac3d-5e6740afb7e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.power
+  module:
+    - feeds_ex
+    - taxonomy
+id: hp_attribute_power
+label: 'HP Attribute | Power'
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: //Items//Item//Attributes//Attribute
+  sources:
+    power:
+      label: Power
+      value: Power
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  values:
+    vid: power
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  power:
+    label: Power
+    value: Power
+    machine_name: power
+mappings:
+  -
+    target: name
+    map:
+      value: power
+    unique:
+      value: '1'
+    settings:
+      language: null

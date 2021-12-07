@@ -1,0 +1,691 @@
+/**
+    Google Fonts
+**/
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+/********************************
+    Custom Styles - Header
+*********************************/
+.header {
+    background-color: #FAFAFA!important;
+}
+
+.prom_shipping {
+    text-align: center;
+}
+.prom_social,
+.prom_shipping,
+.prom_user,
+.promotion_banner a {
+    display: inline-block;
+    color: #FFFFFF;
+    line-height:35px;
+    font-weight: 600
+}
+.promotion_banner {
+    background: #e42555;
+    padding: 0rem;
+    border: none;
+    color: #FFFFFF;
+    vertical-align: middle;
+    position: relative;
+    height: 35px;
+}
+.km_main-menu  li a,
+.km_main-menu a{
+    text-transform: uppercase;
+    font-size: 14px!important;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.km_page-title #page-title {
+    background: #1C2839!important;
+}
+.km_page-title h1 {
+    color: #e42555;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.km_frontpage_collections .block-title,
+.km_frontpage_collections h1{
+    margin: 0 auto;
+    line-height: 75px;
+    text-transform: uppercase;
+    font-size: 20px!important;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.block-title-2 .block-title,
+.km_frontpage_collections h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.km_frontpage_collections {
+    background: #f5f5f5;
+    padding: 3%;
+}
+.km_block_title_hp h2.block-title
+ {
+    text-align: right;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.km_block_title_hp h5.block-subtitle {
+    text-align: right;
+    font-weight: 600;
+}
+.km_block_title h2 {
+    font-size: 20px!important;
+}
+.km_facet_block_title h2 {
+    font-size: 15px!important;
+}
+.km_block_title h1,
+.km_block_title h2,
+.km_block_tile h3,
+.km_facet_block_title h2,
+.km_block_title_hp h2  {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.km_slider .heading-text .field-field-heading-text .heading-text-content {
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.toy_1 h1 a:hover,
+.toy_2 h1 a:hover,
+.toy_3 h1 a:hover {
+  color: #e42555
+}
+.toy_3 h1 a,
+.toy_3 h1{
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.toy_1 h1,
+.toy_1 h1 a,
+.toy_1 a,
+.toy_2 h1 a{
+    color: #FFFFFF;
+    position: absolute;
+    top: 2%;
+}
+.toy_2{
+    margin-bottom: 10px;
+}
+
+.toy_3{
+    padding: 42% 10%;
+}
+.toy_2{
+    padding: 37% 10%;
+}
+.toy_1{
+    padding: 81% 10%;
+}
+.toy_1,
+.toy_2,
+.toy_3 {
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 17 10%;
+    display: block;
+}
+#block-wosh-branding .brand.logo img{
+    max-width: 60%;
+}
+#block-wosh-branding .brand.logo{
+    max-width: 240px;
+    line-height: 96px;
+    position: relative;
+    z-index: 11;
+    left: 0px;
+    top: -2px;
+}
+div.list-style-content ul li,
+.list-style-content {
+    list-style-type: disc!important;
+    list-style: disc;
+}
+div.list-style-content ul {
+  list-style-position: outside;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+/********************************
+    Custom Styles - Fields
+*********************************/
+article h2 {
+    color: #e42555;
+}
+.product-info h2,
+span.fieldset-legend,
+article h2  {
+  font-weight: 600;
+}
+span.fieldset-legend,
+article h2 {
+  font-size: 1.3rem;
+}
+.faq-heading h4{
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.field--widget-commerce-product-variation-attributes span.fieldset-legend {
+    font-size: 0.79rem;
+}
+.product-attributes .field-label,
+.product-attributes .field-item {
+    display: inline;
+}
+.product-teaser-wrap .field-field-product-title,
+/*.product-teaser-wrap .field-field-q,*/
+.product-teaser-wrap .field-field-gross-weight,
+.product-teaser-wrap .field-field-size-len,
+.product-teaser-wrap .field-field-size-ci,
+.product-teaser-wrap .field-field-manufacturer,
+/*.product-teaser-wrap .field-field-category,*/
+.product-teaser-wrap .field-field-size,
+.product-teaser-wrap .field-field-material,
+.product-teaser-wrap .field-field-power,
+.product-teaser-wrap .field-field-packaging,
+.product-teaser-wrap .field-field-flavor,
+.product-teaser-wrap .field-field-purpose,
+.product-teaser-wrap .field-field-display,
+.product-teaser-wrap .field-field-included,
+.product-teaser-wrap .field-field-video,
+.product-teaser-wrap .field-field-feature,
+.product-teaser-wrap .field-field-how-to-use,
+.product-teaser-wrap .field-field-how-to-clean,
+.product-teaser-wrap .field-field-recommended,
+.product-teaser-wrap .field-overall-rating
+/*.product-teaser-wrap .field-overall-rating,
+.field-overall-rating a*/
+ {
+    display: none;
+}
+
+.product-teaser-wrap .product-manufacturer-main,
+.product-title-review-wrap div.product-rating_1
+{
+    display: block;
+}
+.product-title-review-wrap  .product-title {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.product-teaser-wrap .product-manufacturer .taxonomy-term.vocabulary-brand h2{
+    line-height: normal;
+    font-size: 22px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.product-teaser-wrap .product-flag-icon i, .product-flag-icon a {
+    color: #e42555;
+}
+.product-teaser-wrap .field-field-category,
+.product-teaser-wrap .field-field-features {
+    margin-top:20px;
+}
+.product-attributes-heading h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.product-post .product-price-wrap .product-price {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.post-image .bootstrap-basic-image-gallery .thumbnails .thumb img {
+    max-width: 40%;
+    height: auto;
+}
+div.block.block-layout-builder.block-field-blocknodepagebody {
+    padding:10%;
+}
+.km_block_title_hp .product-add-cart.product-add-cart .form-actions {
+    margin-top: 20px;
+}
+.km_product_crumbs ul li a{
+    font-size: .75rem!important;
+}
+.km_product_crumbs {
+    line-height: 50px;
+    /*text-align: right;
+    padding-right: 235px!important;*/
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+
+
+/*.front_page_collections .km_couples {
+
+}
+.front_page_collections .km_vibrators {
+
+}
+.front_page_collections .km_massagers {
+
+}*/
+.front_page_collections .km_massagers,
+.front_page_collections .km_stimlulators,
+.front_page_collections .km_vibrators,
+.front_page_collections .km_couples {
+    padding: 10% 2%;
+}
+.front_page_collections h1,
+.front_page_collections a {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.front_page_collections {
+    margin: 10px 0!important;
+    width: 100%;
+}
+.overall-rating a {
+    color: #e42555;
+}
+.overall-rating div,
+.overall-rating div a,
+.overall-rating a {
+    margin-right: 25px;
+}
+/********************************
+    Custom Styles - Footer
+*********************************/
+.km_footer .block-title {
+    text-transform: uppercase;
+    font-size: 13px!important;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: auto;
+    margin: 0 auto;
+    right: 0;
+    float: right;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 0;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    display: inline!important;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    /*background-color: #322f30;*/
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-instagram {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    /*background-color: #322f30;*/
+}
+.fa-instagram:hover {
+    background-color: #bc2a8d;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    /*background-color: #322f30;*/
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    /*background-color: #322f30;*/
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    /*background-color: #322f30;*/
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+   /*background-color: #322f30;*/
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+   /*background-color: #322f30;*/
+}
+.fa-github:hover {
+    background-color: #5a32a3;
+}
+
+/********************************
+    Custom Styles - Product Images
+*********************************/
+div.bootstrap-basic-image-gallery .thumbnails{
+  margin: 20px 0;
+}
+.product-post .post-image .image-carousel .bootstrap-basic-image-gallery .main-image img{
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .product-post .post-image .image-carousel .bootstrap-basic-image-gallery .main-image {
+    min-height: 300px;
+}
+.product-layout1 .product-teaser .product-image {
+    min-height: 250px;
+}
+.km-bg-img,
+div.field.field-field-responsive-background-imag.field-type-image.field-label-hidden.field-item img{
+    padding:0;
+}
+.km_bg_img_1557 {
+    padding: 75% 2%;
+}
+.color_field__swatch--circle {
+    border: 1px solid #B0B0B0;
+}
+
+/********************************
+    Custom Styles - Commerce Form
+*********************************/
+.checkout-pane iframe#square-card-number.sq-input,
+.checkout-pane iframe#square-expiration-date.sq-input,
+.checkout-pane iframe#square-cvv.sq-input{
+    height: 2.9em!important;
+    padding: 10px;
+}
+label[for=edit-payment-information-payment-method-8],
+label[for^=edit-payment-information-payment-method-8-],
+label[for=edit-payment-information-payment-method-new-paypal-checkout-paypal-checkout],
+label[for^=edit-payment-information-payment-method-new-paypal-checkout-paypal-checkout-]{
+    text-indent: -9999px;
+    background-image: url(../images/shop/paypay-logo-label.png);
+    height: 50px;
+    width: 80%;
+    background-position: 10% -20%;
+    background-repeat: no-repeat;
+}
+label[for=edit-payment-information-payment-method-new-credit-card-square],
+label[for^=edit-payment-information-payment-method-new-credit-card-square-],
+label[for=edit-payment-information-add-payment-method-payment-details-number],
+label[for=edit-payment-information-add-payment-method-payment-details-number-],
+label[for=edit-payment-information-add-payment-method-payment-details-number],
+#form-item-payment-information-add-payment-method-payment-details-number
+div#edit-payment-information-add-payment-method-payment-details-number{
+    background-image: url(../images/shop/all-ccs-30.png);
+    height: 50px;
+    width: 95%;
+    background-position: 200px -2px;
+    background-repeat: no-repeat;
+}
+/*div.js-form-item.form-item.js-form-type-radio.form-item-payment-information-payment-method.js-form-item-payment-information-payment-method
+{
+    border-bottom: 1px solid #999999;
+}*/
+#edit-payment-information-add-payment-method-billing-information p {
+    font-weight: 600;
+}
+.layout-region-checkout-secondary h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+.checkout-pane-payment-information legend:nth-child(1),
+.checkout-pane-contact-information legend {
+    font-weight: 600;
+    margin-top: 70px;
+    line-height: 3px;
+    display: contents;
+}
+.field--name-shipping-method .description {
+    font-size: 12px!important;
+    color: #444!important;
+
+}
+.checkout-pane-contact-information #edit-contact-information-email,
+.checkout-pane-contact-information #edit-contact-information-email-confirm,
+#edit-contact-information-email,
+#edit-contact-information-email-,
+.form-email {
+    background: #FFFFFF;
+    border: 1px solid #cecece;
+}
+.checkout-pane-payment-information,
+.field--name-shipping-method,
+.checkout-pane-contact-information {
+    background: #f6f6f6;
+    padding: 5% 3%;
+    border: 1px solid #cecece;
+    margin: 15px 0;
+    
+}
+
+/********************************
+    Custom Styles - Modals
+*********************************/
+.ui-widget.ui-widget-content {
+    top: 50px!important;
+    z-index: 1111111;
+}
+/*.ui-widget-overlay {
+    position: f;
+}*/
+
+/********************************
+    Custom Styles - Webforms
+*********************************/
+.webform-submission-form label {
+    font-weight: 600;
+}
+.webform-submission-form span.fieldset-legend {
+    font-size: 14px;
+}
+.webform-submission-form .form-text,
+.webform-submission-form .form-tel,
+.webform-submission-form .form-email,
+.webform-submission-form .form-number,
+.webform-submission-form .form-select,
+.webform-submission-form .form-date{
+    background: #FFFFFF;
+    border: 1px solid #ececec;
+}
+
+/********************************
+    Custom Styles - Login/User Registration Forms
+*********************************/
+.page-user-login,
+body.path-user .page-user-login{
+    background-image: url(../images/bg/login_background.jpg);
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: auto; /* You must set a specified height */
+    background-position: 0px -70px; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.login-page .site_logo img{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+.login-page .site_logo{
+    width: 70%;
+    margin: 0 auto;
+}
+.login-page .login_form .description{
+   font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.login-page h3{
+    color: #F5F5F5;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
+.login-page .login_form .form-text {
+    background: #F5F5F5;
+}
+.login-page .form_container{
+    background: #333333;
+    padding: 2%;
+    right: 0;
+    height: 100%;
+    top: 0;
+    margin: 50px auto 0;
+}
+.login-page .user-login-form, .user-form, .user-pass {
+    border: none;
+    margin: 20px auto;
+}
+.login-page .login_form .btn,
+.login_form input#edit-submit.button.js-form-submit.form-submit {
+    width: 100%;
+    background: #CE76B2;
+}
+.login-page .login_form{
+    padding: 0;
+    margin: 0 auto;
+}
+
+/********************************
+    Custom Styles - Facet Colors
+*********************************/
+#variations-product-variation-color-17 {
+    background: #999999;
+}
+div.slimScrollBar {
+    width: 12px!important;
+}
+/********************************
+    Custom Styles - Tables
+*********************************/
+.km_featured_table td.views-field.views-field-variations-target-id.views-align-left{
+    width: 50%;
+}
+/********************************
+    Custom Styles - Payment Submission Loader
+*********************************/
+#overlay {
+    background: #ffffff;
+    color: #666666;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    opacity: .80;
+  }
+  /*button {
+    margin: 40px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }*/
+  .spinner {
+      margin: 0 auto;
+      height: 64px;
+      width: 64px;
+      animation: rotate 0.8s infinite linear;
+      border: 5px solid firebrick;
+      border-right-color: transparent;
+      border-radius: 50%;
+  }
+  @keyframes rotate {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  
+ /********************************
+    Custom Styles - Rules Email
+*********************************/
+
+.km_rule_mail h2,
+.tm_rule_mail h3{
+    font-weight: 700;
+    text-align: center;
+}
+.km_rule_mail {
+    width: 75%;
+    margin: 0 auto;
+    padding:3% 2%;
+    border: 3px solid #e42555;
+}

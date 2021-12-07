@@ -1,0 +1,33 @@
+unprotected_forms:
+  - user_login_form
+  - search_form
+  - search_block_form
+  - views_exposed_form
+  - honeypot_settings_form
+protect_all_forms: false
+log: true
+element_name: email
+time_limit: 5
+expire: 300
+form_settings:
+  user_register_form: true
+  user_pass: true
+  contact_message_feedback_form: true
+  contact_message_personal_form: false
+  node_blog_form: false
+  node_faq_form: false
+  node_features_form: false
+  node_page_form: false
+  node_partners_form: false
+  node_portfolio_form: false
+  node_pricing_table_form: false
+  node_promotion_form: false
+  node_service_form: false
+  node_simplenews_issue_form: false
+  node_slide_form: false
+  node_team_form: false
+  node_testimonial_form: false
+  comment_comment_form: true
+  comment_reviews_form: true
+_core:
+  default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw

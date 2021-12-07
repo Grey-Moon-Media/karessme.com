@@ -1,0 +1,17 @@
+uuid: 497daee0-2e0c-4cf6-96fd-f4a99771190b
+langcode: en
+status: true
+dependencies:
+  config:
+    - business_rules.variable.usps_tracking_number
+id: not_equal_to_default_tracking_number
+label: 'NOT EQUAL TO Default Tracking Number'
+description: 'NOT EQUAL TO 0123456789'
+settings:
+  value_1: '{{usps_tracking_number->current}}'
+  operator: '!='
+  value_2: '0123456789'
+tags: {  }
+type: variable_data_comparison
+target_entity_type: null
+target_bundle: null

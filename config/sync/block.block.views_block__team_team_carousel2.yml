@@ -1,0 +1,50 @@
+uuid: 562077cb-0ed1-4672-8c15-23c79ba69afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_05
+    - views.view.team
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: fullwidth
+    block_subtitle: 'Check out our array of experts selected to deliver the best services.'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: 30px
+    block_padding_bottom: ''
+    block_padding_left: 30px
+    block_text_color: ''
+    block_bg_color: f9f9f9
+    block_bg_image_path: themes/wosh/assets/images/bg/dotted-bg.png
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__team_team_carousel2
+theme: wosh
+region: content_wide
+weight: -34
+provider: null
+plugin: 'views_block:team-team_carousel2'
+settings:
+  id: 'views_block:team-team_carousel2'
+  label: 'Meet the important people'
+  provider: views
+  label_display: visible
+  views_label: 'Meet the important people'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_05
+    context_mapping: {  }

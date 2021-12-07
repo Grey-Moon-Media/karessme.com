@@ -1,0 +1,13 @@
+uuid: 4c0792d9-5e39-45fa-8b72-d682ae57ec2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_avatax
+_core:
+  default_config_hash: W5NR460i6t85Te-npehCsYvEbWu1nBGSRaVqrcZn6eA
+id: avatax
+label: Avatax
+plugin: avatax
+configuration:
+  display_inclusive: false

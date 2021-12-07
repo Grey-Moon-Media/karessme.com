@@ -1,0 +1,19 @@
+uuid: 8db1e16d-128b-47fe-8eca-b4575d780b2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_shipping.commerce_shipment_type.default
+    - field.storage.commerce_shipment.field_us
+id: commerce_shipment.default.field_us
+field_name: field_us
+entity_type: commerce_shipment
+bundle: default
+label: 'USPS Tracking Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

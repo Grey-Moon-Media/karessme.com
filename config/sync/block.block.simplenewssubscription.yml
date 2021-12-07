@@ -1,0 +1,53 @@
+uuid: b17c4883-840f-4700-a1a0-7396f467bf76
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - hsblock
+    - simplenews
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'Subscribe for our latest deals, promotions and news'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_block_title
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: title-light
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/cta-bg3.jpg
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: simplenewssubscription
+theme: wosh
+region: content_wide
+weight: -25
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Stay informed about our products'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: 'Stay informed - subscribe to our newsletter.'
+  unique_id: 04977fec-3539-4f9d-a840-07bab7acd479
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about\r\n/terms-conditions\r\n/shipping-policy\r\n/returns-exchanges\r\n/accessibility\r\n/faq"
+    negate: false

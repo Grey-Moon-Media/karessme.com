@@ -1,0 +1,52 @@
+uuid: 6a6495fc-b740-4e5d-91c3-003e443d36a8
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_06
+  content:
+    - 'block_content:basic:8b6675ce-25e5-4d61-a69b-104bcaa8146c'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: padding-top-0
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: shop_iconbox2
+theme: wosh
+region: content_wide
+weight: -23
+provider: null
+plugin: 'block_content:8b6675ce-25e5-4d61-a69b-104bcaa8146c'
+settings:
+  id: 'block_content:8b6675ce-25e5-4d61-a69b-104bcaa8146c'
+  label: 'Shop Icon Box 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_06
+    context_mapping: {  }

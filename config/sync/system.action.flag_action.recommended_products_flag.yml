@@ -1,0 +1,15 @@
+uuid: 39621488-ef81-4a1f-99b1-c2933313645a
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.recommended_products
+  module:
+    - flag
+id: flag_action.recommended_products_flag
+label: 'Flag this item'
+type: commerce_product
+plugin: 'flag_action:recommended_products_flag'
+configuration:
+  flag_id: recommended_products
+  flag_action: flag

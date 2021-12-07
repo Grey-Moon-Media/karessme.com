@@ -1,0 +1,54 @@
+uuid: 95d4d46d-6394-4176-b1ef-ea8706937ba9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: contactformgreetingmessage
+theme: wosh
+region: content_wide_top
+weight: 0
+provider: null
+plugin: 'block_content:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
+settings:
+  id: 'block_content:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
+  label: 'Contact Form Greeting Message'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false

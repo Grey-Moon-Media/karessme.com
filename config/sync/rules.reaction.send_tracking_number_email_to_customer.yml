@@ -1,0 +1,14 @@
+uuid: 02393ac7-5def-4ceb-8124-4db01a12134b
+langcode: en
+status: false
+dependencies: {  }
+id: send_tracking_number_email_to_customer
+label: 'Send Tracking number Email to Customer'
+events:
+  -
+    event_name: 'rules_entity_update:commerce_order--default'
+description: 'Send Tracking number Email to Customer'
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

@@ -1,0 +1,49 @@
+uuid: df453971-b0e7-4e31-8d60-83a5a27083cd
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.shop_sidebar
+    - facets.facet.product_brand
+  module:
+    - block_visibility_groups
+    - facets
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_facet_block_title
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: product_brand
+theme: wosh
+region: sidebar_first
+weight: -45
+provider: null
+plugin: 'facet_block:product_brand'
+settings:
+  id: 'facet_block:product_brand'
+  label: Brands
+  provider: facets
+  label_display: visible
+  block_id: product_brand
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: shop_sidebar
+    context_mapping: {  }

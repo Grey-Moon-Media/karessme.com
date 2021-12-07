@@ -1,0 +1,17 @@
+api_mode: production
+account_id: '2000763751'
+company_code: GMM5444
+address_validation:
+  enable: false
+  countries:
+    CA: CA
+    US: US
+  postal_code_match: false
+customer_code_field: mail
+disable_commit: false
+disable_tax_calculation: false
+license_key: 25998F01DBB0184B
+logging: true
+shipping_tax_code: FR020100
+_core:
+  default_config_hash: 1mZSYHm1_yrm9REzaU12mpILY0ROYjxcg9cTVceZ_jE

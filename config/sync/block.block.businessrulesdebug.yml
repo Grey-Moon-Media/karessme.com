@@ -1,0 +1,49 @@
+uuid: 0b21c1ef-1048-43bf-9cd6-8a87c813c541
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - business_rules
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: businessrulesdebug
+theme: wosh
+region: content
+weight: -48
+provider: null
+plugin: business_rules_debug_block
+settings:
+  id: business_rules_debug_block
+  label: 'Business rules debug'
+  provider: business_rules
+  label_display: visible
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

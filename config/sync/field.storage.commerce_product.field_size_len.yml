@@ -1,0 +1,20 @@
+uuid: 42baba12-990a-49fb-a2aa-8583482630e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - physical
+id: commerce_product.field_size_len
+field_name: field_size_len
+entity_type: commerce_product
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 6ad4c741-93ed-47ed-b8bc-cff8e208e36c
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.hp_products
+    - field.storage.feeds_feed.field_base_url
+id: feeds_feed.hp_products.field_base_url
+field_name: field_base_url
+entity_type: feeds_feed
+bundle: hp_products
+label: 'Base URL'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'https://www.honeysplace.com'
+default_value_callback: ''
+settings: {  }
+field_type: string

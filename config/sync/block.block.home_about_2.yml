@@ -1,0 +1,52 @@
+uuid: e44a073f-1b29-4610-8eea-e59c5644f9f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_05
+  content:
+    - 'block_content:feature_block:e30dc42b-5a20-4f8c-8e9c-e9aa4e704910'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'Advanced extended doubtful together introduced.'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: home_about_2
+theme: wosh
+region: content
+weight: -28
+provider: null
+plugin: 'block_content:e30dc42b-5a20-4f8c-8e9c-e9aa4e704910'
+settings:
+  id: 'block_content:e30dc42b-5a20-4f8c-8e9c-e9aa4e704910'
+  label: 'Creative Business Agency'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_05
+    context_mapping: {  }

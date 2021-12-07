@@ -1,0 +1,13 @@
+format: full_html
+name: 'Karess Me Adult Novelties & Toys'
+mail: karessmestore@gmail.com
+linkonly: false
+textonly: false
+sitestyle: true
+simple_address: false
+preserve_class: false
+advanced:
+  incoming: false
+  key: EPtbX0Pv68j0a03PqXp0CJfZdzaW57XXWpWziRoEOms
+_core:
+  default_config_hash: rLKGzzC9TqjbEZiBoiyMpOSyZgldADa5SzvbA2gQDxE

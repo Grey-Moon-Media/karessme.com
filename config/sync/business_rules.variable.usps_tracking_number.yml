@@ -1,0 +1,14 @@
+uuid: fc14bbc8-20f5-49bd-ad94-c4bfa61fca1e
+langcode: en
+status: true
+dependencies: {  }
+id: usps_tracking_number
+label: 'USPS Tracking Number'
+description: 'USPS Tracking Number'
+settings:
+  field: field_usps_tracking_number
+  data: original_data
+tags: {  }
+type: entity_filed_variable
+target_entity_type: commerce_order
+target_bundle: default

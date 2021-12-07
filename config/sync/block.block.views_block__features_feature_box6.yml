@@ -1,0 +1,50 @@
+uuid: 20ec5bd2-e2d3-4f1d-b211-01e50b588cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_05
+    - views.view.features
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'We have the most featured packed drupal 8 theme for commerce development.'
+    block_title_style: block-title-1
+    block_title_align: ''
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__features_feature_box6
+theme: wosh
+region: content_wide
+weight: -30
+provider: null
+plugin: 'views_block:features-feature_box6'
+settings:
+  id: 'views_block:features-feature_box6'
+  label: 'What makes us stand out'
+  provider: views
+  label_display: visible
+  views_label: 'What makes us stand out'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_05
+    context_mapping: {  }

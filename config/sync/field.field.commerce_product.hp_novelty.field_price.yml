@@ -1,0 +1,23 @@
+uuid: 9d928a48-c43f-459f-a20c-1e99222c9892
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_price
+  module:
+    - commerce_price
+id: commerce_product.hp_novelty.field_price
+field_name: field_price
+entity_type: commerce_product
+bundle: hp_novelty
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - USD
+field_type: commerce_price

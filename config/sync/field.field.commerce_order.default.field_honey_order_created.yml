@@ -1,0 +1,23 @@
+uuid: f45627f5-8b00-45aa-9295-377ca2476e04
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.default
+    - field.storage.commerce_order.field_honey_order_created
+id: commerce_order.default.field_honey_order_created
+field_name: field_honey_order_created
+entity_type: commerce_order
+bundle: default
+label: 'Honey Order Created'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

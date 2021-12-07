@@ -1,0 +1,55 @@
+uuid: 56e56642-62f6-4356-af33-84f165e99a0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - hsblock
+    - simplenews
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'Subscribe to hot news & deals.'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: 'km_footer padding-bottom-40'
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: simplenews_subscription_footer
+theme: wosh
+region: footer_forth
+weight: -38
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: Newsletter
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: ''
+  unique_id: c5c54a23-8247-44ce-82db-2e5e548b5bcc
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/about\r\n/home\r\n/services"
+    negate: true
+    context_mapping: {  }

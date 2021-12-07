@@ -1,0 +1,13 @@
+uuid: 4dd5eb9e-3ff3-41ef-a763-4d40518dbd8f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-Qd-fiSVXuvCS9Gu6_704Dz8ZMOQ4rXbf3v8fdBQDZM'
+template: example_create_node
+label: 'Example - Create node'
+description: 'Working upon creating of a node.'
+text:
+  -
+    value: "<p><a href='[message:user-url]'>[message:user-name]</a> created <a href='[message:node-url]'>[message:node-title]</a></p>\r\n <p>[message:node-render]</p>\r\n"
+settings: {  }

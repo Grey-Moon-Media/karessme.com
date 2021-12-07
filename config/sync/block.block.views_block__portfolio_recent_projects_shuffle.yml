@@ -1,0 +1,50 @@
+uuid: 2ad5cf5f-89d7-4018-ae70-94ccd88ba8a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_05
+    - views.view.portfolio
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'These are day own either lively new do otherwise advanced extended doubtful.'
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__portfolio_recent_projects_shuffle
+theme: wosh
+region: content_wide
+weight: -35
+provider: null
+plugin: 'views_block:portfolio-recent_projects_shuffle'
+settings:
+  id: 'views_block:portfolio-recent_projects_shuffle'
+  label: 'Most recent works done'
+  provider: views
+  label_display: visible
+  views_label: 'Most recent works done'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_05
+    context_mapping: {  }

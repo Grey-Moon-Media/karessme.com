@@ -1,0 +1,50 @@
+uuid: f17d0418-41cb-46d7-8a18-6800265cf28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_01
+    - views.view.testimonial
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: ''
+    block_subtitle: 'Testimonials from our clients & customers'
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: f2f2f2
+    block_bg_image_path: themes/wosh/assets/images/bg/bg1.jpg
+    block_bg_repeat: no-repeat
+    block_bg_position: 'center top'
+    block_parallax_bg: parallax-bg
+id: views_block__testimonial_testimonial_carousel
+theme: wosh
+region: content_wide
+weight: -42
+provider: null
+plugin: 'views_block:testimonial-testimonial_carousel'
+settings:
+  id: 'views_block:testimonial-testimonial_carousel'
+  label: 'What People Says'
+  provider: views
+  label_display: visible
+  views_label: 'What People Says'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_01
+    context_mapping: {  }

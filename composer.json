@@ -1,0 +1,188 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal 8 projects with composer following drupal/drupal layout",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "matt/honeys_place": {
+            "type": "vcs",
+            "url": "https://github.com/mattc321/honeys_place.git"
+        }
+    },
+    "require": {
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/ajax_loader": "^2.0",
+        "drupal/background_image": "^2.0",
+        "drupal/background_image_formatter": "^1.7",
+        "drupal/block_visibility_groups": "^1.4",
+        "drupal/bootstrap": "^3.23",
+        "drupal/bootstrap_basic_image_gallery": "1.5",
+        "drupal/business_rules": "^2.0@beta",
+        "drupal/color_field": "^2.4",
+        "drupal/colorapi": "^1.1",
+        "drupal/colorbox": "^1.7",
+        "drupal/commerce": "^2.28",
+        "drupal/commerce_avatax": "^1.0@RC",
+        "drupal/commerce_email": "1.x-dev@dev",
+        "drupal/commerce_eta": "^1.2",
+        "drupal/commerce_eta_abandoned_carts": "^1.2",
+        "drupal/commerce_feeds": "^1.0@alpha",
+        "drupal/commerce_google_tag_manager": "^2.0@beta",
+        "drupal/commerce_paypal": "^1.0@RC",
+        "drupal/commerce_product_review": "^1.0@alpha",
+        "drupal/commerce_reactions": "1.x-dev@dev",
+        "drupal/commerce_shipping": "^2.2",
+        "drupal/commerce_square": "^1.4",
+        "drupal/commerce_stripe": "^1.0@RC",
+        "drupal/config_suite": "^2.0",
+        "drupal/console": "~1.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/core-vendor-hardening": "^9",
+        "drupal/ctools": "^3.7",
+        "drupal/ds": "^3.13",
+        "drupal/empty_fields": "^1.0@beta",
+        "drupal/facets": "^1.8",
+        "drupal/feeds": "^3.0@alpha",
+        "drupal/feeds_ex": "^1.0@alpha",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/file_delete": "^1.0",
+        "drupal/fixed_block_content": "^1.1",
+        "drupal/flag": "^4.0@beta",
+        "drupal/flexslider": "^2.0",
+        "drupal/ga_commerce": "^2.0",
+        "drupal/google_analytics": "^2.5",
+        "drupal/google_tag": "^1.4",
+        "drupal/honeypot": "^2.0",
+        "drupal/image_delta_formatter": "^1.1",
+        "drupal/imce": "^2.4",
+        "drupal/jquery_colorpicker": "^2.0",
+        "drupal/libraries": "^3.0@beta",
+        "drupal/maillog": "^1.0@beta",
+        "drupal/mailsystem": "^4.3",
+        "drupal/message_notify": "^1.2",
+        "drupal/metatag": "^1.16",
+        "drupal/mimemail": "^1.0@alpha",
+        "drupal/module_filter": "^3.2",
+        "drupal/physical": "^1.1",
+        "drupal/push_framework": "^2.1",
+        "drupal/recreate_block_content": "^2.1",
+        "drupal/responsive_background_image": "^1.0@alpha",
+        "drupal/rules": "3.x-dev@dev",
+        "drupal/search_api": "^1.19",
+        "drupal/simplenews": "^2.0@beta",
+        "drupal/slick": "^2.3",
+        "drupal/smsframework": "2.x-dev@dev",
+        "drupal/smtp": "^1.0",
+        "drupal/swiftmailer": "^2.0",
+        "drupal/views_bulk_operations": "^4.0",
+        "drupal/views_custom_cache_tag": "^1.2",
+        "drupal/webform": "^6.0",
+        "drupal/weight": "^3.3",
+        "drupal/workbench_menu_access": "^1.3",
+        "drupal/xmlsitemap": "^1.1",
+        "drush/drush": "10.*",
+        "matt/honeys_place": "1.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+	"enable-patching": true,
+        "patches": {
+          "drupal/tamper":{
+		  "Rewrite for multiple images": "https://git.drupalcode.org/project/tamper/-/merge_requests/4.diff"
+          },
+	  "drupal/commerce_square" :{
+              "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
+              "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
+           },
+	    "drupal/commerce_shipping": {
+		    "Error: Call to a member function getPlugin() on null":"https://www.drupal.org/files/issues/2020-03-07/commerce_shipping-3118351-2.patch"
+	    },
+	    "drupal/background_image": {
+              "Render Callback" : "https://www.drupal.org/files/issues/2020-10-14/3161262-6.patch"
+	    },
+	    "drupal/core" : {
+		   "EntityInterface, null given" : "https://www.drupal.org/files/issues/2020-10-20/3178008-2.patch",
+		   "Views TranslationLanguageRenderer fails on ghost nodes" : "https://www.drupal.org/files/issues/views-translation-language-renderer-2869347-2-D8.patch",
+                   "getEntityTranslation() throws exception on null": "https://www.drupal.org/files/issues/2019-12-09/2951493-15-d87-29.patch"
+	    },
+	    "drupal/business_rules" : {
+              "Conflict with Simplenews": "https://www.drupal.org/files/issues/2020-06-01/business_rules-3010872-6.patch"
+	    },
+	    "drupal/commerce" : {
+              "Display credit card icons in the checkout form": "https://www.drupal.org/files/issues/2021-05-20/display-credit-card-icons-in-the-checkout-form-3183931-35.patch"
+	    }
+	},
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            }
+        },
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}

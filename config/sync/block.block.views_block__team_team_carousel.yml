@@ -1,0 +1,50 @@
+uuid: 383039b4-c8ee-4b8a-9933-3275e638efb5
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.about
+    - views.view.team
+  module:
+    - block_visibility_groups
+    - hsblock
+    - views
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: 'We are so passionate on delivering on our promises because we have the best of professionals'
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: views_block__team_team_carousel
+theme: wosh
+region: content_wide
+weight: -19
+provider: null
+plugin: 'views_block:team-team_carousel'
+settings:
+  id: 'views_block:team-team_carousel'
+  label: 'Meet Our Team'
+  provider: views
+  label_display: visible
+  views_label: 'Meet Our Team'
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: about
+    context_mapping: {  }

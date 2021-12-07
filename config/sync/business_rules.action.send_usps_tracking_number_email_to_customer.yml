@@ -1,0 +1,20 @@
+uuid: f865572b-ef76-43cc-abff-ff0bde3b9126
+langcode: en
+status: true
+dependencies: {  }
+id: send_usps_tracking_number_email_to_customer
+label: 'Send USPS Tracking Number Email to Customer'
+description: 'Send USPS Tracking Number Email to Customer'
+settings:
+  use_site_mail_as_sender: false
+  from: 'Karess Me Adult Novelties & Toys'
+  to: '[commerce_order:mail]'
+  subject: 'A Shipment from order [commerce_order:order_id] is on the Way'
+  format: html
+  body:
+    value: "<div style=\"margin-bottom: 50px; margin-top: 25px; margin-left: 150px; margin-right: 150px;\">\r\n  <div class=\"row\">\r\n    <span><img src=\"https://s3.amazonaws.com/karessme.com/images/logo/png1.jpeg\" alt=\"karessme.com logo\" width=\"500\" height=\"325\" align=\"center\"></a></span>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h2> YOUR ORDER IS ON THE WAY</h2>\r\n  </div>\r\n  <div class=\"row\">\r\n    <p>Track your shipment(s) to see the delivery status<br>\r\n     Tracking Number: [commerce_order:field_usps_tracking_number]\r\n    </p>\r\n  </div>\r\n  <div class=\"row\">\r\n    <h3>Items in the Shipment</h3>\r\n    <span>[commerce_order:order_items]</span>\r\n  </div>\r\n</div>"
+    format: full_html
+tags: {  }
+type: send_email
+target_entity_type: null
+target_bundle: null

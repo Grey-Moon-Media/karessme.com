@@ -1,0 +1,55 @@
+uuid: 77606cd5-144a-4a82-812f-38f832e01827
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:27318079-24d3-47d4-8fa9-15234a0d8327'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: text-light
+    block_bg_color: ''
+    block_bg_image_path: themes/wosh/assets/images/bg/cta-bg2.jpg
+    block_bg_repeat: no-repeat
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: shop_icon_box
+theme: wosh
+region: content_wide
+weight: -26
+provider: null
+plugin: 'block_content:27318079-24d3-47d4-8fa9-15234a0d8327'
+settings:
+  id: 'block_content:27318079-24d3-47d4-8fa9-15234a0d8327'
+  label: 'Shop Icon Box'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

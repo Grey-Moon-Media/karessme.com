@@ -1,0 +1,52 @@
+uuid: aaf7cb26-37e7-4b6e-ba71-29cd80605fb0
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_06
+  content:
+    - 'block_content:promotion_block:6b408f6d-04b5-4b5c-8048-264b571bf316'
+  module:
+    - block_content
+    - block_visibility_groups
+    - hsblock
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    block_layout: 'fullwidth framewidth'
+    block_subtitle: 'Select from the premium product and save plenty money'
+    block_title_style: block-title-1
+    block_title_align: block-title-center
+    classes: padding-bottom-0
+    id: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: promotion_block_05
+theme: wosh
+region: content_wide_top
+weight: -43
+provider: null
+plugin: 'block_content:6b408f6d-04b5-4b5c-8048-264b571bf316'
+settings:
+  id: 'block_content:6b408f6d-04b5-4b5c-8048-264b571bf316'
+  label: 'Shop Collections'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_06
+    context_mapping: {  }

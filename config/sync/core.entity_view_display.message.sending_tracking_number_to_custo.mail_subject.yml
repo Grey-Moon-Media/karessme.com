@@ -1,0 +1,23 @@
+uuid: d008ccf0-2dae-4f2f-9791-4f43f8fee0d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - message.template.sending_tracking_number_to_custo
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: message.sending_tracking_number_to_custo.mail_subject
+targetEntityType: message
+bundle: sending_tracking_number_to_custo
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  partial_1: true

@@ -1,0 +1,15 @@
+uuid: 6c1fa2a8-04e9-4572-87a9-38ca093a8f11
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.recommended_products
+  module:
+    - flag
+id: flag_action.recommended_products_unflag
+label: 'Unflag this item'
+type: commerce_product
+plugin: 'flag_action:recommended_products_unflag'
+configuration:
+  flag_id: recommended_products
+  flag_action: unflag

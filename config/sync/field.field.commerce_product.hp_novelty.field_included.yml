@@ -1,0 +1,19 @@
+uuid: 7c59b42b-d48b-42e5-b170-07527766c3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.hp_novelty
+    - field.storage.commerce_product.field_included
+id: commerce_product.hp_novelty.field_included
+field_name: field_included
+entity_type: commerce_product
+bundle: hp_novelty
+label: Included
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

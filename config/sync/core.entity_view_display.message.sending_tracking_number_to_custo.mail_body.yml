@@ -1,0 +1,23 @@
+uuid: 5195bd19-a7ba-45f6-978b-346552d84a06
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - message.template.sending_tracking_number_to_custo
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: message.sending_tracking_number_to_custo.mail_body
+targetEntityType: message
+bundle: sending_tracking_number_to_custo
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+hidden:
+  partial_0: true

@@ -1,0 +1,66 @@
+uuid: da755ac3-b94f-402a-b5e0-11250df229a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.country_of_origin
+  module:
+    - feeds_ex
+    - taxonomy
+id: attribute_country_of_origin
+label: 'HP Attribute | Country of Origin'
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: //Items/Item
+  sources:
+    attributes_attribute_countryoforigin:
+      label: Attributes/Attribute/CountryofOrigin
+      value: Attributes/Attribute/CountryofOrigin
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  values:
+    vid: country_of_origin
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  countryoforigin:
+    label: CountryofOrigin
+    value: CountryofOrigin
+    machine_name: countryoforigin
+  _attributes_attribute_countryoforigin:
+    label: /Attributes/Attribute/CountryofOrigin
+    value: /Attributes/Attribute/CountryofOrigin
+    machine_name: _attributes_attribute_countryoforigin
+  attributes_attribute_countryoforigin:
+    label: Attributes/Attribute/CountryofOrigin
+    value: Attributes/Attribute/CountryofOrigin
+    machine_name: attributes_attribute_countryoforigin
+mappings:
+  -
+    target: name
+    map:
+      value: attributes_attribute_countryoforigin
+    unique:
+      value: '1'
+    settings:
+      language: null

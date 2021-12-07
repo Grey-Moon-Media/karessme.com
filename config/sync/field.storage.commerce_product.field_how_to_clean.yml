@@ -1,0 +1,19 @@
+uuid: 40670519-83ce-46b4-becb-998975af6180
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_how_to_clean
+field_name: field_how_to_clean
+entity_type: commerce_product
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

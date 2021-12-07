@@ -1,0 +1,13 @@
+uuid: f1c12513-a31f-4ceb-9057-84e6b50a2f0e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xm1sDPitFuptDZ9ybpmflA1w16Ap2q_Rci4rew8ddmM
+id: default
+label: Default
+description: ''
+descriptionPlaceholder: null
+notificationEmail: ''
+productTypes:
+  default: default
