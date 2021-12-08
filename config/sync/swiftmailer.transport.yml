@@ -5,8 +5,8 @@ smtp_encryption: tls
 smtp_credential_provider: swiftmailer
 smtp_credentials:
   swiftmailer:
-    username: greymoonmedia@gmail.com
-    password: greymoon1
+    username: karessmestore@gmail.com
+    password: Johnston2021!$
 sendmail_path: /usr/sbin/sendmail
 sendmail_mode: bs
 spool_directory: ''

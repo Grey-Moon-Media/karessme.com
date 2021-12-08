@@ -36,7 +36,7 @@ third_party_settings:
 id: views_block__service_services_menu
 theme: wosh
 region: sidebar_first
-weight: -41
+weight: -50
 provider: null
 plugin: 'views_block:service-services_menu'
 settings:

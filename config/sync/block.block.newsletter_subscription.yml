@@ -1,6 +1,6 @@
 uuid: c3119e39-79cb-4a32-835b-af030e65115b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_04

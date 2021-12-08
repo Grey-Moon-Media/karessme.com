@@ -21,11 +21,8 @@ modules:
     none:
       formatter: business_rules_mail
       sender: SMTPMailSystem
-  message_notify:
-    none:
-      formatter: swiftmailer
-      sender: SMTPMailSystem
+  message_notify: {  }
   commerce_reactions:
     none:
       formatter: mime_mail
-      sender: mime_mail
+      sender: SMTPMailSystem

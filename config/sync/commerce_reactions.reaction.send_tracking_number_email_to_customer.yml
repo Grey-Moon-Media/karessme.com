@@ -1,6 +1,6 @@
 uuid: 60ada9b8-46ee-4d05-8e4a-b92fdf87c034
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - commerce_order
@@ -14,7 +14,7 @@ configuration:
   to_mail: '[commerce_order:mail]'
   cc_mail: ''
   bcc_mail: ''
-  from_mail: '[site:name]'
+  from_mail: '[site:mail]'
   reply_mail: ''
   subject: 'A shipment from order [commerce_order:order_number] is on the way'
   body:

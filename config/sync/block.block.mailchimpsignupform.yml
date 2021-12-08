@@ -1,23 +1,23 @@
-uuid: 24d22d37-ea31-4d2b-8eaf-2950c9072083
+uuid: ac8d02e7-e318-444a-8e99-55f9b9ff3494
 langcode: en
 status: true
 dependencies:
-  config:
-    - facets.facet.product_manufacturer
+  content:
+    - 'block_content:basic:43118073-29d1-4864-8219-f5a9ca7494cd'
   module:
+    - block_content
     - block_visibility_groups
-    - facets
     - hsblock
     - system
   theme:
     - wosh
 third_party_settings:
   hsblock:
-    block_layout: norm-width
+    block_layout: fullwidth
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
-    classes: km_facet_block_title
+    classes: km_mailchimp_form
     id: ''
     block_padding_top: ''
     block_padding_right: ''
@@ -29,18 +29,20 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: manufacturer
+id: mailchimpsignupform
 theme: wosh
-region: sidebar_first
-weight: -46
+region: content_wide
+weight: 0
 provider: null
-plugin: 'facet_block:product_manufacturer'
+plugin: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
 settings:
-  id: 'facet_block:product_manufacturer'
-  label: Manufacturer
-  provider: facets
-  label_display: visible
-  block_id: manufacturer
+  id: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
+  label: 'Mail Chimp Sign-up Form'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
 visibility:
   condition_group:
     id: condition_group
@@ -48,5 +50,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/holiday-items\r\n/on-sale\r\n/shop\r\n/shop/*\r\n/products\r\n/products/*"
+    pages: '<front>'
     negate: false

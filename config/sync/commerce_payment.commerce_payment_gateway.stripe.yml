@@ -11,7 +11,7 @@ plugin: stripe
 configuration:
   publishable_key: pk_test_51IMMaBBjDtVyDmuWzlTaUqYPa1oDqTmwdDXwAuMzQgpryX44RgvmxhDQBFwmE9MQIrwKRxo0yQVdf7stj662Qa4d00cRzkFdtZ
   secret_key: sk_test_51IMMaBBjDtVyDmuW4eUQVFBOLRqQApYOCvaJDr07LUJMGIbPbH5GY7wXwlAofUGNmumR3Vtzcf8K4rqCIULBiNFU00X3tlpuU5
-  enable_credit_card_icons: true
+  enable_credit_card_icons: false
   display_label: Stripe
   mode: test
   payment_method_types:

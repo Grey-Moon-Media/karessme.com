@@ -1,6 +1,6 @@
 uuid: b17c4883-840f-4700-a1a0-7396f467bf76
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - block_visibility_groups

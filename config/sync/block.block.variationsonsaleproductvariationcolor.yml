@@ -32,7 +32,7 @@ third_party_settings:
 id: variationsonsaleproductvariationcolor
 theme: wosh
 region: sidebar_first
-weight: 0
+weight: -49
 provider: null
 plugin: 'facet_block:variations_on_sale_product_variation_color'
 settings:
@@ -48,5 +48,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/holiday-items\r\n/on-sale"
+    pages: "/holiday-items\r\n/holiday-items/*\r\n/holiday-items?/*\r\n/holiday-items?\r\n/on-sale"
     negate: false

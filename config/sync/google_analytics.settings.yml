@@ -27,11 +27,10 @@ track:
   site_search: false
   adsense: false
   displayfeatures: false
+  tel: true
 privacy:
   anonymizeip: true
-custom:
-  dimension: {  }
-  metric: {  }
+custom: {  }
 codesnippet:
   create: {  }
   before: ''

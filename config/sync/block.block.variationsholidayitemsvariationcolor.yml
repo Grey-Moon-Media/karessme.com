@@ -1,14 +1,14 @@
-uuid: 24d22d37-ea31-4d2b-8eaf-2950c9072083
+uuid: 0ada7b54-db6f-4099-b309-587a69b57e0b
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.product_manufacturer
+    - block_visibility_groups.block_visibility_group.shop_sidebar
+    - facets.facet.variations_holiday_items_variation_color
   module:
     - block_visibility_groups
     - facets
     - hsblock
-    - system
   theme:
     - wosh
 third_party_settings:
@@ -29,24 +29,20 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: manufacturer
+id: variationsholidayitemsvariationcolor
 theme: wosh
 region: sidebar_first
-weight: -46
+weight: -47
 provider: null
-plugin: 'facet_block:product_manufacturer'
+plugin: 'facet_block:variations_holiday_items_variation_color'
 settings:
-  id: 'facet_block:product_manufacturer'
-  label: Manufacturer
+  id: 'facet_block:variations_holiday_items_variation_color'
+  label: Color
   provider: facets
   label_display: visible
-  block_id: manufacturer
+  block_id: variationsholidayitemsvariationcolor
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
-  request_path:
-    id: request_path
-    pages: "/holiday-items\r\n/on-sale\r\n/shop\r\n/shop/*\r\n/products\r\n/products/*"
-    negate: false
+    block_visibility_group: shop_sidebar

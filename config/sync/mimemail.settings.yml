@@ -1,6 +1,6 @@
 format: full_html
 name: 'Karess Me Adult Novelties & Toys'
-mail: greymoonmedia@gmail.com
+mail: karessmestore@gmail.com
 linkonly: false
 textonly: false
 sitestyle: true
@@ -11,3 +11,4 @@ advanced:
   key: EPtbX0Pv68j0a03PqXp0CJfZdzaW57XXWpWziRoEOms
 _core:
   default_config_hash: rLKGzzC9TqjbEZiBoiyMpOSyZgldADa5SzvbA2gQDxE
+user_plaintext_field: ''
