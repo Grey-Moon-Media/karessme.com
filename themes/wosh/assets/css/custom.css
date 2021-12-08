@@ -529,6 +529,17 @@ div#edit-payment-information-add-payment-method-payment-details-number{
     margin: 15px 0;
     
 }
+.checkout-pane-payment-information .stripe-form #expiration-element,
+.checkout-pane-payment-information .stripe-form #security-code-element {
+    width: 7em;
+    background: #ffffff;
+    padding: 10px 5px;
+}
+.checkout-pane-payment-information .stripe-form #card-number-element {
+    width: 34em;
+    background: #ffffff;
+    padding: 10px 5px;
+}
 
 /********************************
     Custom Styles - Modals

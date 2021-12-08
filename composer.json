@@ -65,7 +65,7 @@
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
         "drupal/ga_commerce": "^2.0",
-        "drupal/google_analytics": "^2.5",
+        "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^1.4",
         "drupal/honeypot": "^2.0",
         "drupal/image_delta_formatter": "^1.1",
@@ -132,6 +132,9 @@
 	    },
 	    "drupal/commerce" : {
               "Display credit card icons in the checkout form": "https://www.drupal.org/files/issues/2021-05-20/display-credit-card-icons-in-the-checkout-form-3183931-35.patch"
+	    },
+	    "drupal/commerce_stripe": {
+		   "Add credit card icons on checkout" : "https://www.drupal.org/files/issues/2021-11-25/3245980-11-checkout_credit_card_icons.patch"
 	    }
 	},
         "drupal-scaffold": {
