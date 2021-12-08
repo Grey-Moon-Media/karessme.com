@@ -1,23 +1,23 @@
-uuid: ac8d02e7-e318-444a-8e99-55f9b9ff3494
+uuid: 871f9b05-2b09-461f-bd82-fed605ef6718
 langcode: en
-status: false
+status: true
 dependencies:
-  content:
-    - 'block_content:basic:43118073-29d1-4864-8219-f5a9ca7494cd'
+  config:
+    - simple_block.simple_block.front_page_collections_banners_2
   module:
-    - block_content
     - block_visibility_groups
     - hsblock
+    - simple_block
     - system
   theme:
     - wosh
 third_party_settings:
   hsblock:
-    block_layout: fullwidth
+    block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
-    classes: km_mailchimp_form
+    classes: km_frontpage_collections
     id: ''
     block_padding_top: ''
     block_padding_right: ''
@@ -29,20 +29,17 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: mailchimpsignupform
+id: frontpagecollectionsbanners2
 theme: wosh
-region: content_wide
+region: content_wide_top
 weight: 0
 provider: null
-plugin: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
+plugin: 'simple_block:front_page_collections_banners_2'
 settings:
-  id: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
-  label: 'Mail Chimp Sign-up Form'
-  provider: block_content
+  id: 'simple_block:front_page_collections_banners_2'
+  label: 'Front Page Collections Banners 2'
+  provider: simple_block
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
 visibility:
   condition_group:
     id: condition_group

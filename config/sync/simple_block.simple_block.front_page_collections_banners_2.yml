@@ -1,0 +1,11 @@
+uuid: 4585ca82-2196-4a6e-a155-3ea7843cac13
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: front_page_collections_banners_2
+title: 'Front Page Collections Banners 2'
+content:
+  value: "<div class=\"row\">\r\n  <h1>Collections</h1>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-md-6 mx-auto\">\r\n      <div class=\"toy_1\" role=\"img\" style=\"background-image: url('https://s3.amazonaws.com/karessme.com/images/heros/toy_4.jpg');\">\r\n        <h1><a href=\"products?f%5B0%5D=category%3A56\">Massagers</a></h1>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-6 mx-auto\">  \r\n      <div class=\"toy_2\" role=\"img\" style=\"background-image: url('https://s3.amazonaws.com/karessme.com/images/heros/toy_5.jpg');\">\r\n        <h1><a href=\"products?f%5B0%5D=category%3A54\">Eggs & Bullets</a></h1>\r\n      </div>\r\n      <div class=\"toy_3\" role=\"img\" style=\"background-image: url('https://s3.amazonaws.com/karessme.com/images/heros/toy_6.jpg');\">\r\n        <h1><a href=\"products?f%5B0%5D=category%3A123\">Lingerie & Sexy Apparel</a></h1>\r\n      </div>\r\n    </div>\r\n</div>"
+  format: full_html

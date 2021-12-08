@@ -1,0 +1,11 @@
+uuid: 3d48deba-2816-4df5-8ffe-b55b1f1dcd4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: mail_chimp_sign_up_form_2
+title: 'Mail Chimp Sign-up Form 2'
+content:
+  value: "<!-- Begin Mailchimp Signup Form -->\r\n<link href=\"//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css\" rel=\"stylesheet\" type=\"text/css\">\r\n<style type=\"text/css\">\r\n\t/*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}*/\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id=\"mc_embed_signup\">\r\n  <form action=\"https://gmoonmedia.us5.list-manage.com/subscribe/post?u=1a748d9b7448ff1fe07f26365&amp;id=1bffce9f53\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n    <div id=\"mc_embed_signup_scroll\">\r\n\t    <div class=\"row\">\r\n          <div class=\"col-md-5\">\r\n            <h1>STAY INFORMED ABOUT OUR PRODUCTS</h1><br>\r\n            <h2>Subscribe for our latest deals, promotions and news</h2>\r\n          </div>\r\n          <div class=\"col-md-4\">\r\n\t       <input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"email address\" required>\r\n            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->   \r\n          </div>    \r\n          <div class=\"col-md-2\">\r\n            <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_1a748d9b7448ff1fe07f26365_1bffce9f53\" tabindex=\"-1\" value=\"\"></div>\r\n              <div class=\"clear foot\">\r\n                <input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\">\r\n              </div>\r\n            </div>\r\n          </div>\r\n      </div>\r\n    </div>\r\n  </form>\r\n</div>\r\n\r\n<!--End mc_embed_signup-->"
+  format: full_html

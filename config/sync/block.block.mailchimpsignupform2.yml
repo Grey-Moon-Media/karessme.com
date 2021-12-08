@@ -1,14 +1,13 @@
-uuid: ac8d02e7-e318-444a-8e99-55f9b9ff3494
+uuid: e576352d-97cd-41d0-b78f-e134404f201b
 langcode: en
-status: false
+status: true
 dependencies:
-  content:
-    - 'block_content:basic:43118073-29d1-4864-8219-f5a9ca7494cd'
+  config:
+    - simple_block.simple_block.mail_chimp_sign_up_form_2
   module:
-    - block_content
     - block_visibility_groups
     - hsblock
-    - system
+    - simple_block
   theme:
     - wosh
 third_party_settings:
@@ -29,26 +28,19 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: mailchimpsignupform
+id: mailchimpsignupform2
 theme: wosh
 region: content_wide
 weight: 0
 provider: null
-plugin: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
+plugin: 'simple_block:mail_chimp_sign_up_form_2'
 settings:
-  id: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
-  label: 'Mail Chimp Sign-up Form'
-  provider: block_content
+  id: 'simple_block:mail_chimp_sign_up_form_2'
+  label: 'Mail Chimp Sign-up Form 2'
+  provider: simple_block
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
 visibility:
   condition_group:
     id: condition_group
     negate: false
     block_visibility_group: ''
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
