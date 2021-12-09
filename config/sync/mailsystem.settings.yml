@@ -26,3 +26,7 @@ modules:
     none:
       formatter: mime_mail
       sender: SMTPMailSystem
+  mandrill:
+    none:
+      formatter: mandrill_mail
+      sender: mandrill_mail

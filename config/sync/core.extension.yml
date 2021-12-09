@@ -87,6 +87,10 @@ module:
   link: 0
   maillog: 0
   mailsystem: 0
+  mandrill: 0
+  mandrill_activity: 0
+  mandrill_reports: 0
+  mandrill_template: 0
   media: 0
   menu_ui: 0
   message: 0

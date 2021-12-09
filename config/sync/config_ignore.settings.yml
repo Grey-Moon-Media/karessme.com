@@ -5,5 +5,7 @@ ignored_config_entities:
   - commerce_payment.commerce_payment_gateway.paypal_express.yml
   - commerce_payment.commerce_payment_gateway.stripe.yml
   - google_analytics.settings.yml
+  - xmlsitemap.settings.yml
+  - mandrill.settings.yml
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
