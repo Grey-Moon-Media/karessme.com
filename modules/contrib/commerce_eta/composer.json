@@ -1,0 +1,13 @@
+{
+    "name": "commerce_eta",
+    "type": "drupal-module",
+    "description": "Triggers events based on aging and conditions of commerce entities. Currently only working for orders.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/commerce_eta",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/commerce_eta",
+        "source": "http://cgit.drupalcode.org/commerce_eta"
+    }
+}

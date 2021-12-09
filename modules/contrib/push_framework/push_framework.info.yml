@@ -1,0 +1,13 @@
+name: Push Framework
+type: module
+description: The Push Framework receives messages via API and delivers them to specific channels.
+package: Push
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - advancedqueue:advancedqueue
+  - token:token
+
+# Information added by Drupal.org packaging script on 2021-08-20
+version: '2.1.1'
+project: 'push_framework'
+datestamp: 1629470097

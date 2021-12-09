@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies: {  }
+id: abandoned_carts
+label: 'Abandoned Carts'
+cron_status: true
+log_status: true
+run_limit: 1
+target_entity_type: commerce_order
+conditions:
+  -
+    plugin: order_cart_status
+    configuration:
+      cart_status: '1'
+  -
+    plugin: order_contains_email
+    configuration:
+      has_email: '1'
+  -
+    plugin: order_age
+    configuration:
+      minimum_age_basis: changed
+      minimum_age_value: '12'
+      minimum_age_unit: hour
+      limited: '1'
+      maximum_age_basis: created
+      maximum_age_value: '15'
+      maximum_age_unit: day
+  -
+    plugin: order_contains_items
+    configuration:
+      has_items: '1'
+conditionOperator: AND

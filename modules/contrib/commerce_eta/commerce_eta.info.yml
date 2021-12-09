@@ -1,0 +1,12 @@
+name: 'Commerce Event Trigger API'
+type: module
+description: 'Triggers events based on aging and conditions of commerce entities. Currently only working for orders.'
+core_version_requirement: ^8 || ^9
+package: 'Commerce ETA'
+dependencies:
+  - commerce:commerce_order
+
+# Information added by Drupal.org packaging script on 2020-12-02
+version: '8.x-1.2'
+project: 'commerce_eta'
+datestamp: 1606931912

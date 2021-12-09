@@ -1,0 +1,6 @@
+services:
+  commerce_eta.commands:
+    class: \Drupal\commerce_eta\Commands\CommerceEtaCommands
+    arguments: ['@account_switcher']
+    tags:
+      - { name: drush.command }

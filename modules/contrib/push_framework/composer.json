@@ -1,0 +1,23 @@
+{
+    "name": "drupal/push_framework",
+    "license": "GPL-2.0+",
+    "type": "drupal-module",
+    "description": "Base Module for Push Framework to deliver messages",
+    "keywords": [
+        "Drupal",
+        "Push",
+        "Delivery"
+    ],
+    "require": {
+        "php": ">=7.2",
+        "drupal/advancedqueue": "^1.0@beta",
+        "drupal/token": "^1.7"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}

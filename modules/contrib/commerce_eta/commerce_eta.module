@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Contains commerce_eta.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\commerce_eta\Controller\EventDispatchController;
+use Drupal\commerce_eta\Entity\Trigger;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_help().
+ */
+function commerce_eta_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the commerce_eta module.
+    case 'help.page.commerce_eta':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Triggers events based on aging and conditions of commerce entities. Currently only working for orders.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function commerce_eta_cron() {
+  // This probably isn't the best way to do this.
+  // For now we run as admin.
+  $accountSwitcher = Drupal::service('account_switcher');
+  $account = User::load(1);
+  $accountSwitcher->switchTo($account);
+
+  $triggers = Trigger::loadMultiple();
+
+  foreach ($triggers as $trigger) {
+    if ($trigger->isPublished() && $trigger->getCronStatus()) {
+      $eventDispatchController = new EventDispatchController($trigger);
+      $eventDispatchController->fire();
+    }
+  }
+
+  $accountSwitcher->switchBack();
+}
+
+/**
+ * Add index to events table for performance.
+ */
+function commerce_eta_update_8001(&$sandbox) {
+  $spec = [
+    'fields' => [
+      'entity_type' => [
+        'description' => 'The type of commerce entity this trigger fires on.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'entity_id' => [
+        'description' => 'The ID of the entity that this event fired on.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'indexes' => [
+      'entity_type' => ['entity_type', 'entity_id'],
+    ],
+  ];
+
+  $fields = ['entity_type', 'entity_id'];
+
+  $schema = \Drupal::database()->schema();
+
+  $schema->addIndex('commerce_eta_events', 'entity_type', $fields, $spec);
+}

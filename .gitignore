@@ -3,7 +3,7 @@
 /drush/contrib/
 /vendor/
 /core/
-/modules/contrib/
+#/modules/contrib/
 #/themes/wosh/templates/html.html.twig
 /profiles/contrib/
 

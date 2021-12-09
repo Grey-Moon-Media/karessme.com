@@ -1,0 +1,6 @@
+services:
+  push_framework.commands:
+    class: Drupal\push_framework\Commands\PFCommands
+    arguments: ['@push_framework.service']
+    tags:
+      - { name: drush.command }

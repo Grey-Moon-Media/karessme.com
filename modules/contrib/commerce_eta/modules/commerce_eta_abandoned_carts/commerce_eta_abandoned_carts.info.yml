@@ -1,0 +1,12 @@
+name: 'Commerce ETA: Abandoned Carts'
+type: module
+description: 'Event trigger and subscriber for abandoned cart and an email template.'
+core_version_requirement: ^8 || ^9
+package: 'Commerce ETA'
+dependencies:
+  - commerce_eta
+
+# Information added by Drupal.org packaging script on 2020-12-02
+version: '8.x-1.2'
+project: 'commerce_eta'
+datestamp: 1606931912

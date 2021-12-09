@@ -1,0 +1,6 @@
+description: 'Drupal Console generated command.'
+options: {}
+arguments: {}
+messages:
+    success: 'I am a new generated command.'
+    how-to: 'Run one of these with "drupal commerce_eta:fire {trigger}'

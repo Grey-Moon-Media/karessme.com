@@ -1,0 +1,6 @@
+commerce_eta_abandoned_carts.abandoned_carts_config_form:
+  title: 'Abandoned Carts'
+  route_name: commerce_eta_abandoned_carts.abandoned_carts_config_form
+  description: 'Configure Abandoned Cart Emails'
+  parent: commerce_eta.configuration
+  weight: 99

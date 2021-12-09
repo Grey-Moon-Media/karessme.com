@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Contains Drupal Hooks for the basic Commerce ETA Abandoned Carts module.
+ */
+
+/**
+ * Implements hook_mail().
+ */
+function commerce_eta_abandoned_carts_mail($key, &$message, $params) {
+
+  switch ($key) {
+    case 'abandoned_cart_mail':
+      // Get the module configs.
+      $config = \Drupal::config('commerce_eta_abandoned_carts.abandoned_carts');
+
+      // Set the from email address.
+      $message['from'] = $config->get('from_email') ? $config->get('from_email') : \Drupal::config('system.site')->get('mail');
+
+      // Set the BCC if available.
+      if ($config->get('bcc_email')) {
+        $message['headers']['Bcc'] = $config->get('bcc_email');
+      }
+
+      // If the subject line is not set in config, set generic one here.
+      if ($config->get('subject_line')) {
+        $message['subject'] = t('@subject_line', [
+          '@subject_line' => $config->get('subject_line'),
+        ]);
+      }
+      else {
+        $message['subject'] = t('Your cart at @website_name is waiting for you...', [
+          '@website_name' => \Drupal::config('system.site')->get('name'),
+        ]);
+      }
+
+      // Set the email type to HTML.
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+
+      // Set up the Twig theme and variables.
+      $body_data = [
+        '#theme' => 'commerce-eta-abandoned-carts',
+        '#order_view' => $params['order_view'],
+      ];
+
+      /** @var \Drupal\Core\Render\Renderer $render_service */
+      $render_service = \Drupal::service('renderer');
+      // Render the body in HTML.
+      $message['body'][] = $render_service->render($body_data);
+
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_eta_abandoned_carts_theme($existing, $type, $theme, $path) {
+  $config = \Drupal::config('system.theme');
+
+  return [
+    'commerce-eta-abandoned-carts' => [
+      'template' => 'commerce-eta-abandoned-carts',
+      'variables' => [
+        'message_data' => [],
+        'order_view' => [],
+        'site_logo_url' => \Drupal::request()->getSchemeAndHttpHost() . '/' . \Drupal::theme()->getActiveTheme()->getLogo(),
+        'cart_url' => \Drupal::request()->getSchemeAndHttpHost() . '/cart',
+        'checkout_link' => \Drupal::request()->getSchemeAndHttpHost() . '/checkout',
+        'site_name' => $config = \Drupal::config('system.site')->get('name'),
+        'site_url' => \Drupal::request()->getSchemeAndHttpHost(),
+      ],
+    ],
+  ];
+}

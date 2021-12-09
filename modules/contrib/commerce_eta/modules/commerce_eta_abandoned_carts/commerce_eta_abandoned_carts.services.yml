@@ -1,0 +1,6 @@
+services:
+  commerce_eta_abandoned_carts.email:
+    class: Drupal\commerce_eta_abandoned_carts\EventSubscriber\EmailSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

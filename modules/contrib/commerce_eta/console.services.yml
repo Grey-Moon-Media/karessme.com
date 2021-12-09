@@ -1,0 +1,16 @@
+services:
+  commerce_eta.commerce_eta_list_triggers:
+    class: Drupal\commerce_eta\Command\ListTriggersCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  commerce_eta.commerce_eta_fire:
+    class: Drupal\commerce_eta\Command\FireTriggerCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+  commerce_eta.commerce_eta_fire_all:
+    class: Drupal\commerce_eta\Command\FireAllTriggersCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }

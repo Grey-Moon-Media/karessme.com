@@ -1,0 +1,5 @@
+entity.commerce_event_trigger.add_form:
+  route_name: entity.commerce_event_trigger.add_form
+  title: 'Add Trigger'
+  appears_on:
+    - entity.commerce_event_trigger.collection

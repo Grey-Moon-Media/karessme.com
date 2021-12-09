@@ -1,0 +1,15 @@
+commerce_eta.configuration:
+  path: '/admin/commerce/config/events'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Events'
+  requirements:
+    _permission: 'access commerce administration pages'
+
+commerce_eta.event_dispatch_controller_fire:
+  path: '/commerce_eta/fire'
+  defaults:
+    _controller: '\Drupal\commerce_eta\Controller\EventDispatchController::fire'
+    _title: 'fire'
+  requirements:
+    _permission: 'access content'

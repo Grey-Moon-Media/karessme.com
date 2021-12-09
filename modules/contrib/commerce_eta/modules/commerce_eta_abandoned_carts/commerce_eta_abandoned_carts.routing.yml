@@ -1,0 +1,10 @@
+
+commerce_eta_abandoned_carts.abandoned_carts_config_form:
+  path: '/admin/commerce/config/events/abandoned-carts'
+  defaults:
+    _form: '\Drupal\commerce_eta_abandoned_carts\Form\AbandonedCartsConfigForm'
+    _title: 'Abandoned Carts Configuration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

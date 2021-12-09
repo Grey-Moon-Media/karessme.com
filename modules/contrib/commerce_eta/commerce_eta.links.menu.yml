@@ -1,0 +1,13 @@
+# Events API Config Top Level
+commerce_eta.configuration:
+  title: 'Events'
+  route_name: 'commerce_eta.configuration'
+  parent: 'commerce.configuration'
+
+# Trigger menu items definition
+entity.commerce_event_trigger.collection:
+  title: 'Triggers'
+  route_name: entity.commerce_event_trigger.collection
+  description: 'List all event triggers'
+  parent: commerce_eta.configuration
+  weight: 99

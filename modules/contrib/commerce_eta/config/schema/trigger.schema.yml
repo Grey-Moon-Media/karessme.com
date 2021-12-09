@@ -1,0 +1,31 @@
+commerce_eta.commerce_event_trigger.*:
+  type: config_entity
+  label: 'Trigger config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    cron_status:
+      type: boolean
+      label: 'Cron Status'
+    log_status:
+      type: boolean
+      label: 'Log Status'
+    run_limit:
+      type: integer
+      label: 'Run Limit'
+    target_entity_type:
+      type: string
+      label: 'Target Entity Type'
+    conditions:
+      type: sequence
+      sequence:
+        type: commerce_condition
+    conditionOperator:
+      type: string
+      label: 'Condition operator'

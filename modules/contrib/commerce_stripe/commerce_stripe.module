@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Used for stripe integration.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function commerce_stripe_theme() {
+  return [
+    'commerce_stripe_credit_card_logos' => [
+      'variables' => [
+        'credit_cards' => [],
+      ],
+    ],
+  ];
+}
