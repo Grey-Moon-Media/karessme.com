@@ -97,10 +97,12 @@ class AfterCheckout implements EventSubscriberInterface
       //$honeyOrder = $this->honeyOrderManagementService->createOrderInHoneysPlace($event->getOrder());
       //if ($honeyOrder) {
         $order_id = $event->getOrder()->id();
-
+        $order = $event->getOrder();
         $response = $this->honeyOrderManagementService->getHoneyOrderStatus($order_id);
         $order_data_response = $response->getData();
-        
+        $order_state = $order->getState()->getId();  
+      
+        if($order_state == 'completed'){
         if($response->getStatus() == "Shipped" && $order_data_response['shipagent'] == "USPS"){
           $trackingnumber1 = $order_data_response['trackingnumber1'];
           //$order = Order::load($order_id);
@@ -149,6 +151,7 @@ class AfterCheckout implements EventSubscriberInterface
               }
             }
           }
+        }
         }
       //}
     } catch (Exception $e) {
