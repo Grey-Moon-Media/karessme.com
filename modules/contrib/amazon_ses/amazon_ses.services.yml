@@ -1,0 +1,22 @@
+parameters:
+  amazon_ses_client.options:
+    version: latest
+
+services:
+  amazon_ses.handler:
+    class: Drupal\amazon_ses\AmazonSesHandler
+    arguments: ['@amazon_ses.client', '@logger.channel.amazon_ses', '@config.factory']
+
+  amazon_ses.client:
+    class: Aws\Ses\SesClient
+    factory: 'amazon_ses.client_factory:createInstance'
+    arguments: ['%amazon_ses_client.options%', '@config.factory']
+
+  amazon_ses.client_factory:
+    class: Drupal\amazon_ses\AmazonSesClientFactory
+    public: false
+
+  logger.channel.amazon_ses:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['amazon_ses']

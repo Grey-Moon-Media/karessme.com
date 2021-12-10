@@ -7,5 +7,6 @@ ignored_config_entities:
   - google_analytics.settings.yml
   - xmlsitemap.settings.yml
   - mandrill.settings.yml
+  - smtp.settings.yml
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

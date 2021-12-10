@@ -23,6 +23,7 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/ajax_loader": "^2.0",
+        "drupal/amazon_ses": "^2.0@beta",
         "drupal/background_image": "^2.0",
         "drupal/background_image_formatter": "^1.7",
         "drupal/block_visibility_groups": "^1.4",

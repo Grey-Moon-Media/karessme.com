@@ -1,0 +1,12 @@
+name: 'Amazon SES'
+description: 'Allows site email to be sent using Amazon SES.'
+type: module
+package: Other
+core_version_requirement: ^8 || ^9
+dependencies:
+  - aws_secrets_manager:aws_secrets_manager
+
+# Information added by Drupal.org packaging script on 2021-06-17
+version: '2.0.0-beta2'
+project: 'amazon_ses'
+datestamp: 1623890124
