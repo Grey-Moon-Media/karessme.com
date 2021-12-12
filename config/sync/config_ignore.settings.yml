@@ -1,12 +1,12 @@
 ignored_config_entities:
-  - commerce_payment.commerce_payment_gateway.square.yml
-  - honeys_place.settings.yml
-  - commerce_payment.commerce_payment_gateway.paypal_checkout.yml
-  - commerce_payment.commerce_payment_gateway.paypal_express.yml
-  - commerce_payment.commerce_payment_gateway.stripe.yml
-  - google_analytics.settings.yml
-  - xmlsitemap.settings.yml
-  - mandrill.settings.yml
-  - smtp.settings.yml
+  - commerce_payment.commerce_payment_gateway.square
+  - honeys_place.settings
+  - commerce_payment.commerce_payment_gateway.paypal_checkout
+  - commerce_payment.commerce_payment_gateway.paypal_express
+  - commerce_payment.commerce_payment_gateway.stripe
+  - google_analytics.settings
+  - xmlsitemap.settings
+  - mandrill.settings
+  - smtp.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
