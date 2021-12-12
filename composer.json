@@ -83,7 +83,6 @@
         "drupal/physical": "^1.1",
         "drupal/push_framework": "^2.1",
         "drupal/recreate_block_content": "^2.1",
-        "drupal/responsive_background_image": "^1.0@alpha",
         "drupal/rules": "3.x-dev@dev",
         "drupal/search_api": "^1.19",
         "drupal/simple_block": "^1.3",
@@ -121,9 +120,6 @@
            },
 	    "drupal/commerce_shipping": {
 		    "Error: Call to a member function getPlugin() on null":"https://www.drupal.org/files/issues/2020-03-07/commerce_shipping-3118351-2.patch"
-	    },
-	    "drupal/background_image": {
-              "Render Callback" : "https://www.drupal.org/files/issues/2020-10-14/3161262-6.patch"
 	    },
 	    "drupal/core" : {
 		   "EntityInterface, null given" : "https://www.drupal.org/files/issues/2020-10-20/3178008-2.patch",

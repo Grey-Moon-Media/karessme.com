@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_image
-    - field.field.node.page.field_responsive_background_imag
     - node.type.page
   module:
     - image
     - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -31,15 +29,6 @@ content:
     region: content
   field_image:
     weight: 2
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: first
-  field_responsive_background_imag:
-    weight: 3
     label: above
     settings:
       image_style: ''
