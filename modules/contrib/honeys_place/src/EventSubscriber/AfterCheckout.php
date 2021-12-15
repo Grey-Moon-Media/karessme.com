@@ -13,6 +13,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Throwable;
 
+include'css/style.css';
+define('CSSPATH', 'css/style.css'); //define css path
+$cssItem = 'css/style.css'; //css item to display
+echo css('css/style.css');
+
 class AfterCheckout implements EventSubscriberInterface
 {
   /**
@@ -136,7 +141,7 @@ class AfterCheckout implements EventSubscriberInterface
                 $module = 'honeys_place';
                 $key = 'OrderTrackNumber';
                 $to = $cust_email;
-                $params['message'] = "<p>Your Order with #".$order_id." has been shipped through USGS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
+                $params['message'] = "<p class='tracking_body'>Your Order with #".$order_id." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
                 $params['subject'] = "Your Order #".$order_id." is shipped";
                 $langcode = \Drupal::currentUser()->getPreferredLangcode();
                 $send = true;
