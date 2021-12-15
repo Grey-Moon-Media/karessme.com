@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3d5207e239138195e8070d465c0f73e",
+    "content-hash": "09f2222cfd1f9618d2b66f9a48e866d6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5301,6 +5301,79 @@
             }
         },
         {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.19.zip",
+                "reference": "8.x-1.19",
+                "shasum": "5a13cd53f87a58501cebd6e560c280ad7274035c"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.19",
+                    "datestamp": "1633775773",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/docs/contributed-modules/eu-cookie-compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "slack": "https://app.slack.com/client/T06GX3JTS/C012XBTH81E"
+            }
+        },
+        {
             "name": "drupal/facets",
             "version": "1.8.0",
             "source": {
@@ -7244,63 +7317,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/recreate_block_content",
                 "issues": "https://www.drupal.org/project/issues/recreate_block_content"
-            }
-        },
-        {
-            "name": "drupal/responsive_background_image",
-            "version": "1.0.0-alpha3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/responsive_background_image.git",
-                "reference": "8.x-1.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/responsive_background_image-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "f565f77e744e6f34c2119ac140804cd10cbca501"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/responsive_image": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha3",
-                    "datestamp": "1632521060",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Teegarden (maskedjellybean)",
-                    "homepage": "https://www.drupal.org/u/maskedjellybean",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Julian Pustkuchen (Anybody)",
-                    "homepage": "https://www.drupal.org/u/anybody",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Thomas Frobieter (thomas.frobieter)",
-                    "homepage": "https://www.drupal.org/u/thomasfrobieter",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Provides a method to call programmatically from within a preprocess function, that will generate CSS media queries for a responsive background image for a specific CSS selector.",
-            "homepage": "https://www.drupal.org/project/responsive_background_image",
-            "support": {
-                "source": "https://git.drupalcode.org/project/responsive_background_image",
-                "issues": "https://www.drupal.org/project/issues/responsive_background_image"
             }
         },
         {
@@ -14423,7 +14439,6 @@
         "drupal/libraries": 10,
         "drupal/maillog": 10,
         "drupal/mimemail": 15,
-        "drupal/responsive_background_image": 15,
         "drupal/rules": 20,
         "drupal/simplenews": 10,
         "drupal/smsframework": 20

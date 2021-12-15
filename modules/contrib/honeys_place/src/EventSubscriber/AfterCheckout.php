@@ -116,7 +116,7 @@ class AfterCheckout implements EventSubscriberInterface
           $connection = \Drupal::service('database');
 
           $coquery = \Drupal::database()->select('commerce_order', 'co');
-          $coquery->fields('co', ['mail']);
+          $coquery->fields('co', ['mail','order_number']);
           $coquery->condition('co.order_id', $order_id);
           $order_query = $coquery->execute()->fetchAssoc();
 
@@ -124,6 +124,7 @@ class AfterCheckout implements EventSubscriberInterface
           $cofutnquery->fields('cofutn', ['entity_id']);
           $cofutnquery->condition('cofutn.entity_id', $order_id);
           $hastrackingno = $cofutnquery->execute()->fetchAssoc();
+		  $order_number = $order_query['order_number'];
           if($trackingnumber1){
             if($hastrackingno){
               \Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $trackingnumber1))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
@@ -141,8 +142,8 @@ class AfterCheckout implements EventSubscriberInterface
                 $module = 'honeys_place';
                 $key = 'OrderTrackNumber';
                 $to = $cust_email;
-                $params['message'] = "<p class='tracking_body'>Your Order with #".$order_id." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
-                $params['subject'] = "Your Order #".$order_id." is shipped";
+                $params['message'] = "<p class='tracking_body'>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
+                $params['subject'] = "Your Order #".$order_number." is shipped";
                 $langcode = \Drupal::currentUser()->getPreferredLangcode();
                 $send = true;
 

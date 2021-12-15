@@ -57,6 +57,7 @@
         "drupal/ctools": "^3.7",
         "drupal/ds": "^3.13",
         "drupal/empty_fields": "^1.0@beta",
+        "drupal/eu_cookie_compliance": "^1.19",
         "drupal/facets": "^1.8",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
