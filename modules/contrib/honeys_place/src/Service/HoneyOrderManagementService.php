@@ -159,6 +159,7 @@ class HoneyOrderManagementService
       'locality',
       'postal_code',
       'address_line1',
+      'organization',
       'given_name'
     ];
 

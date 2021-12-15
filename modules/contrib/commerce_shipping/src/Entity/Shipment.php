@@ -593,7 +593,7 @@ class Shipment extends ContentEntityBase implements ShipmentInterface {
       ->setRequired(TRUE)
       ->setSetting('target_type', 'profile')
       ->setSetting('handler', 'default')
-      ->setSetting('handler_settings', ['target_bundles' => ['customer']])
+      ->setSetting('handler_settings', ['target_bundles' => ['customer' => 'customer']])
       ->setDisplayOptions('form', [
         'type' => 'commerce_shipping_profile',
         'weight' => -10,
@@ -711,7 +711,7 @@ class Shipment extends ContentEntityBase implements ShipmentInterface {
     $fields['shipping_profile'] = clone $base_field_definitions['shipping_profile'];
     $fields['shipping_profile']->setSetting('handler_settings', [
       'target_bundles' => [
-        $shipment_type->getProfileTypeId(),
+        $shipment_type->getProfileTypeId() => $shipment_type->getProfileTypeId(),
       ],
     ]);
 

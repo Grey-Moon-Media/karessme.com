@@ -126,10 +126,10 @@ class ShippingInformation extends CheckoutPaneBase implements ContainerFactoryPl
    */
   public function buildConfigurationSummary() {
     if (!empty($this->configuration['require_shipping_profile'])) {
-      $summary = $this->t('Hide shipping costs until an address is entered: Yes') . '<br>';;
+      $summary = $this->t('Hide shipping costs until an address is entered: Yes') . '<br>';
     }
     else {
-      $summary = $this->t('Hide shipping costs until an address is entered: No') . '<br>';;
+      $summary = $this->t('Hide shipping costs until an address is entered: No') . '<br>';
     }
     if (!empty($this->configuration['auto_recalculate'])) {
       $summary .= $this->t('Autorecalculate: Yes');
@@ -339,7 +339,7 @@ class ShippingInformation extends CheckoutPaneBase implements ContainerFactoryPl
     // Update the shipments and save the order if no rate was explicitly
     // selected, that usually occurs when changing addresses, this will ensure
     // the default rate is selected/applied.
-    if (!$this->hasRateSelected($pane_form, $form_state)) {
+    if (!$this->hasRateSelected($pane_form, $form_state) && ($recalculate_shipping || $force_packing)) {
       array_map(function (ShipmentInterface $shipment) {
         if (!$shipment->isNew()) {
           $shipment->save();
@@ -445,6 +445,10 @@ class ShippingInformation extends CheckoutPaneBase implements ContainerFactoryPl
     // Save the modified shipments.
     $shipments = [];
     foreach (Element::children($pane_form['shipments']) as $index) {
+      if (!isset($pane_form['shipments'][$index]['#shipment'])) {
+        continue;
+      }
+
       /** @var \Drupal\commerce_shipping\Entity\ShipmentInterface $shipment */
       $shipment = clone $pane_form['shipments'][$index]['#shipment'];
       $form_display = EntityFormDisplay::collectRenderDisplay($shipment, 'checkout');

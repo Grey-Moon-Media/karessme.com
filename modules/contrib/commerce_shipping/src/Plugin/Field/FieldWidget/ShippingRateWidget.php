@@ -163,7 +163,7 @@ class ShippingRateWidget extends WidgetBase implements ContainerFactoryPluginInt
     $selected_value = NestedArray::getValue($form_state->getValues(), $parents, $key_exists);
 
     // Fallback to the default rate if the selected rate is no longer valid.
-    if (!isset($element[$selected_value]) && isset($element[$element['#default_value']])) {
+    if (!isset($element[$selected_value]) && isset($element['#default_value'], $element[$element['#default_value']])) {
       $selected_value = $element['#default_value'];
     }
 
@@ -229,6 +229,9 @@ class ShippingRateWidget extends WidgetBase implements ContainerFactoryPluginInt
     if (isset($form['sidebar']['order_summary'])) {
       $selector = sprintf('[data-drupal-selector="%s"]', $form['sidebar']['order_summary']['#attributes']['data-drupal-selector']);
       $response->addCommand(new ReplaceCommand($selector, $form['sidebar']['order_summary']));
+    }
+    if (isset($form['shipping_information']['shipments'])) {
+      $response->addCommand(new ReplaceCommand('[data-drupal-selector="' . $form['shipping_information']['shipments']['#attributes']['data-drupal-selector'] . '"]', $form['shipping_information']['shipments']));
     }
 
     return $response;
