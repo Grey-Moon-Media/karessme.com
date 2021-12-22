@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\honeys_place\Service\HoneyOrderManagementService;
+
+function custom_karessme_cron(){
+
+	$connection = \Drupal::service('database');
+	$honey_order_management = \Drupal::service('honeys_place.honey_order_management');
+
+	$coquery = \Drupal::database()->select('commerce_order', 'co');
+	$coquery->fields('co', ['order_id','mail']);
+	$coquery->condition('co.cart', 0);
+	$coquery->condition('co.state', 'completed');
+	$order_query = $coquery->execute()->fetchAll();
+	
+	foreach($order_query as $order_record){
+		$order_id = intval($order_record->order_id);
+
+		$response = $honey_order_management->getHoneyOrderStatus($order_id);
+        $order_data_response = $response->getData();
+
+		$order = \Drupal\commerce_order\Entity\Order::load($order_id);
+		$tracking_number_ext = $order->get('field_usps_tracking_number')->value;
+		
+		if(empty($tracking_number_ext)){
+			if($response->getStatus() == "Shipped" && $order_data_response['shipagent'] == "USPS"){
+				$trackingnumber1 = $order_data_response['trackingnumber1'];
+				if($trackingnumber1){
+					$cofutnresult = $connection->insert('commerce_order__field_usps_tracking_number')->fields(['bundle' => 'default','deleted' => 0,'entity_id' => $order_id,'revision_id' => $order_id,'langcode' => 'und','delta' => 0,'field_usps_tracking_number_value' => $trackingnumber1])->execute();
+					
+					if(count($order_query)){
+						$cust_email = $order_query['mail'];
+					}else{
+						$cust_email = "";
+					}
+
+					if($cust_email){
+						$mailManager = \Drupal::service('plugin.manager.mail');
+						$module = 'honeys_place';
+						$key = 'OrderTrackNumber';
+						$to = $cust_email;
+						$params['message'] = "<p>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
+						$params['subject'] = "Your Order #".$order_number." is shipped";
+						$langcode = \Drupal::currentUser()->getPreferredLangcode();
+						$send = true;
+
+						$result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+					}
+				}
+			}
+		}
+	}
+	
+}
