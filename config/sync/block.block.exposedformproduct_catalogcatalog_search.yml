@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -39,17 +39,17 @@ plugin: 'views_exposed_filter_block:product_catalog-catalog_search'
 settings:
   id: 'views_exposed_filter_block:product_catalog-catalog_search'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
     context_mapping: {  }
+    block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/home-02\r\n/home-03\r\n/home-04\r\n/products\r\n/products/*\r\n/product/*\r\n/catalog\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/home-02\r\n/home-03\r\n/home-04\r\n/products\r\n/products/*\r\n/product/*\r\n/catalog\r\n"

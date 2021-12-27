@@ -4,11 +4,11 @@ status: true
 dependencies: {  }
 id: usps_tracking_number
 label: 'USPS Tracking Number'
-description: 'USPS Tracking Number'
-settings:
-  field: field_usps_tracking_number
-  data: original_data
-tags: {  }
 type: entity_filed_variable
+description: 'USPS Tracking Number'
 target_entity_type: commerce_order
 target_bundle: default
+tags: {  }
+settings:
+  data: original_data
+  field: field_usps_tracking_number

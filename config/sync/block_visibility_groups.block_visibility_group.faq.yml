@@ -10,8 +10,8 @@ logic: and
 conditions:
   3a6b9476-3f58-4948-a3db-c740e189fedd:
     id: request_path
-    pages: /faq
     negate: false
-    context_mapping: {  }
     uuid: 3a6b9476-3f58-4948-a3db-c740e189fedd
+    context_mapping: {  }
+    pages: /faq
 allow_other_conditions: false

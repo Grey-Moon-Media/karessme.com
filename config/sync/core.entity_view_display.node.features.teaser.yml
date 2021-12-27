@@ -18,29 +18,29 @@ bundle: features
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 2
+    label: hidden
     settings:
       trim_length: 150
     third_party_settings: {  }
+    weight: 2
     region: content
   field_icon:
     type: string
-    weight: 0
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
     region: content
   field_image:
     type: image
-    weight: 1
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   links: true

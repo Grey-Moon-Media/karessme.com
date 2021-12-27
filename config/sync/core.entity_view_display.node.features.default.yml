@@ -18,33 +18,33 @@ bundle: features
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
     region: content
   field_icon:
-    weight: 102
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 102
     region: content
   field_image:
-    weight: 103
+    type: image
     label: hidden
     settings:
-      image_style: 1200x500
       image_link: ''
+      image_style: 1200x500
     third_party_settings: {  }
-    type: image
+    weight: 103
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   search_api_excerpt: true

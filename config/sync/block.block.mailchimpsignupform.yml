@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: fullwidth
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_mailchimp_form
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
 settings:
   id: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
   label: 'Mail Chimp Sign-up Form'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -50,5 +50,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

@@ -14,12 +14,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: ''
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -39,8 +39,8 @@ plugin: 'block_content:e009779d-842e-419e-a3ce-039ea9fafbe7'
 settings:
   id: 'block_content:e009779d-842e-419e-a3ce-039ea9fafbe7'
   label: 'Promotion Block 03'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -48,5 +48,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_02
     context_mapping: {  }
+    block_visibility_group: home_02

@@ -1,20 +1,23 @@
-uuid: cefd2592-0239-4772-a0b8-3148b9038ff2
+uuid: 6aff8dd0-116a-41a0-acd2-b4eeef6f5f73
 langcode: en
 status: true
 dependencies:
+  config:
+    - simple_block.simple_block.social_media_icons
   module:
     - block_visibility_groups
     - hsblock
+    - simple_block
   theme:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -30,15 +33,12 @@ theme: wosh
 region: footer_bottom_second
 weight: 0
 provider: null
-plugin: 'block_content:fc33c6c3-5055-4eb9-9cbb-3a76de5e0a4c'
+plugin: 'simple_block:social_media_icons'
 settings:
-  id: 'block_content:fc33c6c3-5055-4eb9-9cbb-3a76de5e0a4c'
+  id: 'simple_block:social_media_icons'
   label: 'Social Media Icons'
-  provider: block_content
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
+  provider: simple_block
 visibility:
   condition_group:
     id: condition_group

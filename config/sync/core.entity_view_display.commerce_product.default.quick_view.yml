@@ -27,65 +27,71 @@ mode: quick_view
 content:
   body:
     type: text_default
-    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_product_brand:
-    weight: 5
+    type: entity_reference_facet_link
     label: hidden
     settings:
       facet: product_brand
     third_party_settings: {  }
-    type: entity_reference_facet_link
+    weight: 5
     region: content
   field_product_review:
-    weight: 6
+    type: comment_default
     label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    type: comment_default
+    weight: 6
     region: content
   field_short_description:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   flag_compare:
-    weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
+  flag_recommended_products:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   flag_wishlist:
-    weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: -5
+    weight: 10
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
   variations:
     type: commerce_add_to_cart
-    weight: 3
     label: hidden
     settings:
       combine: true
     third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   created: true
   field_featured_product: true
   field_product_category: true
+  overall_rating: true
   search_api_excerpt: true
   stores: true
   uid: true

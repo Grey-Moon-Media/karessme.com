@@ -13,7 +13,7 @@ bundle: color
 mode: default
 content:
   field_color:
-    weight: 0
+    type: color_field_formatter_swatch
     label: hidden
     settings:
       shape: circle
@@ -21,7 +21,7 @@ content:
       height: '20'
       opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_swatch
+    weight: 0
     region: content
 hidden:
   name: true

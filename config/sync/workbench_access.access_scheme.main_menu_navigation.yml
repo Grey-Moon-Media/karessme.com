@@ -5,8 +5,8 @@ dependencies:
   config:
     - system.menu.main
 id: main_menu_navigation
-label: 'Main Menu Navigation'
 plural_label: 'Main Menu Navigations'
+label: 'Main Menu Navigation'
 scheme: menu
 scheme_settings:
   menus:

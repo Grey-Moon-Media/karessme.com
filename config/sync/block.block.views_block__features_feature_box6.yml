@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: 'We have the most featured packed drupal 8 theme for commerce development.'
     block_title_style: block-title-1
     block_title_align: ''
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,13 +38,13 @@ plugin: 'views_block:features-feature_box6'
 settings:
   id: 'views_block:features-feature_box6'
   label: 'What makes us stand out'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'What makes us stand out'
   items_per_page: none
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_05
     context_mapping: {  }
+    block_visibility_group: home_05

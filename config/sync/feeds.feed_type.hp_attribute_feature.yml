@@ -7,8 +7,8 @@ dependencies:
   module:
     - feeds_ex
     - taxonomy
-id: hp_attribute_feature
 label: 'HP Attribute | Feature'
+id: hp_attribute_feature
 description: ''
 help: ''
 import_period: 3600
@@ -18,41 +18,42 @@ fetcher_configuration:
   directory: 'public://feeds'
 parser: xml
 parser_configuration:
-  context:
-    value: //Items//Item//Attributes//Attribute
   sources:
     feature:
       label: Feature
       value: Feature
-  use_tidy: false
-  display_errors: false
+  context:
+    value: //Items//Item//Attributes//Attribute
   source_encoding:
     - auto
+  display_errors: false
   debug_mode: false
   line_limit: 100
+  use_tidy: false
 processor: 'entity:taxonomy_term'
 processor_configuration:
-  langcode: en
-  update_existing: 2
-  update_non_existent: _keep
-  expire: -1
-  skip_hash_check: false
   values:
     vid: feature
-  owner_id: 0
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
   authorize: false
+  expire: -1
   owner_feed_author: false
+  owner_id: 0
 custom_sources:
   feature:
-    label: Feature
     value: Feature
+    label: Feature
     machine_name: feature
 mappings:
   -
     target: name
     map:
       value: feature
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

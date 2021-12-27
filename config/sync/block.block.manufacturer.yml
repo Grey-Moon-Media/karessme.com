@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_facet_block_title
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'facet_block:product_manufacturer'
 settings:
   id: 'facet_block:product_manufacturer'
   label: Manufacturer
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: manufacturer
 visibility:
   condition_group:
@@ -48,5 +48,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/holiday-items\r\n/on-sale\r\n/shop\r\n/shop/*\r\n/products\r\n/products/*"
     negate: false
+    pages: "/holiday-items\r\n/on-sale\r\n/shop\r\n/shop/*\r\n/products\r\n/products/*"

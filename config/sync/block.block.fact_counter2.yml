@@ -14,12 +14,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: dark-bg
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -39,8 +39,8 @@ plugin: 'block_content:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
 settings:
   id: 'block_content:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
   label: 'Fact Counter'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -48,5 +48,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_05
     context_mapping: {  }
+    block_visibility_group: home_05

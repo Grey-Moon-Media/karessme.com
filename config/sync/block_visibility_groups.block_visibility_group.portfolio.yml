@@ -10,8 +10,8 @@ logic: and
 conditions:
   5b0319a3-be01-4467-b2b8-bcf15e6b6fdb:
     id: request_path
-    pages: /portfolio
     negate: false
-    context_mapping: {  }
     uuid: 5b0319a3-be01-4467-b2b8-bcf15e6b6fdb
+    context_mapping: {  }
+    pages: /portfolio
 allow_other_conditions: false

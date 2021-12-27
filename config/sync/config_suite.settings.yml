@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: ScY2YofVIGMVG0t-BTzj9sB882Thr9ShbXc5TcVyiAA
 automatic_import: false
 automatic_export: false
 dependencies:
@@ -6,5 +8,3 @@ dependencies:
   enforced:
     module:
       - config_suite
-_core:
-  default_config_hash: ScY2YofVIGMVG0t-BTzj9sB882Thr9ShbXc5TcVyiAA

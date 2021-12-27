@@ -12,12 +12,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_footer
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -37,8 +37,8 @@ plugin: 'block_content:a43b38b3-91e8-44f4-a2a2-7ad381baad91'
 settings:
   id: 'block_content:a43b38b3-91e8-44f4-a2a2-7ad381baad91'
   label: 'Customer Service'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -46,5 +46,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: ''
     context_mapping: {  }
+    block_visibility_group: ''

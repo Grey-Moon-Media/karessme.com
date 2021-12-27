@@ -6,13 +6,13 @@ dependencies:
     - business_rules.variable.usps_tracking_number
 id: original_value_not_equal_to_current_value
 label: 'Original Value not Equal to Current Value'
+type: data_comparison
 description: 'Original Value not Equal to Current Value'
+target_entity_type: commerce_order
+target_bundle: default
+tags: {  }
 settings:
   field: field_usps_tracking_number
   data_to_compare: original_data
   operator: '!='
   value_to_compare: '{{usps_tracking_number->current}}'
-tags: {  }
-type: data_comparison
-target_entity_type: commerce_order
-target_bundle: default

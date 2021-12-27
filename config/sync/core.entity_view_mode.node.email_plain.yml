@@ -2,11 +2,11 @@ uuid: cc22141a-8249-4da0-b940-35d816f64661
 langcode: en
 status: false
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - simplenews
-  module:
-    - node
 _core:
   default_config_hash: rCDGCl6pMFu6zZuErLQggKvmawfFDysFcZNCDL72U4M
 id: node.email_plain

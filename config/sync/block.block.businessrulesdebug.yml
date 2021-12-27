@@ -11,12 +11,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -36,8 +36,8 @@ plugin: business_rules_debug_block
 settings:
   id: business_rules_debug_block
   label: 'Business rules debug'
-  provider: business_rules
   label_display: visible
+  provider: business_rules
 visibility:
   condition_group:
     id: condition_group
@@ -45,5 +45,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

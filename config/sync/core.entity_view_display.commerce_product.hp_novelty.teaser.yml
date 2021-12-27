@@ -58,8 +58,8 @@ dependencies:
     - text
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
 id: commerce_product.hp_novelty.teaser
@@ -69,23 +69,21 @@ mode: teaser
 content:
   body:
     type: text_default
-    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_category:
-    weight: 15
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 15
     region: content
   field_display:
     type: string
-    weight: 25
-    region: content
     label: above
     settings:
       link_to_entity: false
@@ -94,55 +92,55 @@ content:
         handler: nbsp
       ds:
         ds_limit: ''
+    weight: 25
+    region: content
   field_featured_novelty:
-    weight: 27
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 27
     region: content
   field_flavor:
     type: string
-    weight: 20
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings:
       empty_fields:
         handler: nbsp
+    weight: 20
+    region: content
   field_gross_weight:
-    weight: 9
+    type: physical_measurement_default
     label: above
     settings: {  }
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: physical_measurement_default
+    weight: 9
     region: content
   field_how_to_clean:
     type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
     weight: 19
     region: content
-    label: above
-    settings: {  }
-    third_party_settings:
-      empty_fields:
-        handler: nbsp
   field_how_to_use:
-    weight: 12
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: basic_string
+    weight: 12
     region: content
   field_included:
     type: string
-    weight: 21
-    region: content
     label: above
     settings:
       link_to_entity: false
@@ -151,38 +149,40 @@ content:
         handler: nbsp
       ds:
         ds_limit: ''
+    weight: 21
+    region: content
   field_manufacturer:
-    weight: 1
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: entity_reference_label
+    weight: 1
     region: content
   field_material:
     type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      empty_fields:
+        handler: nbsp
     weight: 22
     region: content
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      empty_fields:
-        handler: nbsp
   field_packaging:
     type: string
-    weight: 24
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings:
       empty_fields:
         handler: nbsp
+    weight: 24
+    region: content
   field_power:
-    weight: 13
+    type: entity_reference_label
     label: inline
     settings:
       link: true
@@ -191,37 +191,37 @@ content:
         handler: nbsp
       ds:
         ds_limit: ''
-    type: entity_reference_label
+    weight: 13
     region: content
   field_product_brand:
-    weight: 4
+    type: entity_reference_facet_link
     label: hidden
     settings:
       facet: product_brand
     third_party_settings: {  }
-    type: entity_reference_facet_link
+    weight: 4
     region: content
   field_product_review:
-    weight: 5
+    type: comment_default
     label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    type: comment_default
+    weight: 5
     region: content
   field_purpose:
     type: string
-    weight: 26
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings:
       empty_fields:
         handler: nbsp
+    weight: 26
+    region: content
   field_q:
-    weight: 8
+    type: number_integer
     label: above
     settings:
       thousand_separator: ','
@@ -229,19 +229,17 @@ content:
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: number_integer
+    weight: 8
     region: content
   field_short_description:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_size:
     type: number_decimal
-    weight: 18
-    region: content
     label: above
     settings:
       thousand_separator: ''
@@ -249,8 +247,10 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
+    weight: 18
+    region: content
   field_size_ci:
-    weight: 11
+    type: number_decimal
     label: above
     settings:
       thousand_separator: ','
@@ -260,63 +260,63 @@ content:
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: number_decimal
+    weight: 11
     region: content
   field_size_len:
-    weight: 10
+    type: physical_measurement_default
     label: above
     settings: {  }
     third_party_settings:
       empty_fields:
         handler: nbsp
-    type: physical_measurement_default
+    weight: 10
     region: content
   field_video:
     type: text_default
-    weight: 23
-    region: content
     label: above
     settings: {  }
     third_party_settings:
       empty_fields:
         handler: nbsp
+    weight: 23
+    region: content
   flag_compare:
+    settings: {  }
+    third_party_settings: {  }
     weight: 6
     region: content
-    settings: {  }
-    third_party_settings: {  }
   flag_recommended_products:
-    weight: 10
     settings: {  }
     third_party_settings: {  }
+    weight: 10
     region: content
   flag_wishlist:
-    weight: 7
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 7
+    region: content
   stores:
     type: entity_reference_entity_id
-    weight: 0
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: 17
+    weight: 0
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 17
+    region: content
   variations:
     type: commerce_add_to_cart
-    weight: 16
     label: hidden
     settings:
       combine: true
     third_party_settings: {  }
+    weight: 16
     region: content
 hidden:
   created: true

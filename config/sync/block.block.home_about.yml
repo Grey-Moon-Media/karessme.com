@@ -14,12 +14,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: ''
     block_subtitle: 'creative agency with a difference'
     block_title_style: block-title-2
     block_title_align: ''
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -43,8 +43,8 @@ plugin: 'block_content:540de843-233b-4d75-b156-59da38fc12c1'
 settings:
   id: 'block_content:540de843-233b-4d75-b156-59da38fc12c1'
   label: 'Biggest online commerce development agency'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -52,5 +52,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_01
     context_mapping: {  }
+    block_visibility_group: home_01

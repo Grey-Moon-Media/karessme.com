@@ -19,33 +19,60 @@ mode: default
 content:
   account:
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
+  avatax_customer_code:
+    type: string_textfield
+    weight: 0
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  avatax_tax_exemption_number:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  avatax_tax_exemption_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   contact:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_biography:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
-  language:
+  google_analytics:
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
+  language:
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   simplenews:
     weight: 5
     region: content
@@ -53,17 +80,17 @@ content:
     third_party_settings: {  }
   timezone:
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   user_picture:
     type: image_image
+    weight: 1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   commerce_remote_id: true
   customer_profiles: true

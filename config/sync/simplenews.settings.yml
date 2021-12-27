@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: cy-hJPYCnfCsuUZA7VDoAwssKhRJCa8N88iJTaWiims
 hash_expiration: 86400
 newsletter:
   format: plain
@@ -8,6 +10,7 @@ newsletter:
 subscriber:
   sync_fields: true
 subscription:
+  tidy_unconfirmed: 0
   use_combined: multiple
   confirm_subscribe_subject: 'Confirmation for [simplenews-newsletter:name] from [site:name]'
   confirm_subscribe_unsubscribed: |-
@@ -26,12 +29,9 @@ subscription:
   confirm_combined_line_unsubscribe_unsubscribed: 'Already unsubscribed from [simplenews-newsletter:name]'
   confirm_subscribe_page: ''
   confirm_unsubscribe_page: ''
-  tidy_unconfirmed: 0
 mail:
   use_cron: true
   throttle: 20
   spool_progress_expiration: 3600
   spool_expire: 0
   debug: false
-_core:
-  default_config_hash: cy-hJPYCnfCsuUZA7VDoAwssKhRJCa8N88iJTaWiims

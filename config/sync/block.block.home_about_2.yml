@@ -14,12 +14,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: 'Advanced extended doubtful together introduced.'
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -39,8 +39,8 @@ plugin: 'block_content:e30dc42b-5a20-4f8c-8e9c-e9aa4e704910'
 settings:
   id: 'block_content:e30dc42b-5a20-4f8c-8e9c-e9aa4e704910'
   label: 'Creative Business Agency'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -48,5 +48,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_05
     context_mapping: {  }
+    block_visibility_group: home_05

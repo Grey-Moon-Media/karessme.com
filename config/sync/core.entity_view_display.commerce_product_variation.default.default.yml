@@ -24,7 +24,7 @@ bundle: default
 mode: default
 content:
   field_image:
-    weight: 6
+    type: bootstrap_basic_image_gallery_formatter
     label: hidden
     settings:
       image_style: ''
@@ -39,50 +39,50 @@ content:
         handler: ''
       ds:
         ds_limit: ''
-    type: bootstrap_basic_image_gallery_formatter
+    weight: 6
     region: content
   field_sku:
     type: string
-    weight: 5
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 5
+    region: content
   list_price:
     type: commerce_price_calculated
-    weight: 2
-    region: content
     label: above
     settings:
-      adjustment_types: {  }
       strip_trailing_zeroes: false
       currency_display: symbol
+      adjustment_types: {  }
     third_party_settings: {  }
-  price:
-    label: hidden
-    type: commerce_price_default
-    weight: 3
+    weight: 2
     region: content
+  price:
+    type: commerce_price_default
+    label: hidden
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 3
+    region: content
   product_id:
     type: entity_reference_entity_id
-    weight: 0
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: 1
+    weight: 0
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   attribute_color: true
   feeds_item: true

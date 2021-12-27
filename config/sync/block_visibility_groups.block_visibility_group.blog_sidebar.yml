@@ -10,8 +10,8 @@ logic: and
 conditions:
   7bbb0a5b-ba53-407a-a572-0831f595d9a2:
     id: request_path
-    pages: "/blog\r\n/blog/*\r\n/tags/*\r\n/category/*"
     negate: false
-    context_mapping: {  }
     uuid: 7bbb0a5b-ba53-407a-a572-0831f595d9a2
+    context_mapping: {  }
+    pages: "/blog\r\n/blog/*\r\n/tags/*\r\n/category/*"
 allow_other_conditions: false

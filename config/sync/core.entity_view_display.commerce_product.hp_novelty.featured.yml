@@ -50,8 +50,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
 id: commerce_product.hp_novelty.featured
@@ -61,19 +61,19 @@ mode: featured
 content:
   title:
     type: string
-    weight: 1
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
   variations:
     type: commerce_add_to_cart
-    weight: 0
     label: hidden
     settings:
       combine: true
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   body: true

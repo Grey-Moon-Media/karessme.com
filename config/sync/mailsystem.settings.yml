@@ -1,32 +1,32 @@
+_core:
+  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
 theme: wosh
 defaults:
   sender: SMTPMailSystem
   formatter: SMTPMailSystem
-_core:
-  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
 modules:
   swiftmailer:
     none:
-      formatter: swiftmailer
       sender: SMTPMailSystem
+      formatter: swiftmailer
   commerce:
     none:
-      formatter: swiftmailer
       sender: SMTPMailSystem
+      formatter: swiftmailer
   contact:
     none:
-      formatter: php_mail
       sender: SMTPMailSystem
+      formatter: php_mail
   business_rules:
     none:
-      formatter: business_rules_mail
       sender: SMTPMailSystem
+      formatter: business_rules_mail
   message_notify: {  }
   commerce_reactions:
     none:
-      formatter: mime_mail
       sender: SMTPMailSystem
+      formatter: mime_mail
   mandrill:
     none:
-      formatter: mandrill_mail
       sender: mandrill_mail
+      formatter: mandrill_mail

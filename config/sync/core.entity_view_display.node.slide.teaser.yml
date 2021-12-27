@@ -25,34 +25,32 @@ bundle: slide
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 4
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 4
     region: content
   field_heading_text:
     type: string
-    weight: 3
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_image:
     type: image
-    weight: 1
-    region: content
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_link:
     type: link
-    weight: 5
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -61,26 +59,28 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_pre_heading_text:
     type: string
-    weight: 2
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_text_color:
     type: list_default
-    weight: 7
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 7
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_content_placement: true
   field_text_align: true

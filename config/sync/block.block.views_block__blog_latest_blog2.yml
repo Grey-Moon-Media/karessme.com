@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: 'fullwidth framewidth'
     block_subtitle: 'Get the latest news information'
     block_title_style: block-title-1
     block_title_align: block-title-center
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,13 +38,13 @@ plugin: 'views_block:blog-latest_blog2'
 settings:
   id: 'views_block:blog-latest_blog2'
   label: 'Latest News'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Latest News'
   items_per_page: none
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_06
     context_mapping: {  }
+    block_visibility_group: home_06

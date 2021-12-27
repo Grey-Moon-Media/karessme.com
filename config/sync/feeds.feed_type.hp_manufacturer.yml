@@ -7,8 +7,8 @@ dependencies:
   module:
     - feeds_ex
     - taxonomy
-id: hp_manufacturer
 label: 'HP Manufacturer'
+id: hp_manufacturer
 description: ''
 help: ''
 import_period: -1
@@ -20,42 +20,42 @@ fetcher_configuration:
   recursive_scan: false
 parser: xml
 parser_configuration:
-  context:
-    value: //Items//Item
   sources:
     manufacturer:
       label: manufacturer
       value: manufacturer
-  use_tidy: false
-  display_errors: false
+  context:
+    value: //Items//Item
   source_encoding:
     - auto
+  display_errors: false
   debug_mode: false
   line_limit: 100
+  use_tidy: false
 processor: 'entity:taxonomy_term'
 processor_configuration:
+  values:
+    vid: brand
   langcode: en
   insert_new: 1
   update_existing: 2
   update_non_existent: _keep
-  expire: -1
   skip_hash_check: false
-  values:
-    vid: brand
-  owner_id: 0
   authorize: false
+  expire: -1
   owner_feed_author: false
+  owner_id: 0
 custom_sources:
   manufacturer:
-    label: manufacturer
     value: manufacturer
+    label: manufacturer
     machine_name: manufacturer
 mappings:
   -
     target: name
     map:
       value: manufacturer
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

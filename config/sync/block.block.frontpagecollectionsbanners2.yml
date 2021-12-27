@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_frontpage_collections
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'simple_block:front_page_collections_banners_2'
 settings:
   id: 'simple_block:front_page_collections_banners_2'
   label: 'Front Page Collections Banners 2'
-  provider: simple_block
   label_display: '0'
+  provider: simple_block
 visibility:
   condition_group:
     id: condition_group
@@ -47,5 +47,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
+    pages: '<front>'

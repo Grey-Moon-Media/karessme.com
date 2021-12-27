@@ -58,7 +58,7 @@
         "drupal/ds": "^3.13",
         "drupal/empty_fields": "^1.0@beta",
         "drupal/eu_cookie_compliance": "^1.19",
-        "drupal/facets": "^1.8",
+        "drupal/facets": "^2.0",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",
@@ -67,18 +67,18 @@
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
         "drupal/ga_commerce": "^2.0",
-        "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^1.4",
         "drupal/honeypot": "^2.0",
         "drupal/image_delta_formatter": "^1.1",
         "drupal/imce": "^2.4",
         "drupal/jquery_colorpicker": "^2.0",
+        "drupal/jquery_ui_datepicker": "^1.1",
         "drupal/libraries": "^3.0@beta",
         "drupal/maillog": "^1.0@beta",
         "drupal/mailsystem": "^4.3",
         "drupal/mandrill": "^1.2",
         "drupal/message_notify": "^1.2",
-        "drupal/metatag": "^1.16",
+        "drupal/metatag": "^1.18",
         "drupal/mimemail": "^1.0@alpha",
         "drupal/module_filter": "^3.2",
         "drupal/physical": "^1.1",
@@ -92,6 +92,7 @@
         "drupal/smsframework": "2.x-dev@dev",
         "drupal/smtp": "^1.0",
         "drupal/swiftmailer": "^2.0",
+        "drupal/symfony_mailer": "^1.0@alpha",
         "drupal/views_bulk_operations": "^4.0",
         "drupal/views_custom_cache_tag": "^1.2",
         "drupal/webform": "^6.0",
@@ -99,6 +100,7 @@
         "drupal/workbench_menu_access": "^1.3",
         "drupal/xmlsitemap": "^1.1",
         "drush/drush": "10.*",
+        "mailchimp/transactional": "^1.0",
         "matt/honeys_place": "1.3"
     },
     "conflict": {
@@ -119,9 +121,6 @@
               "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
               "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
            },
-	    "drupal/commerce_shipping": {
-		    "Error: Call to a member function getPlugin() on null":"https://www.drupal.org/files/issues/2020-03-07/commerce_shipping-3118351-2.patch"
-	    },
 	    "drupal/core" : {
 		   "EntityInterface, null given" : "https://www.drupal.org/files/issues/2020-10-20/3178008-2.patch",
 		   "Views TranslationLanguageRenderer fails on ghost nodes" : "https://www.drupal.org/files/issues/views-translation-language-renderer-2869347-2-D8.patch",
@@ -136,6 +135,7 @@
 	    "drupal/commerce_stripe": {
 		   "Add credit card icons on checkout" : "https://www.drupal.org/files/issues/2021-11-25/3245980-11-checkout_credit_card_icons.patch"
 	    }
+
 	},
         "drupal-scaffold": {
             "locations": {

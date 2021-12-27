@@ -1,5 +1,7 @@
-api_mode: production
+_core:
+  default_config_hash: 1mZSYHm1_yrm9REzaU12mpILY0ROYjxcg9cTVceZ_jE
 account_id: '2000763751'
+api_mode: production
 company_code: GMM5444
 address_validation:
   enable: false
@@ -13,5 +15,3 @@ disable_tax_calculation: false
 license_key: 25998F01DBB0184B
 logging: true
 shipping_tax_code: FR020100
-_core:
-  default_config_hash: 1mZSYHm1_yrm9REzaU12mpILY0ROYjxcg9cTVceZ_jE

@@ -2,11 +2,11 @@ uuid: cd45029c-bcb1-4de5-9f10-d3145a8056b1
 langcode: en
 status: true
 dependencies:
+  module:
+    - profile
   enforced:
     module:
       - commerce_order
-  module:
-    - profile
 id: profile.billing
 label: Billing
 targetEntityType: profile

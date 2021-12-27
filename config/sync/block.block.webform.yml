@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_frontpage_collections
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: webform_block
 settings:
   id: webform_block
   label: 'Return Request Form'
-  provider: webform
   label_display: visible
+  provider: webform
   webform_id: return_request_form
   default_data: ''
   redirect: false
@@ -50,5 +50,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: /returns-exchanges
     negate: false
+    pages: /returns-exchanges

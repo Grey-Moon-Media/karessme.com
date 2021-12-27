@@ -4,13 +4,13 @@ status: true
 dependencies: {  }
 id: send_email_to_customer_with_tracking_number
 label: 'Send Email to Customer with Tracking Number'
+type: data_comparison
 description: 'Send Email to Customer with Tracking Number'
+target_entity_type: commerce_order
+target_bundle: default
+tags: {  }
 settings:
   field: field_usps_tracking_number
   data_to_compare: current_data
   operator: '!='
   value_to_compare: "0\r\nnull\r\nNULL"
-tags: {  }
-type: data_comparison
-target_entity_type: commerce_order
-target_bundle: default

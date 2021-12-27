@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_facet_block_title
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,12 +38,12 @@ plugin: 'facet_block:product_brand'
 settings:
   id: 'facet_block:product_brand'
   label: Brands
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: product_brand
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: shop_sidebar
     context_mapping: {  }
+    block_visibility_group: shop_sidebar

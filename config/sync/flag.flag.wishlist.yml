@@ -9,7 +9,6 @@ label: Wishlist
 bundles: {  }
 entity_type: commerce_product
 global: false
-weight: 0
 flag_short: 'Add to wishlist'
 flag_long: 'Add this product to your wishlist'
 flag_message: 'This product has been added to your wishlist'
@@ -17,6 +16,7 @@ unflag_short: 'Remove wishlist'
 unflag_long: 'Remove this product from your wishlist'
 unflag_message: 'This product has been removed from your wishlist'
 unflag_denied_text: ''
+weight: 0
 flag_type: 'entity:commerce_product'
 link_type: ajax_link
 flagTypeConfig:

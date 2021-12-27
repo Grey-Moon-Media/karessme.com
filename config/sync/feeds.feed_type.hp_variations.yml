@@ -17,30 +17,30 @@ third_party_settings:
     tampers:
       13da7d3e-6020-4e36-8510-4cfdddc2086e:
         text: 'https://www.honeysplace.com[_self]'
+        uuid: 13da7d3e-6020-4e36-8510-4cfdddc2086e
         plugin: rewrite
         source: images_image_filename
         weight: -9
         label: Rewrite
-        uuid: 13da7d3e-6020-4e36-8510-4cfdddc2086e
       42780f5f-e1b7-473a-87f6-d4a2a21d2eb6:
         operation: multiplication
         flip: false
         value: !!float 2
+        uuid: 42780f5f-e1b7-473a-87f6-d4a2a21d2eb6
         plugin: math
         source: price
         weight: 0
         label: Math
-        uuid: 42780f5f-e1b7-473a-87f6-d4a2a21d2eb6
       5af04c47-263d-4157-adb9-e5ef377f109c:
         separator: ','
         limit: null
+        uuid: 5af04c47-263d-4157-adb9-e5ef377f109c
         plugin: explode
         source: images_image_filename
         weight: -10
         label: Explode
-        uuid: 5af04c47-263d-4157-adb9-e5ef377f109c
-id: hp_variations
 label: 'HP Variations'
+id: hp_variations
 description: ''
 help: ''
 import_period: 86400
@@ -52,8 +52,6 @@ fetcher_configuration:
   recursive_scan: false
 parser: xml
 parser_configuration:
-  context:
-    value: //Items/Item
   sources:
     sku:
       label: sku
@@ -73,97 +71,100 @@ parser_configuration:
     gross_weight:
       label: gross_weight
       value: gross_weight
-  use_tidy: false
-  display_errors: false
+  context:
+    value: //Items/Item
   source_encoding:
     - auto
+  display_errors: false
   debug_mode: false
   line_limit: 100
+  use_tidy: false
 processor: 'entity:commerce_product_variation'
 processor_configuration:
+  values:
+    type: default
   langcode: en
+  insert_new: 1
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 259
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: default
 custom_sources:
   color:
-    label: Attributes.Attribute.Color
     value: Attributes.Attribute.Color
+    label: Attributes.Attribute.Color
     machine_name: color
   size_length:
-    label: size_length
     value: size_length
+    label: size_length
     machine_name: size_length
   images_image_filename:
-    label: Images/Image/filename
     value: Images/Image/filename
+    label: Images/Image/filename
     machine_name: images_image_filename
   sku:
-    label: sku
     value: sku
+    label: sku
     machine_name: sku
   name:
-    label: name
     value: name
+    label: name
     machine_name: name
   price:
-    label: price
     value: price
+    label: price
     machine_name: price
   attributes_attribute_color:
-    label: Attributes//Attribute//Color
     value: Attributes//Attribute//Color
+    label: Attributes//Attribute//Color
     machine_name: attributes_attribute_color
   '':
-    label: ''
     value: ''
+    label: ''
     machine_name: ''
   _https_www_honeysplace_com:
-    label: ' https://www.honeysplace.com'
     value: ' https://www.honeysplace.com'
+    label: ' https://www.honeysplace.com'
     machine_name: _https_www_honeysplace_com
   attributes_attribute_color_1:
-    label: Attributes/Attribute/Color
     value: Attributes/Attribute/Color
+    label: Attributes/Attribute/Color
     machine_name: attributes_attribute_color_1
   filename:
-    label: filename
     value: filename
+    label: filename
     machine_name: filename
   concat_basepath_images_image_filename_:
-    label: 'concat(//basepath,Images/Image/filename)'
     value: 'concat(//basepath,Images/Image/filename)'
+    label: 'concat(//basepath,Images/Image/filename)'
     machine_name: concat_basepath_images_image_filename_
   images_image_filename_1:
-    label: Images/Image/Filename
     value: Images/Image/Filename
+    label: Images/Image/Filename
     machine_name: images_image_filename_1
   gross_weight:
-    label: gross_weight
     value: gross_weight
+    label: gross_weight
     machine_name: gross_weight
 mappings:
   -
     target: sku
     map:
       value: sku
+    settings: {  }
     unique:
       value: '1'
-    settings: {  }
   -
     target: title
     map:
       value: name
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'
   -
     target: price
     map:

@@ -19,34 +19,34 @@ bundle: service
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 3
     region: content
   field_icon:
     type: string
-    weight: 1
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_image:
     type: image
-    weight: 2
     label: hidden
     settings:
-      image_style: 640x480
       image_link: content
+      image_style: 640x480
     third_party_settings: {  }
+    weight: 2
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   search_api_excerpt: true

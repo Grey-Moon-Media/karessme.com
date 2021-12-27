@@ -7,8 +7,8 @@ dependencies:
   module:
     - feeds_ex
     - taxonomy
-id: attribute_country_of_origin
 label: 'HP Attribute | Country of Origin'
+id: attribute_country_of_origin
 description: ''
 help: ''
 import_period: 3600
@@ -18,49 +18,50 @@ fetcher_configuration:
   directory: 'public://feeds'
 parser: xml
 parser_configuration:
-  context:
-    value: //Items/Item
   sources:
     attributes_attribute_countryoforigin:
       label: Attributes/Attribute/CountryofOrigin
       value: Attributes/Attribute/CountryofOrigin
-  use_tidy: false
-  display_errors: false
+  context:
+    value: //Items/Item
   source_encoding:
     - auto
+  display_errors: false
   debug_mode: false
   line_limit: 100
+  use_tidy: false
 processor: 'entity:taxonomy_term'
 processor_configuration:
-  langcode: en
-  update_existing: 2
-  update_non_existent: _keep
-  expire: -1
-  skip_hash_check: false
   values:
     vid: country_of_origin
-  owner_id: 0
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
   authorize: false
+  expire: -1
   owner_feed_author: false
+  owner_id: 0
 custom_sources:
   countryoforigin:
-    label: CountryofOrigin
     value: CountryofOrigin
+    label: CountryofOrigin
     machine_name: countryoforigin
   _attributes_attribute_countryoforigin:
-    label: /Attributes/Attribute/CountryofOrigin
     value: /Attributes/Attribute/CountryofOrigin
+    label: /Attributes/Attribute/CountryofOrigin
     machine_name: _attributes_attribute_countryoforigin
   attributes_attribute_countryoforigin:
-    label: Attributes/Attribute/CountryofOrigin
     value: Attributes/Attribute/CountryofOrigin
+    label: Attributes/Attribute/CountryofOrigin
     machine_name: attributes_attribute_countryoforigin
 mappings:
   -
     target: name
     map:
       value: attributes_attribute_countryoforigin
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

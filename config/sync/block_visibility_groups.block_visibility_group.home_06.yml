@@ -10,8 +10,8 @@ logic: and
 conditions:
   e2f3c854-b739-4c92-96c9-ea8c179c69e8:
     id: request_path
-    pages: /home-06
     negate: false
-    context_mapping: {  }
     uuid: e2f3c854-b739-4c92-96c9-ea8c179c69e8
+    context_mapping: {  }
+    pages: /home-06
 allow_other_conditions: false

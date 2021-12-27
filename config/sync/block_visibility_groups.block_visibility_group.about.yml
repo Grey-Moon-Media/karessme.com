@@ -10,8 +10,8 @@ logic: and
 conditions:
   bef5f7dd-73c5-477f-8b44-16f389955b8c:
     id: request_path
-    pages: /about
     negate: false
-    context_mapping: {  }
     uuid: bef5f7dd-73c5-477f-8b44-16f389955b8c
+    context_mapping: {  }
+    pages: /about
 allow_other_conditions: false

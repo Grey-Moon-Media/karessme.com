@@ -10,8 +10,8 @@ logic: and
 conditions:
   1cabff18-5c3a-453a-87f8-ed9072c31844:
     id: request_path
-    pages: /team
     negate: false
-    context_mapping: {  }
     uuid: 1cabff18-5c3a-453a-87f8-ed9072c31844
+    context_mapping: {  }
+    pages: /team
 allow_other_conditions: false

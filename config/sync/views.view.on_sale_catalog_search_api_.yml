@@ -20,70 +20,12 @@ base_table: search_api_index_db_search_index
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 15
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: ViewsBootstrapGrid
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-          lg: '4'
-          md: '6'
-          sm: '12'
-          grid_item: 0
-      row:
-        type: search_api
-        options:
-          view_modes:
-            'entity:commerce_product':
-              default: teaser
-              hp_novelty: teaser
+      title: 'On Sale'
       fields:
         title:
           id: title
@@ -92,6 +34,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: commerce_product
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -153,8 +97,98 @@ display:
             link_to_item: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: commerce_product
-          plugin_id: search_api_field
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 15
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        title:
+          id: title
+          table: search_api_index_db_search_index
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: Name
+            field_identifier: title
+          exposed: true
+        number:
+          id: number
+          table: search_api_index_db_search_index
+          field: number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: Price
+            field_identifier: number
+          exposed: true
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_db_search_index
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: Relevance
+            field_identifier: search_api_relevance
+          exposed: true
+        created:
+          id: created
+          table: search_api_index_db_search_index
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: Newness
+            field_identifier: created
+          exposed: true
+      arguments: {  }
       filters:
         field_category:
           id: field_category
@@ -163,6 +197,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value:
             75: 75
@@ -196,12 +231,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          type: select
-          limit: true
           vid: category
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_q:
           id: field_q
           table: search_api_index_db_search_index
@@ -209,6 +243,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_numeric
           operator: '>'
           value:
             min: ''
@@ -230,9 +265,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -245,7 +280,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: search_api_numeric
         search_api_fulltext:
           id: search_api_fulltext
           table: search_api_index_db_search_index
@@ -253,6 +287,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: or
           value: ''
           group: 1
@@ -273,8 +308,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            placeholder: 'Search by Product Title/Name'
             expose_fields: false
+            placeholder: 'Search by Product Title/Name'
             searched_fields_id: search_api_fulltext_searched_fields
           is_grouped: false
           group_info:
@@ -291,68 +326,37 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
-          plugin_id: search_api_fulltext
-      sorts:
-        title:
-          id: title
-          table: search_api_index_db_search_index
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Name
-          plugin_id: search_api
-        number:
-          id: number
-          table: search_api_index_db_search_index
-          field: number
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Price
-          plugin_id: search_api
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_db_search_index
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: Relevance
-          plugin_id: search_api
-        created:
-          id: created
-          table: search_api_index_db_search_index
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Newness
-          plugin_id: search_api
-      title: 'On Sale'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-      use_ajax: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      style:
+        type: ViewsBootstrapGrid
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          lg: '4'
+          md: '6'
+          sm: '12'
+          grid_item: 0
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:commerce_product':
+              default: teaser
+              hp_novelty: teaser
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+      relationships: {  }
+      use_ajax: false
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -366,33 +370,39 @@ display:
       tags:
         - 'config:search_api.index.db_search_index'
   catalog_search:
-    display_plugin: page
     id: catalog_search
     display_title: 'On Sale Catalog Search'
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: on-sale-catalog
+      title: Search
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       cache:
         type: search_api_tag
         options: {  }
-      defaults:
-        cache: false
-        filters: false
-        filter_groups: false
-        sorts: false
-        exposed_form: false
-        title: false
-      display_description: ''
-      menu:
-        type: none
-        title: ''
-        description: ''
-        expanded: false
-        parent: ''
-        weight: -49
-        context: '0'
-        menu_name: main
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_db_search_index
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: Relevance
+            field_identifier: search_api_relevance
+          exposed: false
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -401,6 +411,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: or
           value: ''
           group: 1
@@ -437,7 +448,6 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
-          plugin_id: search_api_fulltext
         field_category:
           id: field_category
           table: search_api_index_db_search_index
@@ -445,6 +455,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value:
             75: 75
@@ -478,41 +489,35 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: category
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
       filter_groups:
         operator: AND
         groups:
           1: AND
-      sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_db_search_index
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: Relevance
-          plugin_id: search_api
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Search
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: false
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      title: Search
+      defaults:
+        cache: false
+        title: false
+        exposed_form: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
       exposed_block: true
+      display_extenders: {  }
+      path: on-sale-catalog
+      menu:
+        type: none
+        title: ''
+        description: ''
+        weight: -49
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
@@ -524,28 +529,13 @@ display:
       tags:
         - 'config:search_api.index.db_search_index'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: 'On Sale Catalog'
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: on-sale
       cache:
         type: none
-      defaults:
-        cache: false
-        sorts: false
-      display_description: ''
-      menu:
-        type: normal
-        title: 'On Sale'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: -47
-        context: '0'
-        menu_name: main
       sorts:
         created_1:
           id: created_1
@@ -554,11 +544,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: DESC
-          exposed: false
           expose:
             label: ''
-          plugin_id: search_api
+            field_identifier: created_1
+          exposed: false
         title:
           id: title
           table: search_api_index_db_search_index
@@ -566,11 +557,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: ASC
-          exposed: true
           expose:
             label: Name
-          plugin_id: search_api
+            field_identifier: title
+          exposed: true
         number:
           id: number
           table: search_api_index_db_search_index
@@ -578,11 +570,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: ASC
-          exposed: true
           expose:
             label: Price
-          plugin_id: search_api
+            field_identifier: number
+          exposed: true
         search_api_relevance:
           id: search_api_relevance
           table: search_api_index_db_search_index
@@ -590,11 +583,12 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: DESC
-          exposed: true
           expose:
             label: Relevance
-          plugin_id: search_api
+            field_identifier: search_api_relevance
+          exposed: true
         created:
           id: created
           table: search_api_index_db_search_index
@@ -602,11 +596,27 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           order: ASC
-          exposed: true
           expose:
             label: Newness
-          plugin_id: search_api
+            field_identifier: created
+          exposed: true
+      defaults:
+        cache: false
+        sorts: false
+      display_description: ''
+      display_extenders: {  }
+      path: on-sale
+      menu:
+        type: normal
+        title: 'On Sale'
+        description: ''
+        weight: -47
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

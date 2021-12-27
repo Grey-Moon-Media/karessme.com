@@ -1,0 +1,11 @@
+uuid: 9a869561-5533-4a4b-9b58-2a1688904610
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: social_media_icons
+title: 'Social Media Icons'
+content:
+  value: "<div class=\"footer-social-icons\">\r\n<div class=\"row\">\r\n<!--  <div class=\"col-md-8 mx-auto\"><p>Follow Us:</p></div> -->\r\n  <div class=\"col-md-2 mx-auto\">\r\n      <ul class=\"social-icons\">\r\n        <!--  <li><a href=\"\" class=\"social-icon\"> <i class=\"fa fa-facebook\"></i></a></li>\r\n          <li><a href=\"\" class=\"social-icon\"> <i class=\"fa fa-twitter\"></i></a></li> -->\r\n        <li><a href=\"https://instagram.com/karess_me_store\" class=\"social-icon\" target=\"_parent\"> <i class=\"fa fa-instagram\"></i></a></li>\r\n       <!--     <li><a href=\"\" class=\"social-icon\"> <i class=\"fa fa-youtube\"></i></a></li>\r\n        <. li><a href=\"\" class=\"social-icon\"> <i class=\"fa fa-linkedin\"></i></a></li> -->\r\n    </ul>\r\n  </div>\r\n</div>\r\n</div>"
+  format: full_html

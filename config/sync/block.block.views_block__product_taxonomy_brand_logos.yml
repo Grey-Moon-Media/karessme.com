@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: ''
     block_subtitle: 'Select from the premium product brands and save plenty money'
     block_title_style: block-title-1
     block_title_align: block-title-center
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,13 +38,13 @@ plugin: 'views_block:product_taxonomy-brand_logos'
 settings:
   id: 'views_block:product_taxonomy-brand_logos'
   label: 'Shop by Brand'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Shop by Brand'
   items_per_page: none
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_02
     context_mapping: {  }
+    block_visibility_group: home_02

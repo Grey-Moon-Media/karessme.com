@@ -13,13 +13,13 @@ bundle: default
 mode: default
 content:
   field_us:
+    type: string_textfield
     weight: 51
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   shipping_method:
     type: commerce_shipping_rate
     weight: 0
@@ -29,8 +29,8 @@ content:
   shipping_profile:
     type: commerce_shipping_profile
     weight: -10
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield

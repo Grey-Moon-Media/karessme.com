@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'block_content:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
 settings:
   id: 'block_content:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
   label: 'Contact Form Greeting Message'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -50,5 +50,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: /contact
     negate: false
+    pages: /contact

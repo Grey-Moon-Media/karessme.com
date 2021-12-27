@@ -6,8 +6,8 @@ _core:
   default_config_hash: QPuFH9E4612ox18hXdUXL8FhU021rCvOtYISSmvMQzc
 id: default
 label: Default
-orderItemType: default
-generateTitle: true
 traits:
   - purchasable_entity_shippable
 locked: false
+orderItemType: default
+generateTitle: true

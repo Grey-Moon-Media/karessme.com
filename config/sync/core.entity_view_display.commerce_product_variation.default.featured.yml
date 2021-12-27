@@ -21,50 +21,50 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: commerce_product_variation.default.featured
 targetEntityType: commerce_product_variation
 bundle: default
 mode: featured
 content:
   field_image:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: 640x480
       image_link: ''
+      image_style: 640x480
     third_party_settings:
       empty_fields:
         handler: ''
       ds:
         ds_limit: ''
-    type: image
+    weight: 0
     region: content
   price:
-    label: hidden
     type: commerce_price_default
-    weight: 3
-    region: content
+    label: hidden
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 3
+    region: content
   product_id:
     type: entity_reference_entity_id
-    weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: 2
+    weight: 1
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   attribute_color: true
   feeds_item: true

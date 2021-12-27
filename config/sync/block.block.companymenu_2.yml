@@ -12,12 +12,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_footer
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -37,8 +37,8 @@ plugin: 'block_content:ae38f226-4d76-4f6b-989c-f5b1b6c3799c'
 settings:
   id: 'block_content:ae38f226-4d76-4f6b-989c-f5b1b6c3799c'
   label: Company
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full

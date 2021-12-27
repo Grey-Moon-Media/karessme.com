@@ -12,12 +12,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: fullwidth
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_mailchimp_form
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -37,8 +37,8 @@ plugin: 'simple_block:mail_chimp_sign_up_form_2'
 settings:
   id: 'simple_block:mail_chimp_sign_up_form_2'
   label: 'Mail Chimp Sign-up Form 2'
-  provider: simple_block
   label_display: '0'
+  provider: simple_block
 visibility:
   condition_group:
     id: condition_group

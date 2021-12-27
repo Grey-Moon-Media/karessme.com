@@ -12,12 +12,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -37,8 +37,8 @@ plugin: 'block_content:aa142f9a-1381-4e97-88a1-358a174ae6c8'
 settings:
   id: 'block_content:aa142f9a-1381-4e97-88a1-358a174ae6c8'
   label: 'Customer Support Top Header'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

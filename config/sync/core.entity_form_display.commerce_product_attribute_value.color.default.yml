@@ -13,13 +13,13 @@ bundle: color
 mode: default
 content:
   field_color:
+    type: color_field_widget_default
     weight: 3
+    region: content
     settings:
       placeholder_color: ''
       placeholder_opacity: ''
     third_party_settings: {  }
-    type: color_field_widget_default
-    region: content
   name:
     type: string_textfield
     weight: -5

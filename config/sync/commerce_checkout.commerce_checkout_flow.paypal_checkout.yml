@@ -7,8 +7,8 @@ dependencies:
     - commerce_shipping
 _core:
   default_config_hash: lNJaUt8IZZTPVkYvR4MvoYxYJCbPx10KeynMhXpYV24
-id: paypal_checkout
 label: 'PayPal Checkout'
+id: paypal_checkout
 plugin: paypal_checkout
 configuration:
   display_checkout_progress: true

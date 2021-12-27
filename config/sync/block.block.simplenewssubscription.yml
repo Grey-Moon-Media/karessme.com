@@ -11,12 +11,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: 'Subscribe for our latest deals, promotions and news'
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_block_title
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -36,8 +36,8 @@ plugin: simplenews_subscription_block
 settings:
   id: simplenews_subscription_block
   label: 'Stay informed about our products'
-  provider: simplenews
   label_display: visible
+  provider: simplenews
   newsletters:
     default: default
   message: 'Stay informed - subscribe to our newsletter.'
@@ -49,5 +49,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "<front>\r\n/about\r\n/terms-conditions\r\n/shipping-policy\r\n/returns-exchanges\r\n/accessibility\r\n/faq"
     negate: false
+    pages: "<front>\r\n/about\r\n/terms-conditions\r\n/shipping-policy\r\n/returns-exchanges\r\n/accessibility\r\n/faq"

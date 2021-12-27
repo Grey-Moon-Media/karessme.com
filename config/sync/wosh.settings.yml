@@ -1,3 +1,9 @@
+_core:
+  default_config_hash: nV_mgIx__zDOIFaMhE7QmtK1GC41-h04rNNYTkHiyrI
+favicon:
+  mimetype: image/png
+  path: 'public://km_favicon_0.png'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -6,6 +12,9 @@ features:
   name: false
   node_user_picture: true
   slogan: false
+logo:
+  path: 'public://login_page_logo.png'
+  use_default: false
 preloader: 1
 scrolltop: 1
 single_page_menu: 0
@@ -27,8 +36,6 @@ google_plus_url: ''
 linkedin_url: ''
 pinterest_url: ''
 rss_url: ''
-_core:
-  default_config_hash: nV_mgIx__zDOIFaMhE7QmtK1GC41-h04rNNYTkHiyrI
 sidenav_logo_value: ''
 sidenav_text_content: ''
 footer_first_size: col-md-12
@@ -41,13 +48,6 @@ instagram_url: ''
 youtube_url: ''
 vimeo_url: ''
 dribbble_url: ''
-logo:
-  use_default: false
-  path: 'public://login_page_logo.png'
-favicon:
-  use_default: false
-  path: 'public://km_favicon_0.png'
-  mimetype: image/png
 commerce_layout: commerce-layout1
 product_layout: product-layout1
 fixed_header: 0

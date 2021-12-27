@@ -9,11 +9,11 @@ label: 'Payment Example'
 weight: -10
 plugin: example_offsite_redirect
 configuration:
-  redirect_method: post
   display_label: Example
   mode: test
   payment_method_types:
     - credit_card
   collect_billing_information: true
+  redirect_method: post
 conditions: {  }
 conditionOperator: AND

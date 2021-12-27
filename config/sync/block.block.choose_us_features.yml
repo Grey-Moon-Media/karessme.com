@@ -14,12 +14,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: fullwidth
     block_subtitle: 'Packed with unbeatable features for seamless development.'
     block_title_style: block-title-2
     block_title_align: ''
     classes: nopadding
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -39,8 +39,8 @@ plugin: 'block_content:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
 settings:
   id: 'block_content:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
   label: 'So many reasons to choose WOSH'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
@@ -48,5 +48,5 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_01
     context_mapping: {  }
+    block_visibility_group: home_01

@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: km_facet_block_title
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'facet_block:category'
 settings:
   id: 'facet_block:category'
   label: Category
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: category
 visibility:
   condition_group:

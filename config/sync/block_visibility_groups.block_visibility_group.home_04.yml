@@ -10,8 +10,8 @@ logic: and
 conditions:
   fc4ef483-13c5-42ff-ada2-f297c4e043c5:
     id: request_path
-    pages: /home-04
     negate: false
-    context_mapping: {  }
     uuid: fc4ef483-13c5-42ff-ada2-f297c4e043c5
+    context_mapping: {  }
+    pages: /home-04
 allow_other_conditions: false

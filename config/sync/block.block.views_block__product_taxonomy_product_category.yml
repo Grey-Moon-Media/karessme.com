@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: ''
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: ''
     classes: padding-bottom-0
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,13 +38,13 @@ plugin: 'views_block:product_taxonomy-product_category'
 settings:
   id: 'views_block:product_taxonomy-product_category'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   condition_group:
     id: condition_group
     negate: false
-    block_visibility_group: home_02
     context_mapping: {  }
+    block_visibility_group: home_02

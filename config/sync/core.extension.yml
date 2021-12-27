@@ -48,6 +48,7 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  custom_karessme: 0
   datetime: 0
   dblog: 0
   dbug: 0
@@ -68,7 +69,6 @@ module:
   file_delete: 0
   filter: 0
   flag: 0
-  google_analytics: 0
   google_tag: 0
   help: 0
   history: 0
@@ -92,10 +92,6 @@ module:
   mandrill_template: 0
   media: 0
   menu_ui: 0
-  message: 0
-  message_example: 0
-  message_notify: 0
-  message_notify_example: 0
   metatag: 0
   metatag_facebook: 0
   metatag_favicons: 0

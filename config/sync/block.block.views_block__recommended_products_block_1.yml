@@ -13,12 +13,12 @@ dependencies:
     - wosh
 third_party_settings:
   hsblock:
+    id: ''
     block_layout: norm-width
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
     classes: ''
-    id: ''
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -38,8 +38,8 @@ plugin: 'views_block:recommended_products-block_1'
 settings:
   id: 'views_block:recommended_products-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
@@ -49,5 +49,5 @@ visibility:
     block_visibility_group: ''
   request_path:
     id: request_path
-    pages: "/product\r\n/product/*"
     negate: false
+    pages: "/product\r\n/product/*"

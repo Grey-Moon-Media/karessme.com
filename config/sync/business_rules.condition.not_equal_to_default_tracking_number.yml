@@ -6,12 +6,12 @@ dependencies:
     - business_rules.variable.usps_tracking_number
 id: not_equal_to_default_tracking_number
 label: 'NOT EQUAL TO Default Tracking Number'
+type: variable_data_comparison
 description: 'NOT EQUAL TO 0123456789'
+target_entity_type: null
+target_bundle: null
+tags: {  }
 settings:
   value_1: '{{usps_tracking_number->current}}'
   operator: '!='
   value_2: '0123456789'
-tags: {  }
-type: variable_data_comparison
-target_entity_type: null
-target_bundle: null

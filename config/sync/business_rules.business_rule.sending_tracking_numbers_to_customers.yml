@@ -6,24 +6,24 @@ dependencies:
     - business_rules.action.sending_tracking_numbers_to_customers_2
     - business_rules.condition.not_equal_to_default_tracking_number
     - business_rules.condition.original_value_not_equal_to_current_value
-description: 'Send Email to Customer with Tracking Number'
 id: sending_tracking_numbers_to_customers
 label: 'Sending tracking numbers to Customers'
-enabled: null
+description: 'Send Email to Customer with Tracking Number'
 reacts_on: form_field_alter
+target_entity_type: commerce_order
+target_bundle: default
 items:
   original_value_not_equal_to_current_value:
-    id: original_value_not_equal_to_current_value
     type: condition
+    id: original_value_not_equal_to_current_value
     weight: -100
   not_equal_to_default_tracking_number:
-    id: not_equal_to_default_tracking_number
     type: condition
+    id: not_equal_to_default_tracking_number
     weight: -99
   sending_tracking_numbers_to_customers_2:
-    id: sending_tracking_numbers_to_customers_2
     type: action
+    id: sending_tracking_numbers_to_customers_2
     weight: -98
 tags: {  }
-target_bundle: default
-target_entity_type: commerce_order
+enabled: null

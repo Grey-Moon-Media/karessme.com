@@ -7,8 +7,8 @@ dependencies:
   module:
     - feeds_ex
     - taxonomy
-id: hp_category
 label: 'HP Category'
+id: hp_category
 description: ''
 help: ''
 import_period: 86400
@@ -20,41 +20,42 @@ fetcher_configuration:
   recursive_scan: false
 parser: xml
 parser_configuration:
-  context:
-    value: //Items//Item//Categories//Category
   sources:
     name:
       label: name
       value: name
-  use_tidy: false
-  display_errors: false
+  context:
+    value: //Items//Item//Categories//Category
   source_encoding:
     - auto
+  display_errors: false
   debug_mode: false
   line_limit: 100
+  use_tidy: false
 processor: 'entity:taxonomy_term'
 processor_configuration:
-  langcode: en
-  update_existing: 2
-  update_non_existent: _keep
-  expire: -1
-  skip_hash_check: false
   values:
     vid: category
-  owner_id: 0
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
   authorize: false
+  expire: -1
   owner_feed_author: false
+  owner_id: 0
 custom_sources:
   name:
-    label: name
     value: name
+    label: name
     machine_name: name
 mappings:
   -
     target: name
     map:
       value: name
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

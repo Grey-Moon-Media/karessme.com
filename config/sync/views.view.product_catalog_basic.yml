@@ -20,66 +20,23 @@ base_table: commerce_product_field_data
 base_field: product_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: none
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
-      style:
-        type: ViewsBootstrapGrid
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-          lg: '3'
-          md: '6'
-          sm: '12'
-          grid_item: 0
-      row:
-        type: 'entity:commerce_product'
-        options:
-          relationship: none
-          view_mode: teaser
+      title: 'New Products'
       fields:
         title:
+          id: title
           table: commerce_product_field_data
           field: title
-          id: title
-          entity_type: null
-          entity_field: title
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: null
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -134,6 +91,46 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 5
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: none
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: commerce_product_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      arguments: {  }
       filters:
         status:
           id: status
@@ -142,6 +139,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -172,9 +172,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
         type:
           id: type
           table: commerce_product_field_data
@@ -182,6 +179,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: commerce_entity_bundle
           operator: in
           value:
             hp_novelty: hp_novelty
@@ -215,9 +215,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: commerce_product
-          entity_field: type
-          plugin_id: commerce_entity_bundle
         field_q_value:
           id: field_q_value
           table: commerce_product__field_q
@@ -225,6 +222,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: numeric
           operator: '>'
           value:
             min: ''
@@ -246,9 +244,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -261,34 +259,37 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: numeric
-      sorts:
-        created:
-          id: created
-          table: commerce_product_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: commerce_product
-          entity_field: created
-          plugin_id: date
-      title: 'New Products'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
+      style:
+        type: ViewsBootstrapGrid
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          lg: '3'
+          md: '6'
+          sm: '12'
+          grid_item: 0
+      row:
+        type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: teaser
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -296,21 +297,100 @@ display:
         - 'languages:language_interface'
       tags: {  }
   block_1:
-    display_plugin: block
     id: block_1
     display_title: 'Featured Products Grid'
+    display_plugin: block
     position: 5
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: 'Featured Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        filters: false
-        filter_groups: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 8
+      filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_featured_product_value:
+          id: field_featured_product_value
+          table: commerce_product__field_featured_product
+          field: field_featured_product_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: ViewsBootstrapGrid
         options:
@@ -326,94 +406,15 @@ display:
         options:
           relationship: none
           view_mode: teaser
-      pager:
-        type: some
-        options:
-          items_per_page: 8
-          offset: 0
-      filters:
-        status:
-          id: status
-          table: commerce_product_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
-        field_featured_product_value:
-          id: field_featured_product_value
-          table: commerce_product__field_featured_product
-          field: field_featured_product_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -421,21 +422,62 @@ display:
         - 'languages:language_interface'
       tags: {  }
   block_2:
-    display_plugin: block
     id: block_2
     display_title: 'People Also Viewed'
+    display_plugin: block
     position: 5
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: 'People Also Viewed'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        filters: false
-        filter_groups: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 8
+      filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: ViewsBootstrapGrid
         options:
@@ -451,56 +493,15 @@ display:
         options:
           relationship: none
           view_mode: teaser
-      pager:
-        type: some
-        options:
-          items_per_page: 8
-          offset: 0
-      filters:
-        status:
-          id: status
-          table: commerce_product_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -508,21 +509,100 @@ display:
         - 'languages:language_interface'
       tags: {  }
   featured_products:
-    display_plugin: block
     id: featured_products
     display_title: 'Featured Products'
+    display_plugin: block
     position: 4
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: 'Featured Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        filters: false
-        filter_groups: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
+      filters:
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_featured_product_value:
+          id: field_featured_product_value
+          table: commerce_product__field_featured_product
+          field: field_featured_product_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: ViewsBootstrapGrid
         options:
@@ -538,94 +618,15 @@ display:
         options:
           relationship: none
           view_mode: teaser
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      filters:
-        status:
-          id: status
-          table: commerce_product_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
-        field_featured_product_value:
-          id: field_featured_product_value
-          table: commerce_product__field_featured_product
-          field: field_featured_product_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: boolean
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -633,63 +634,17 @@ display:
         - 'languages:language_interface'
       tags: {  }
   featured_products_carousel:
-    display_plugin: block
     id: featured_products_carousel
     display_title: 'Featured Products Carousel'
+    display_plugin: block
     position: 6
     display_options:
-      display_extenders: {  }
-      display_description: ''
       title: 'Featured Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        filters: false
-        filter_groups: false
-      style:
-        type: carousel
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-          items: '4'
-          margin: '30'
-          autoplay: 0
-          autoplayHoverPause: 0
-          autoplaySpeed: '1000'
-          autoplayTimeout: '4000'
-          nav: 1
-          navSpeed: '800'
-          loop: 1
-          navRewind: 0
-          rewindSpeed: '1000'
-          dots: 0
-          dotsSpeed: '800'
-          slideBy: '1'
-          mouseDrag: 1
-          touchDrag: 1
-          pullDrag: 0
-          freeDrag: 0
-          stagePadding: ''
-          merge: 0
-          mergeFit: 0
-          center: 0
-          autoWidth: 0
-          video: 0
-          videoHeight: ''
-          videoWidth: ''
-      row:
-        type: 'entity:commerce_product'
-        options:
-          relationship: none
-          view_mode: teaser
       pager:
         type: some
         options:
-          items_per_page: 8
           offset: 0
+          items_per_page: 8
       filters:
         status:
           id: status
@@ -698,6 +653,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -708,14 +666,14 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -728,9 +686,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: commerce_product
-          entity_field: status
-          plugin_id: boolean
         field_featured_product_value:
           id: field_featured_product_value
           table: commerce_product__field_featured_product
@@ -738,6 +693,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: boolean
           operator: '='
           value: '1'
           group: 1
@@ -748,14 +704,14 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -768,89 +724,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: boolean
       filter_groups:
         operator: AND
         groups:
           1: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
-  new_products:
-    display_plugin: block
-    id: new_products
-    display_title: 'New Products'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      title: 'New Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        sorts: false
-      style:
-        type: ViewsBootstrapGrid
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-          lg: '3'
-          md: '6'
-          sm: '12'
-          grid_item: 0
-      row:
-        type: 'entity:commerce_product'
-        options:
-          relationship: none
-          view_mode: teaser
-      pager:
-        type: some
-        options:
-          items_per_page: 4
-          offset: 0
-      sorts:
-        created:
-          id: created
-          table: commerce_product_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: commerce_product
-          entity_field: created
-          plugin_id: date
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
-  new_products_carousel:
-    display_plugin: block
-    id: new_products_carousel
-    display_title: 'New Products Carousel'
-    position: 3
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      title: 'New Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        sorts: false
       style:
         type: carousel
         options:
@@ -888,11 +765,33 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags: {  }
+  new_products:
+    id: new_products
+    display_title: 'New Products'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: 'New Products'
       pager:
         type: some
         options:
-          items_per_page: 8
           offset: 0
+          items_per_page: 4
       sorts:
         created:
           id: created
@@ -901,36 +800,15 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
           entity_type: commerce_product
           entity_field: created
           plugin_id: date
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-      tags: {  }
-  new_products_grid:
-    display_plugin: block
-    id: new_products_grid
-    display_title: 'New Products Grid'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      title: 'New Products'
-      defaults:
-        title: false
-        style: false
-        row: false
-        pager: false
-        fields: false
-        sorts: false
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       style:
         type: ViewsBootstrapGrid
         options:
@@ -946,11 +824,107 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        sorts: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags: {  }
+  new_products_carousel:
+    id: new_products_carousel
+    display_title: 'New Products Carousel'
+    display_plugin: block
+    position: 3
+    display_options:
+      title: 'New Products'
       pager:
         type: some
         options:
-          items_per_page: 8
           offset: 0
+          items_per_page: 8
+      sorts:
+        created:
+          id: created
+          table: commerce_product_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      style:
+        type: carousel
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          items: '4'
+          margin: '30'
+          autoplay: 0
+          autoplayHoverPause: 0
+          autoplaySpeed: '1000'
+          autoplayTimeout: '4000'
+          nav: 1
+          navSpeed: '800'
+          loop: 1
+          navRewind: 0
+          rewindSpeed: '1000'
+          dots: 0
+          dotsSpeed: '800'
+          slideBy: '1'
+          mouseDrag: 1
+          touchDrag: 1
+          pullDrag: 0
+          freeDrag: 0
+          stagePadding: ''
+          merge: 0
+          mergeFit: 0
+          center: 0
+          autoWidth: 0
+          video: 0
+          videoHeight: ''
+          videoWidth: ''
+      row:
+        type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        sorts: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags: {  }
+  new_products_grid:
+    id: new_products_grid
+    display_title: 'New Products Grid'
+    display_plugin: block
+    position: 2
+    display_options:
+      title: 'New Products'
       fields:
         title:
           id: title
@@ -959,6 +933,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: null
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1014,9 +991,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: null
-          entity_field: title
-          plugin_id: field
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 8
       sorts:
         field_updated_at_value:
           id: field_updated_at_value
@@ -1025,12 +1004,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: datetime
           order: DESC
-          exposed: false
           expose:
             label: ''
+            field_identifier: field_updated_at_value
+          exposed: false
           granularity: second
-          plugin_id: datetime
         created:
           id: created
           table: commerce_product_field_data
@@ -1038,14 +1018,39 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: hour
           entity_type: commerce_product
           entity_field: created
           plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: hour
+      style:
+        type: ViewsBootstrapGrid
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          lg: '3'
+          md: '6'
+          sm: '12'
+          grid_item: 0
+      row:
+        type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: teaser
+      defaults:
+        title: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+      display_description: ''
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:

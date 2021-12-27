@@ -66,9 +66,6 @@ class ShipmentManager implements ShipmentManagerInterface {
     $shipping_method_storage = $this->entityTypeManager->getStorage('commerce_shipping_method');
     /** @var \Drupal\commerce_shipping\Entity\ShippingMethodInterface $shipping_method */
     $shipping_method = $shipping_method_storage->load($rate->getShippingMethodId());
-    if (is_null($shipping_method)) {
-      return;
-    }
     $shipping_method_plugin = $shipping_method->getPlugin();
     if (empty($shipment->getPackageType())) {
       $shipment->setPackageType($shipping_method_plugin->getDefaultPackageType());
