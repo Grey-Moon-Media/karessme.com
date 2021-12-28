@@ -3,6 +3,24 @@
 use Drupal\honeys_place\Service\HoneyOrderManagementService;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+* Implements hook_mail().
+*/
+function custom_karessme_mail($key, &$message, $params) {
+ $options = array(
+   'langcode' => $message['langcode'],
+ );
+
+ switch ($key) {
+   case 'OrderTrackNumber':
+     $message['from'] = \Drupal::config('system.site')->get('mail');
+     $message['subject'] = t($params['subject'], $options);
+     $message['body'][] = $params['message'];
+	 $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+     break;
+ }
+}
+
 function custom_karessme_cron(){
 
 	$connection = \Drupal::service('database');
@@ -37,7 +55,7 @@ function custom_karessme_cron(){
 
 					if($cust_email){
 						$mailManager = \Drupal::service('plugin.manager.mail');
-						$module = 'honeys_place';
+						$module = 'custom_karessme';
 						$key = 'OrderTrackNumber';
 						$to = $cust_email;
 						$params['message'] = "<p>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
@@ -96,7 +114,7 @@ function update_order_validate_new($form, FormStateInterface $form_state){
 				\Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $updated_tracking_num))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
 				
 				$mailManager = \Drupal::service('plugin.manager.mail');
-				$module = 'honeys_place';
+				$module = 'custom_karessme';
 				$key = 'OrderTrackNumber';
 				$to = $cust_email;
 				$params['message'] = "<p>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your updated tracking number is ".$updated_tracking_num."</p>";
