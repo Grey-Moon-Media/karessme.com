@@ -1,6 +1,25 @@
 <?php
 
 use Drupal\honeys_place\Service\HoneyOrderManagementService;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+* Implements hook_mail().
+*/
+function custom_karessme_mail($key, &$message, $params) {
+ $options = array(
+   'langcode' => $message['langcode'],
+ );
+
+ switch ($key) {
+   case 'OrderTrackNumber':
+     $message['from'] = \Drupal::config('system.site')->get('mail');
+     $message['subject'] = t($params['subject'], $options);
+     $message['body'][] = $params['message'];
+	 $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+     break;
+ }
+}
 
 function custom_karessme_cron(){
 
@@ -36,7 +55,7 @@ function custom_karessme_cron(){
 
 					if($cust_email){
 						$mailManager = \Drupal::service('plugin.manager.mail');
-						$module = 'honeys_place';
+						$module = 'custom_karessme';
 						$key = 'OrderTrackNumber';
 						$to = $cust_email;
 						$params['message'] = "<p>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your tracking number is ".$trackingnumber1."</p>";
@@ -51,4 +70,60 @@ function custom_karessme_cron(){
 		}
 	}
 	
+}
+
+function custom_karessme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if($form_id == "commerce_order_default_edit_form"){
+		$form['#validate'][] = 'update_order_validate_new';
+	}
+}
+
+function update_order_validate_new($form, FormStateInterface $form_state){
+	$values = $form_state->cleanValues()->getValues();
+	$current_path = \Drupal::service('path.current')->getPath();
+	$current_path_exp = explode('/',$current_path);
+	if($current_path_exp[count($current_path_exp) - 1] == "edit"){
+		$order_id = $current_path_exp[count($current_path_exp) - 2];
+	}
+	
+	$connection = \Drupal::service('database');
+	
+	$coquery = \Drupal::database()->select('commerce_order', 'co');
+	$coquery->fields('co', ['mail','order_number']);
+	$coquery->condition('co.order_id', $order_id);
+	$order_query = $coquery->execute()->fetchAssoc();
+
+	$cofutnquery = \Drupal::database()->select('commerce_order__field_usps_tracking_number', 'cofutn');
+	$cofutnquery->fields('cofutn', ['entity_id','field_usps_tracking_number_value']);
+	$cofutnquery->condition('cofutn.entity_id', $order_id);
+	
+	$hastrackingno = $cofutnquery->execute()->fetchAssoc();
+	$order_number = $order_query['order_number'];
+	$updated_tracking_num = $values['field_usps_tracking_number'][0]['value'];
+	if($hastrackingno['field_usps_tracking_number_value']){
+		if($hastrackingno['field_usps_tracking_number_value'] != $updated_tracking_num){
+			
+			if($order_query){
+				$cust_email = $order_query['mail'];
+			}else{
+				$cust_email = "";
+			}
+
+			if($cust_email){
+				
+				\Drupal::database()->update('commerce_order__field_usps_tracking_number')->fields(array('field_usps_tracking_number_value' => $updated_tracking_num))->condition('entity_id', $order_id)->condition('bundle', 'default')->execute();
+				
+				$mailManager = \Drupal::service('plugin.manager.mail');
+				$module = 'custom_karessme';
+				$key = 'OrderTrackNumber';
+				$to = $cust_email;
+				$params['message'] = "<p>Your Order with #".$order_number." has been shipped through USPS courier service.</br> Your updated tracking number is ".$updated_tracking_num."</p>";
+				$params['subject'] = "Your Order #".$order_number." is shipped";
+				$langcode = \Drupal::currentUser()->getPreferredLangcode();
+				$send = true;
+
+				$result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+			}
+		}
+	}
 }
