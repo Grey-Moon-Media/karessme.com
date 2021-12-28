@@ -5,7 +5,9 @@ dependencies:
   module:
     - commerce_payment
     - commerce_paypal
+    - commerce_promotion
     - commerce_shipping
+    - commerce_stripe
 _core:
   default_config_hash: wwkDVBiXUqSzRifJbb71ajFBklJdNJ_DgS67IF-_qgY
 label: Default
@@ -56,3 +58,11 @@ configuration:
       step: _sidebar
       weight: 9
       view: commerce_checkout_order_summary
+    coupon_redemption:
+      step: _sidebar
+      weight: 10
+      allow_multiple: false
+    stripe_review:
+      step: review
+      weight: 10
+      button_id: edit-actions-next

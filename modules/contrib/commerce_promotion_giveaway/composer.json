@@ -1,0 +1,11 @@
+{
+    "name": "drupal/commerce_promotion_giveaway",
+    "type": "drupal-module",
+    "description": "Provides promotion giveaway plugin for Commerce.",
+    "homepage": "https://drupal.org/project/commerce_promotion_giveaway",
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/commerce": "^2.11"
+    },
+    "minimum-stability": "dev"
+}

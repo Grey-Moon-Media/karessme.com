@@ -1,0 +1,13 @@
+name: 'Commerce Promotion Giveaway'
+type: module
+description: 'Provides a promotional giveaway to orders based on the Commerce Promotion module.'
+core_version_requirement: ^8 || ^9
+package: 'Commerce (contrib)'
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_promotion
+
+# Information added by Drupal.org packaging script on 2021-10-13
+version: '2.0.0'
+project: 'commerce_promotion_giveaway'
+datestamp: 1634121404

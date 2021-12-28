@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "820d223c8638eb41985e9659c485e5cc",
+    "content-hash": "ffcf5f17706666fbc1c14faa45af2a5a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2926,6 +2926,58 @@
             }
         },
         {
+            "name": "drupal/commerce_cart",
+            "version": "2.28.0",
+            "require": {
+                "drupal/commerce": "*",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_product": "*",
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.28",
+                    "datestamp": "1639899120",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Implements the shopping cart system and add to cart features.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
             "name": "drupal/commerce_email",
             "version": "dev-1.x",
             "source": {
@@ -3062,6 +3114,60 @@
             "homepage": "https://www.drupal.org/project/commerce_eta",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_eta"
+            }
+        },
+        {
+            "name": "drupal/commerce_extra_items",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_extra_items.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_extra_items-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "02fd1477d3e188d470c1c244ee8f464b6fe78a65"
+            },
+            "require": {
+                "drupal/commerce_cart": "*",
+                "drupal/commerce_promotion": "^2.8",
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1629999315",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "abramm",
+                    "homepage": "https://www.drupal.org/user/3216035"
+                },
+                {
+                    "name": "max-kuzomko",
+                    "homepage": "https://www.drupal.org/user/3003505"
+                },
+                {
+                    "name": "nnevill",
+                    "homepage": "https://www.drupal.org/user/835208"
+                }
+            ],
+            "description": "Provides the ability to create commerce promotion offers like \"BOGO\" (Buy one, get one).",
+            "homepage": "https://www.drupal.org/project/commerce_extra_items",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_extra_items"
             }
         },
         {
@@ -3586,6 +3692,107 @@
             "homepage": "https://drupal.org/project/commerce_product_review",
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_product_review"
+            }
+        },
+        {
+            "name": "drupal/commerce_promotion",
+            "version": "2.28.0",
+            "require": {
+                "drupal/commerce": "*",
+                "drupal/commerce_order": "*",
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.28",
+                    "datestamp": "1639899120",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides a UI for managing promotions.",
+            "homepage": "https://www.drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
+        },
+        {
+            "name": "drupal/commerce_promotion_giveaway",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_promotion_giveaway.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_promotion_giveaway-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "0d49e218f766488a81a23ed33d52f16a507f9d9b"
+            },
+            "require": {
+                "drupal/commerce": "^2.11",
+                "drupal/commerce_promotion": "*",
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1634121401",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Siegrist",
+                    "homepage": "https://www.drupal.org/user/3604748"
+                },
+                {
+                    "name": "grahl",
+                    "homepage": "https://www.drupal.org/user/146040"
+                }
+            ],
+            "description": "Provides promotion giveaway plugin for Commerce.",
+            "homepage": "https://drupal.org/project/commerce_promotion_giveaway",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_promotion_giveaway"
             }
         },
         {

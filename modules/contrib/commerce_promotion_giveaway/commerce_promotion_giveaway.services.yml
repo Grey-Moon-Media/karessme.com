@@ -1,0 +1,5 @@
+services:
+  commerce_promotion_giveaway.order_item_cleanup:
+    class: Drupal\commerce_promotion_giveaway\GiveawayPromotionOrderProcessor
+    tags:
+      - { name: commerce_order.order_processor, priority: 99 }
