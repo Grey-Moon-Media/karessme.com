@@ -82,7 +82,7 @@ function update_order_validate_new($form, FormStateInterface $form_state){
 	$hastrackingno = $cofutnquery->execute()->fetchAssoc();
 	$order_number = $order_query['order_number'];
 	$updated_tracking_num = $values['field_usps_tracking_number'][0]['value'];
-	if($updated_tracking_num){
+	if($hastrackingno['field_usps_tracking_number_value']){
 		if($hastrackingno['field_usps_tracking_number_value'] != $updated_tracking_num){
 			
 			if($order_query){
