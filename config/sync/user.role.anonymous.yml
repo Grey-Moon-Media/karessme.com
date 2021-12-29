@@ -1,7 +1,21 @@
 uuid: 5e573dcb-3dff-4d6f-9e41-65342ba7de76
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - commerce_product_review
+    - contact
+    - eu_cookie_compliance
+    - filter
+    - flag
+    - media
+    - simplenews
+    - system
 id: anonymous
 label: 'Anonymous user'
 weight: 0

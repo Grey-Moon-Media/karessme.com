@@ -7,7 +7,7 @@ popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
 eu_only: null
 eu_only_js: null
-popup_position: true
+popup_position: false
 fixed_top_position: true
 popup_info:
   value: "<h2>We use cookies on this site to enhance your user experience</h2>\r\n\r\n<p>By clicking the Accept button, you agree to us doing so.</p>\r\n"
@@ -28,7 +28,7 @@ popup_agreed:
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
 popup_link: '<front>'
-popup_link_new_window: true
+popup_link_new_window: false
 popup_height: null
 popup_width: 100%
 popup_delay: 1000
@@ -56,7 +56,7 @@ method: categories
 disabled_javascripts: ''
 automatic_cookies_removal: true
 allowed_cookies: ''
-consent_storage_method: do_not_store
+consent_storage_method: basic
 withdraw_message:
   value: "<h2>We use cookies on this site to enhance your user experience</h2>\r\n\r\n<p>You have given your consent for us to set cookies.</p>\r\n"
   format: basic_html

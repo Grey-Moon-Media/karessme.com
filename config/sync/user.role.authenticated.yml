@@ -1,7 +1,21 @@
 uuid: 4db465e4-6416-43de-932f-472edfda7c0d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - comment
+    - commerce_checkout
+    - commerce_product
+    - commerce_product_review
+    - contact
+    - filter
+    - flag
+    - media
+    - shortcut
+    - simplenews
+    - system
 id: authenticated
 label: 'Authenticated user'
 weight: 1
