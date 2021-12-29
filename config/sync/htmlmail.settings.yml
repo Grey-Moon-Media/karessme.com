@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: Jh_7Qy5GHQxxThw125M0lN5htchRjsy4fQtImF8RBd8
+debug: true
+theme: wosh
+html_with_plain: false
+postfilter: full_html
+use_mail_mime: false
+test:
+  to: greymoonmedia@aol.com
+  subject: 'subject test'
+  body:
+    value: "<p>body test from HTML Mail</p>\r\n"
+    format: basic_html
+  class: SMTPMailSystem

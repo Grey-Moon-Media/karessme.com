@@ -32,7 +32,7 @@ third_party_settings:
 id: frontpagecollectionsbanners2
 theme: wosh
 region: content_wide_top
-weight: 0
+weight: -51
 provider: null
 plugin: 'simple_block:front_page_collections_banners_2'
 settings:

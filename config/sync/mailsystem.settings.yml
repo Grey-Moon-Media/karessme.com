@@ -30,3 +30,7 @@ modules:
     none:
       sender: mandrill_mail
       formatter: mandrill_mail
+  custom_karessme:
+    none:
+      sender: SMTPMailSystem
+      formatter: SMTPMailSystem

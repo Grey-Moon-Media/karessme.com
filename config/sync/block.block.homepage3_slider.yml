@@ -33,7 +33,7 @@ third_party_settings:
 id: homepage3_slider
 theme: wosh
 region: slider
-weight: -42
+weight: -51
 provider: null
 plugin: 'block_content:9b0b748b-988a-4bde-952f-25056dced89d'
 settings:

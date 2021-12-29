@@ -1,0 +1,11 @@
+uuid: 1d6cf61a-6e14-4d6b-8659-1c1079a7f905
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: prom
+title: 'Promotional Banner'
+content:
+  value: "<div class=\"km_promotion_banner\">\r\n   <div class=\"col-md-3  content\">\r\n    <h1>Grand Opening Sale</h1>\r\n    <p></p>\r\n    <h2>CODE: KMNEW2022 </h2>\r\n </div>\r\n  <div class=\"col-md-6 thumb role=\"img\" style=\"background-image: url('sites/default/files/pictures/promotions/promotion_thumb.jpg');\"></div>\r\n</div>"
+  format: full_html

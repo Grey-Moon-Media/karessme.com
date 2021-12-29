@@ -29,7 +29,7 @@ third_party_settings:
 id: frontpagecollectionsbanners
 theme: wosh
 region: slider
-weight: -38
+weight: -47
 provider: null
 plugin: 'block_content:b5cebb9b-f261-4bd8-a5fc-5519a6b8f9eb'
 settings:

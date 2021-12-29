@@ -77,6 +77,7 @@ module:
   honeypot: 0
   honeys_place: 0
   hsblock: 0
+  htmlmail: 0
   image: 0
   image_delta_formatter: 0
   imce: 0
@@ -120,6 +121,7 @@ module:
   search_api_db: 0
   shortcut: 0
   simple_block: 0
+  simple_popup_blocks: 0
   simplenews: 0
   slick: 0
   slick_ui: 0

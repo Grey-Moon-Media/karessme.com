@@ -32,7 +32,7 @@ third_party_settings:
 id: contactformgreetingmessage
 theme: wosh
 region: content_wide_top
-weight: 0
+weight: -52
 provider: null
 plugin: 'block_content:67fd75b7-7dc0-4359-84f3-f02f3ac9f64a'
 settings:

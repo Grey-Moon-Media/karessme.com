@@ -1,0 +1,51 @@
+uuid: 212af816-79b0-4b20-8b40-cb390e98ec55
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.prom
+  module:
+    - block_visibility_groups
+    - hsblock
+    - simple_block
+    - system
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    id: ''
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: ''
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: promotionalbanner
+theme: wosh
+region: slider
+weight: -46
+provider: null
+plugin: 'simple_block:prom'
+settings:
+  id: 'simple_block:prom'
+  label: 'Promotional Banner'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

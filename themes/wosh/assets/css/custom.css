@@ -759,3 +759,43 @@ div.slimScrollBar {
     background-position: center center;
     background-repeat: no-repeat;
 }
+.km_promotion_banner .content,
+.km_promotion_banner .thumb {
+    display: inline-grid;
+}
+.km_promotion_banner .thumb {
+    /*padding: 5%;*/
+}
+.km_promotion_banner .content h1{
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+.km_promotion_banner .content p{
+    font-size: 1.1rem;
+}
+.km_promotion_banner .content h1,
+.km_promotion_banner .content p{
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+.km_promotion_banner .content {
+    background-color: #010101;
+}
+.km_promotion_banner {
+    background-color: #010101;
+    width: 50%;
+    margin: 0 auto;
+    border: 10px solid #FFFFFF;
+    position: fixed;
+    top: 0;
+    z-index: 111111111;
+}
+.km_promo {
+    position: absolute;
+    top: 0;
+    z-index: 111111111;
+}
+/*#block-frontpagepromo {
+    display: none;
+  }*/

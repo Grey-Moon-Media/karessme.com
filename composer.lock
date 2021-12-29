@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffcf5f17706666fbc1c14faa45af2a5a",
+    "content-hash": "e91ee473aec71de785b0d5b606c2dae9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6347,6 +6347,73 @@
             }
         },
         {
+            "name": "drupal/htmlmail",
+            "version": "3.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/htmlmail.git",
+                "reference": "8.x-3.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/htmlmail-8.x-3.0-alpha3.zip",
+                "reference": "8.x-3.0-alpha3",
+                "shasum": "d2d3d145531bc1e2d29e86cfa49853a4c622fa27"
+            },
+            "require": {
+                "drupal/core": "^8.8.2 || ^9",
+                "drupal/mailsystem": "^4.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-alpha3",
+                    "datestamp": "1613730655",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gaurav.kapoor",
+                    "homepage": "https://www.drupal.org/user/3495331",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nafes",
+                    "homepage": "https://www.drupal.org/user/2489926",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/u/RenatoG",
+                    "email": "renatog@ciandt.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/u/salvis",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/user/82964"
+                }
+            ],
+            "description": "Enables HTML in system emails.",
+            "homepage": "https://www.drupal.org/project/htmlmail",
+            "support": {
+                "source": "https://git.drupalcode.org/project/htmlmail",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/image_delta_formatter",
             "version": "1.1.0",
             "source": {
@@ -7772,6 +7839,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/simple_block",
                 "issues": "https://www.drupal.org/project/issues/simple_block"
+            }
+        },
+        {
+            "name": "drupal/simple_popup_blocks",
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simple_popup_blocks.git",
+                "reference": "8.x-2.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simple_popup_blocks-8.x-2.8.zip",
+                "reference": "8.x-2.8",
+                "shasum": "b40b14fe4226327a933d3672d08f434136e27a3b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.8",
+                    "datestamp": "1622660240",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ameer Khan",
+                    "homepage": "https://www.drupal.org/user/3087149"
+                },
+                {
+                    "name": "mattbloomfield",
+                    "homepage": "https://www.drupal.org/user/3620586"
+                },
+                {
+                    "name": "vengatjove",
+                    "homepage": "https://www.drupal.org/user/3555715"
+                }
+            ],
+            "description": "Enable Simple popup blocks to show any block contents, forms or custom div in popup. Now Drupal 8/9 compatible. Originally created by Ameer Khan. This is a stable release of the 2.0 version.",
+            "homepage": "https://www.drupal.org/project/simple_popup_blocks",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simple_popup_blocks"
             }
         },
         {
@@ -14951,6 +15070,7 @@
         "drupal/feeds_ex": 15,
         "drupal/feeds_tamper": 10,
         "drupal/flag": 10,
+        "drupal/htmlmail": 15,
         "drupal/libraries": 10,
         "drupal/maillog": 10,
         "drupal/mimemail": 15,
