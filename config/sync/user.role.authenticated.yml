@@ -12,6 +12,7 @@ dependencies:
     - contact
     - filter
     - flag
+    - google_analytics
     - media
     - shortcut
     - simplenews
