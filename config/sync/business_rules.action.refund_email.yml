@@ -1,0 +1,20 @@
+uuid: d90593f2-509f-469e-ab14-bd64eafe9493
+langcode: en
+status: true
+dependencies: {  }
+id: refund_email
+label: 'Refund Email'
+description: 'Send Customer an Email when a refund is issued'
+type: send_email
+target_entity_type: null
+target_bundle: null
+tags: {  }
+settings:
+  subject: 'A refund was issued from order [commerce_order:order_id] is on the Way'
+  use_site_mail_as_sender: true
+  from: ''
+  to: '[commerce_order:mail]'
+  format: html
+  body:
+    format: basic_html
+    value: "<img alt=\"karessme.com logo\" data-align=\"center\" data-entity-type=\"file\" data-entity-uuid=\"b4b902eb-0576-4090-90df-89680255c902\" src=\"/sites/default/files/inline-images/email-logo.jpeg\" />\r\n<p>Hello,</p>\r\n\r\n<p>Due to an unexpected occurrence, [commerce_order:order_id], was not processed. The details of the order are below:</p>\r\n\r\n<p><strong>Order ID:</strong> [commerce_order:order_id]<br />\r\n<strong>Purchase Date:</strong> [commerce_order:created:date]<br />\r\n<strong>Payment Method:</strong> [commerce_order:payment_method]<br />\r\n<strong>Items: </strong>[commerce_order:order_items]<br />\r\n<strong>Order Total:</strong> [commerce_payment:amount]<br />\r\n<strong>Refunded Amount:</strong> [commerce_payment:refunded_amount]</p>\r\n\r\n<p>No worries, a refund was issued to the payment source you used to purchase the item.&nbsp; Sorry for the inconvenience. We look forward to your business in the future.</p>\r\n\r\n<p>Sincerely<br />\r\n<br />\r\nKaress Me Adult Toys &amp; Novelties</p>\r\n"

@@ -90,7 +90,7 @@ class AfterCheckout implements EventSubscriberInterface
       $this->loggerChannelFactory->get('honeys_place')->error($t->getMessage());
     }
   }
-  
+
   public function respondToOdrderStatusChange(OrderEvent $event)
   {
     try {
@@ -100,12 +100,12 @@ class AfterCheckout implements EventSubscriberInterface
         $response = $this->honeyOrderManagementService->getHoneyOrderStatus($order_id);
         $order_data_response = $response->getData();
         $order_state = $order->getState()->getId();
-		
+
 		if($order_state == 'completed'){
-			
+
 			if($response->getStatus() == "Shipped" && $order_data_response['shipagent'] == "USPS"){
 			  $trackingnumber1 = $order_data_response['trackingnumber1'];
-			  
+
 			  //$order = Order::load($order_id);
 			  //$order->set('field_usps_tracking_number', $trackingnumber1);
 			  //$order->save();
@@ -133,7 +133,7 @@ class AfterCheckout implements EventSubscriberInterface
 					$cust_email = "";
 				  }
 
-				  if($cust_email){
+				/*  if($cust_email){
 					$mailManager = \Drupal::service('plugin.manager.mail');
 					$module = 'honeys_place';
 					$key = 'OrderTrackNumber';
@@ -144,7 +144,7 @@ class AfterCheckout implements EventSubscriberInterface
 					$send = true;
 
 					$result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-				  }
+        }*/
 				}
 			  }
 			}
@@ -156,4 +156,3 @@ class AfterCheckout implements EventSubscriberInterface
     }
   }
 }
-

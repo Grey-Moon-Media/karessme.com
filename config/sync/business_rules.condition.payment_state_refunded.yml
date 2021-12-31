@@ -1,0 +1,16 @@
+uuid: 603a9dd3-6ebc-40d9-8cf5-a0c34b5ba8ba
+langcode: en
+status: true
+dependencies: {  }
+id: payment_state_refunded
+label: 'Payment State: Refunded'
+type: data_comparison
+description: 'When a payment is refunded'
+target_entity_type: commerce_payment
+target_bundle: payment_default
+tags: {  }
+settings:
+  field: state
+  data_to_compare: current_data
+  operator: '=='
+  value_to_compare: "refunded\r\n\"refunded\""

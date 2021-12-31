@@ -144,7 +144,7 @@
     display: block;
 }
 #block-wosh-branding .brand.logo img{
-    max-width: 60%;
+    max-width: 80%;
 }
 #block-wosh-branding .brand.logo{
     max-width: 240px;
@@ -152,7 +152,7 @@
     position: relative;
     z-index: 11;
     left: 0px;
-    top: -2px;
+    top: 0px;
 }
 div.list-style-content ul li,
 .list-style-content {
@@ -540,6 +540,9 @@ div#edit-payment-information-add-payment-method-payment-details-number{
     background: #ffffff;
     padding: 10px 5px;
 }
+.fieldgroup .form-composite legend .span.fieldset-legend {
+
+}
 
 /********************************
     Custom Styles - Modals
@@ -796,6 +799,9 @@ div.slimScrollBar {
     top: 0;
     z-index: 111111111;
 }
-/*#block-frontpagepromo {
-    display: none;
-  }*/
+#block-frontpagepromo .container-wrap{
+    padding-right: 0!important;
+    padding-left: 0!important;
+    margin-right: auto;
+    margin-left: auto;
+  }

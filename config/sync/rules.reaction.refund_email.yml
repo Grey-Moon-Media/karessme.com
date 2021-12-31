@@ -1,0 +1,14 @@
+uuid: 324dbf77-a7f3-4366-8341-ca1f5c5fbc35
+langcode: en
+status: true
+dependencies: {  }
+id: refund_email
+label: 'Refund Email'
+events:
+  -
+    event_name: 'rules_entity_update:commerce_order--default'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

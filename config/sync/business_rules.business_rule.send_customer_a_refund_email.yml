@@ -1,0 +1,24 @@
+uuid: 250db8f3-22a2-4cfa-9376-2d058388e331
+langcode: en
+status: true
+dependencies:
+  config:
+    - business_rules.action.refund_email
+    - business_rules.condition.payment_state_refunded
+id: send_customer_a_refund_email
+label: 'Send customer a refund email'
+description: 'Send customer a refund email with details.'
+reacts_on: entity_update
+target_entity_type: commerce_payment
+target_bundle: payment_default
+items:
+  payment_state_refunded:
+    type: condition
+    id: payment_state_refunded
+    weight: -9
+  refund_email:
+    type: action
+    id: refund_email
+    weight: -8
+tags: {  }
+enabled: null

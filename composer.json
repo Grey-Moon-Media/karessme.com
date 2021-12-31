@@ -63,7 +63,7 @@
         "drupal/facets": "^2.0",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
-        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/feeds_tamper": "2.x-dev@dev",
         "drupal/file_delete": "^1.0",
         "drupal/fixed_block_content": "^1.1",
         "drupal/flag": "^4.0@beta",
@@ -119,9 +119,6 @@
     "extra": {
 	"enable-patching": true,
         "patches": {
-          "drupal/tamper":{
-		  "Rewrite for multiple images": "https://git.drupalcode.org/project/tamper/-/merge_requests/4.diff"
-          },
 	  "drupal/commerce_square" :{
               "Postal code issue":"https://www.drupal.org/files/issues/2020-11-20/commerce-square-postal-code-3123602.patch",
               "Missing Input Fields":"https://www.drupal.org/files/issues/2020-12-01/3093086-10.patch"
@@ -139,7 +136,10 @@
 	    },
 	    "drupal/commerce_stripe": {
 		   "Add credit card icons on checkout" : "https://www.drupal.org/files/issues/2021-11-25/3245980-11-checkout_credit_card_icons.patch"
-	    }
+	    },
+	    "drupal/feeds_tamper": {
+	       "Catch TamperException to prevent import from crashing":"https://www.drupal.org/files/issues/2019-06-16/feeds_tamper-tamper-exception-catching-2983197-4.patch"
+            }
 
 	},
         "drupal-scaffold": {

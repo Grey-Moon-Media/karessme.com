@@ -39,9 +39,7 @@ class Rewrite extends TamperBase {
       '#default_value' => $this->getSetting(self::SETTING_TEXT),
     ];
 
-    $replace = [
-      '[_self]',
-    ];
+    $replace = [];
     foreach ($this->sourceDefinition->getList() as $source) {
       $replace[] = '[' . $source . ']';
     }
@@ -72,25 +70,8 @@ class Rewrite extends TamperBase {
     foreach ($item->getSource() as $key => $value) {
       $trans['[' . $key . ']'] = is_array($value) ? reset($value) : $value;
     }
-    $trans['[_self]'] = $this->getOwnDataAsReplacementValue($data);
 
     return strtr($this->getSetting(self::SETTING_TEXT), $trans);
-  }
-
-  /**
-   * Pick own data value as replacement.
-   *
-   * @param mixed $data
-   *   The data to pick.
-   */
-  protected function getOwnDataAsReplacementValue($data) {
-    if (is_scalar($data)) {
-      return $data;
-    }
-    elseif (is_array($data)) {
-      $data = reset($data);
-      return $this->getOwnDataAsReplacementValue($data);
-    }
   }
 
 }
