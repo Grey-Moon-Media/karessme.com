@@ -1,14 +1,13 @@
-uuid: ace5e1a3-4cc9-4860-a92e-0c2bf65eb481
+uuid: 91255a6f-bd60-4e06-8a82-66205ce35d2e
 langcode: en
 status: false
 dependencies:
   config:
-    - simple_block.simple_block.front_page_promo
+    - simple_block.simple_block.company_menu_simple
   module:
     - block_visibility_groups
     - hsblock
     - simple_block
-    - system
   theme:
     - wosh
 third_party_settings:
@@ -29,23 +28,19 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: frontpagepromo
+id: companymenusimple
 theme: wosh
-region: slider
-weight: -45
+region: footer_third
+weight: 0
 provider: null
-plugin: 'simple_block:front_page_promo'
+plugin: 'simple_block:company_menu_simple'
 settings:
-  id: 'simple_block:front_page_promo'
-  label: 'Front Page Promo'
-  label_display: '0'
+  id: 'simple_block:company_menu_simple'
+  label: Company
+  label_display: visible
   provider: simple_block
 visibility:
   condition_group:
     id: condition_group
     negate: false
     block_visibility_group: ''
-  request_path:
-    id: request_path
-    negate: false
-    pages: '<front>'

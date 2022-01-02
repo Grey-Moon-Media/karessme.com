@@ -534,10 +534,10 @@ div#edit-payment-information-add-payment-method-payment-details-number{
 .checkout-pane-payment-information,
 .field--name-shipping-method,
 .checkout-pane-contact-information {
-    background: #f6f6f6;
+    /*background: #f6f6f6;
     padding: 5% 3%;
     border: 1px solid #cecece;
-    margin: 15px 0;
+    margin: 15px 0;*/
     
 }
 .checkout-pane-payment-information .stripe-form #expiration-element,
@@ -551,8 +551,19 @@ div#edit-payment-information-add-payment-method-payment-details-number{
     background: #ffffff;
     padding: 10px 5px;
 }
-.fieldgroup .form-composite legend .span.fieldset-legend {
-
+/*.layout-region-checkout-main {
+    background: #f6f6f6!important;
+    padding: 1%;
+}*/
+.layout-region-checkout-main fieldset .form-text,
+.layout-region-checkout-main fieldset select {
+    background: #FFFFFF;
+    border: 1px solid #cecece;
+}
+.layout-region-checkout-main fieldset{
+    margin-bottom: 30px!important;
+    background: #f6f6f6!important;
+    padding: 7% 5%;
 }
 
 /********************************
@@ -773,37 +784,96 @@ div.slimScrollBar {
     background-position: center center;
     background-repeat: no-repeat;
 }
-.km_promotion_banner .content,
-.km_promotion_banner .thumb {
-    display: inline-grid;
+.km_promotion_banner button.km_promo_button {
+    display: block;
+    outline: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 46px;
+    width: 160px!important;
+    padding: 15px 20px;
+    background: rgb(0, 0, 0)!important;
+    line-height: 20px;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: none;
+    border-color: #000000;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    font-family: 'Expresssans Medium', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
+
 .km_promotion_banner .thumb {
-    /*padding: 5%;*/
+    position: absolute;
+    margin: 0 0 0 0;
+    top: 0%;
+    left: 0%;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    z-index: 7;
+    display: block;
+    padding: 29% 0;
+    width: 35%;
+    background-image: url(../images/bg/promo-bg.jpg);
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: auto; /* You must set a specified height */
+    background-position: 0 0; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.km_promotion_banner .content h2{
+    font-size: 22px;
+    text-align: center;
 }
 .km_promotion_banner .content h1{
-    font-size: 1.9rem;
+    font-size: 33px;
+}
+.km_promotion_banner .content h1,
+.km_promotion_banner .content h2{
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 40px;
+    letter-spacing: 0em;
+    padding: 0 0 0 0;
+    background: rgba(255, 255, 255, 0);
     text-transform: uppercase;
+    font-weight: 600;
 }
 .km_promotion_banner .content p{
     font-size: 1.1rem;
+    color: #010101;
 }
-.km_promotion_banner .content h1,
-.km_promotion_banner .content p{
-    color: #ffffff;
-    font-weight: 600;
-    letter-spacing: 1.8px;
-}
-.km_promotion_banner .content {
-    background-color: #010101;
+.km_promotion_banner .content{
+    float: right;
+    width: 65%;
+    padding: 75px 25px;
 }
 .km_promotion_banner {
-    background-color: #010101;
-    width: 50%;
-    margin: 0 auto;
-    border: 10px solid #FFFFFF;
-    position: fixed;
-    top: 0;
-    z-index: 111111111;
+    height: 500px;
+    width: 850px;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: 0px 0px 0px 0px #000000;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 0;
+    border-color: #000000;
+    animation-name: none;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    padding: 1%;
 }
 .km_promo {
     position: absolute;
@@ -816,3 +886,25 @@ div.slimScrollBar {
     margin-right: auto;
     margin-left: auto;
   }
+div.spb-controls .spb_close,
+div.spb-controls .spb_minimize {
+    font-size: 25px!important;
+    border: 0px solid!important;
+}
+
+
+/**********************
+   MENUS
+***********************/
+.km_contact_menu ul li{
+    width: 100%;
+}
+.km_contact_menu ul li a{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    line-height: 35px;
+}
+.km_contact_menu {
+    padding: 2%;
+}

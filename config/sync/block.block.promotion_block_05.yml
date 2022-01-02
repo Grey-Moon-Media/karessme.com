@@ -33,7 +33,7 @@ third_party_settings:
 id: promotion_block_05
 theme: wosh
 region: content_wide_top
-weight: -50
+weight: -51
 provider: null
 plugin: 'block_content:6b408f6d-04b5-4b5c-8048-264b571bf316'
 settings:

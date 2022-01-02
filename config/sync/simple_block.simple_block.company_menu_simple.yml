@@ -1,0 +1,11 @@
+uuid: 9357a679-14e9-43cc-a3cb-6aa0edf8ccf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: company_menu_simple
+title: 'Company Menu - Simple'
+content:
+  value: "<ul>\r\n\t<li><a href=\"/about\">About Us</a></li>\r\n\t<li><a href=\"/return-request\">Return Request</a></li>\r\n\t<li><a href=\"/privacy-policy\">Privacy Policy</a></li>\r\n\t<!--<li><a href=\"/terms-conditions\">Terms &amp; Conditions</a></li> -->\r\n</ul>"
+  format: basic_html

@@ -1,13 +1,12 @@
-uuid: ace5e1a3-4cc9-4860-a92e-0c2bf65eb481
+uuid: 0e42b3b9-9a1f-4a15-8ab0-9bf856a9fcbc
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - simple_block.simple_block.front_page_promo
+    - system.menu.contact-menu
   module:
     - block_visibility_groups
     - hsblock
-    - simple_block
     - system
   theme:
     - wosh
@@ -18,7 +17,7 @@ third_party_settings:
     block_subtitle: ''
     block_title_style: block-title-1
     block_title_align: block-title-left
-    classes: ''
+    classes: km_contact_menu
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''
@@ -29,17 +28,20 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: frontpagepromo
+id: contactmenu
 theme: wosh
-region: slider
-weight: -45
+region: sidebar_first
+weight: 0
 provider: null
-plugin: 'simple_block:front_page_promo'
+plugin: 'system_menu_block:contact-menu'
 settings:
-  id: 'simple_block:front_page_promo'
-  label: 'Front Page Promo'
+  id: 'system_menu_block:contact-menu'
+  label: 'Contact Menu'
   label_display: '0'
-  provider: simple_block
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
 visibility:
   condition_group:
     id: condition_group
@@ -48,4 +50,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: "/contact\r\n/return-request"

@@ -32,7 +32,7 @@ third_party_settings:
 id: mailchimpsignupform
 theme: wosh
 region: content_wide
-weight: -19
+weight: -20
 provider: null
 plugin: 'block_content:43118073-29d1-4864-8219-f5a9ca7494cd'
 settings:

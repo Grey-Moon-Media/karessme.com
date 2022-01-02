@@ -74,14 +74,14 @@ class UiCrudTest extends FeedsTamperBrowserTestBase {
     $edit = [
       'tamper_id' => 'trim',
     ];
-    $this->drupalPostForm(NULL, $edit, 'Submit');
+    $this->submitForm($edit, 'Submit');
 
     // Configure plugin.
     $edit = [
       'plugin_configuration[label]' => 'Trim test',
       'plugin_configuration[side]' => 'ltrim',
     ];
-    $this->drupalPostForm(NULL, $edit, 'Submit');
+    $this->submitForm($edit, 'Submit');
 
     // And assert that the tamper plugin was added.
     $this->feedType = $this->reloadEntity($this->feedType);
@@ -126,7 +126,7 @@ class UiCrudTest extends FeedsTamperBrowserTestBase {
     $edit = [
       'plugin_configuration[operation]' => 'ucfirst',
     ];
-    $this->drupalPostForm(NULL, $edit, 'Submit');
+    $this->submitForm($edit, 'Submit');
 
     // Assert that the tamper instance configuration was updated.
     $this->feedType = $this->reloadEntity($this->feedType);
@@ -168,7 +168,7 @@ class UiCrudTest extends FeedsTamperBrowserTestBase {
       ->click();
 
     // Confirm.
-    $this->drupalPostForm(NULL, [], 'Confirm');
+    $this->submitForm([], 'Confirm');
 
     // Assert that the tamper instance was removed.
     $this->feedType = $this->reloadEntity($this->feedType);
@@ -227,7 +227,7 @@ class UiCrudTest extends FeedsTamperBrowserTestBase {
       "content[$uuid_content_2][weight]" => -8,
       "content[$uuid_content_3][weight]" => -9,
     ];
-    $this->drupalPostForm(NULL, $edit, 'Save');
+    $this->submitForm($edit, 'Save');
 
     // Assert that the weights of all tamper plugins were updated.
     $this->feedType = $this->reloadEntity($this->feedType);

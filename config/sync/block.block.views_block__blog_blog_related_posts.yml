@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__blog_blog_related_posts
 theme: wosh
 region: content_wide
-weight: -34
+weight: -35
 provider: null
 plugin: 'views_block:blog-blog_related_posts'
 settings:

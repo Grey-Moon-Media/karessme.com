@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__recommended_products_block_1
 theme: wosh
 region: content_wide
-weight: -28
+weight: -29
 provider: null
 plugin: 'views_block:recommended_products-block_1'
 settings:

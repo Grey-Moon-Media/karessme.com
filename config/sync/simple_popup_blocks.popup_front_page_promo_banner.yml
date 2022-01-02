@@ -1,4 +1,4 @@
-identifier: frontpagepromo
+identifier: promotionalbanner
 uid: front_page_promo_banner
 type: '0'
 css_selector: '1'
@@ -14,7 +14,7 @@ close: 1
 use_time_frequency: 0
 time_frequency: '3600'
 show_minimized_button: 0
-width: '800'
+width: '880'
 cookie_expiry: '100'
 status: 1
 trigger_width: null

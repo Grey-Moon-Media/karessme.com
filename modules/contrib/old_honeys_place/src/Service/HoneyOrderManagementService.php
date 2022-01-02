@@ -85,7 +85,7 @@ class HoneyOrderManagementService
       $address['country_code'],
       isset($address['telephone']) ? $address['telephone'] : '',
       $commerceOrder->getEmail(),
-      $address['organization'],
+     // $address['organization'],
       'packing_slip_one' //get it from config
     );
 

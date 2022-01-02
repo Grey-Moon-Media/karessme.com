@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fddf1bad919e419a9948ba623d7c84d",
+    "content-hash": "3b710f2ee8f75af5e94c716548b4278c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5818,17 +5818,11 @@
         },
         {
             "name": "drupal/feeds_tamper",
-            "version": "2.0.0-beta2",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds_tamper.git",
-                "reference": "8.x-2.0-beta2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_tamper-8.x-2.0-beta2.zip",
-                "reference": "8.x-2.0-beta2",
-                "shasum": "969075b8a3fd702dfbfd219fd507d3aa166f919d"
+                "reference": "14bcf24deef214e38ee7e542164b4a268e8c867c"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5840,12 +5834,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-2.0-beta2",
-                    "datestamp": "1591295714",
+                    "version": "8.x-2.0-beta2+2-dev",
+                    "datestamp": "1605728199",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -15134,7 +15131,7 @@
         "drupal/empty_fields": 10,
         "drupal/feeds": 15,
         "drupal/feeds_ex": 15,
-        "drupal/feeds_tamper": 10,
+        "drupal/feeds_tamper": 20,
         "drupal/flag": 10,
         "drupal/htmlmail": 15,
         "drupal/libraries": 10,

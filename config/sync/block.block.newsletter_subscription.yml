@@ -31,7 +31,7 @@ third_party_settings:
 id: newsletter_subscription
 theme: wosh
 region: content_wide
-weight: -30
+weight: -31
 provider: null
 plugin: simplenews_subscription_block
 settings:

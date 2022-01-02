@@ -1,0 +1,11 @@
+uuid: 5087dfb7-9a00-4a03-8cb1-1ff2d3865efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: contact_form_greeting_message_simple
+title: 'Contact Form Greeting Message - Simple'
+content:
+  value: "<p>If you have any questions, comments or suggestions for our products, service or website, you are welcome to contact us at any time. Our customer service team is on line 24 hours around the clock to be at your service wholeheartedly. You can contact us in the manners as follows:</p>\r\n\r\n<p>Send E-mails to us at:&nbsp; info@karessme.com or fill out the contact form below:</p>\r\n\r\n<p>We will try our best to provide for you a satisfactory reply within 24 hours. In the case of holidays, please wait patiently for one or two days. If a reply has not been received for a long time, please check the spam mails or the spam mails folder.</p>\r\n"
+  format: basic_html

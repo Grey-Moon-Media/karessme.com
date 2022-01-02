@@ -33,7 +33,7 @@ third_party_settings:
 id: pricing_table
 theme: wosh
 region: content_wide
-weight: -49
+weight: -50
 provider: null
 plugin: 'block_content:b735a851-fe00-49e1-9392-df73cd504b16'
 settings:

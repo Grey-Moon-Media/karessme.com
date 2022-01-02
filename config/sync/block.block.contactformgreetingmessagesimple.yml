@@ -1,9 +1,9 @@
-uuid: ace5e1a3-4cc9-4860-a92e-0c2bf65eb481
+uuid: 773445e4-6646-4080-8dd6-be12e155380d
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - simple_block.simple_block.front_page_promo
+    - simple_block.simple_block.contact_form_greeting_message_simple
   module:
     - block_visibility_groups
     - hsblock
@@ -29,15 +29,15 @@ third_party_settings:
     block_bg_repeat: ''
     block_bg_position: ''
     block_parallax_bg: ''
-id: frontpagepromo
+id: contactformgreetingmessagesimple
 theme: wosh
-region: slider
-weight: -45
+region: content_wide_top
+weight: -54
 provider: null
-plugin: 'simple_block:front_page_promo'
+plugin: 'simple_block:contact_form_greeting_message_simple'
 settings:
-  id: 'simple_block:front_page_promo'
-  label: 'Front Page Promo'
+  id: 'simple_block:contact_form_greeting_message_simple'
+  label: 'Contact Form Greeting Message - Simple'
   label_display: '0'
   provider: simple_block
 visibility:
@@ -48,4 +48,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: /contact
