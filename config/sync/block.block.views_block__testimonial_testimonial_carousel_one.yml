@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__testimonial_testimonial_carousel_one
 theme: wosh
 region: content_wide
-weight: -29
+weight: -35
 provider: null
 plugin: 'views_block:testimonial-testimonial_carousel_one'
 settings:

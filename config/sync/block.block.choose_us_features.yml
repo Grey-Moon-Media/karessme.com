@@ -33,7 +33,7 @@ third_party_settings:
 id: choose_us_features
 theme: wosh
 region: content_wide
-weight: -46
+weight: -51
 provider: null
 plugin: 'block_content:ab2b1cbc-0b5e-412e-8dbe-79a09f214d17'
 settings:

@@ -1,0 +1,155 @@
+uuid: d1df0ce8-65d5-4df0-b66b-01b0153fa4a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.attribute_color
+    - field.field.commerce_product_variation.default.field_image
+    - field.field.commerce_product_variation.default.weight
+  module:
+    - commerce_feeds
+    - commerce_product
+    - feeds_ex
+    - feeds_tamper
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      90240ee7-9c91-4768-a163-c8310efe36fa:
+        operation: multiplication
+        flip: false
+        value: !!float 2
+        uuid: 90240ee7-9c91-4768-a163-c8310efe36fa
+        plugin: math
+        source: price
+        weight: 0
+        label: Math
+      e2152b0c-1967-447e-84b1-142109eec3a5:
+        separator: ','
+        limit: null
+        uuid: e2152b0c-1967-447e-84b1-142109eec3a5
+        plugin: explode
+        source: images_image_filename
+        weight: 0
+        label: Explode
+label: 'HP Variations JSON'
+id: hp_variations_json
+description: ''
+help: ''
+import_period: 3600
+fetcher: directory
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml json'
+  allowed_schemes:
+    public: public
+  recursive_scan: false
+parser: jsonpath
+parser_configuration:
+  sources:
+    images_image_filename:
+      value: Images.Image.filename
+      label: Images.Image.filename
+    sku:
+      label: sku
+      value: sku
+    name:
+      label: name
+      value: name
+    price:
+      label: price
+      value: price
+    attributes_attribute_color:
+      label: Attributes.Attribute.Color
+      value: Attributes.Attribute.Color
+    gross_weight:
+      label: gross_weight
+      value: gross_weight
+  context:
+    value: '$.items.item.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:commerce_product_variation'
+processor_configuration:
+  values:
+    type: default
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+custom_sources:
+  images_image_filename:
+    value: Images.Image.filename
+    label: Images.Image.filename
+    machine_name: images_image_filename
+  sku:
+    value: sku
+    label: sku
+    machine_name: sku
+  name:
+    value: name
+    label: name
+    machine_name: name
+  price:
+    value: price
+    label: price
+    machine_name: price
+  attributes_attribute_color:
+    value: Attributes.Attribute.Color
+    label: Attributes.Attribute.Color
+    machine_name: attributes_attribute_color
+  gross_weight:
+    value: gross_weight
+    label: gross_weight
+    machine_name: gross_weight
+mappings:
+  -
+    target: field_image
+    map:
+      target_id: images_image_filename
+      alt: images_image_filename
+      title: images_image_filename
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+  -
+    target: sku
+    map:
+      value: sku
+    settings: {  }
+    unique: {  }
+  -
+    target: title
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: price
+    map:
+      number: price
+    settings:
+      currency_code: USD
+  -
+    target: attribute_color
+    map:
+      target_id: attributes_attribute_color
+    settings:
+      reference_by: name
+      autocreate: false
+  -
+    target: weight
+    map:
+      number: gross_weight
+    settings:
+      unit: kg

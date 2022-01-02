@@ -5,7 +5,7 @@ dependencies: {  }
 id: feedback
 label: Contact
 recipients:
-  - karessmestore@gmail.com
+  - info@karessme.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

@@ -307,6 +307,17 @@ div.block.block-layout-builder.block-field-blocknodepagebody {
 .overall-rating a {
     margin-right: 25px;
 }
+#product-detail .field-field-video {
+    text-align: center;
+}
+#sliding-popup .eu-cookie-compliance-banner p{
+    font-size: 0.6em!important;
+}
+#sliding-popup .eu-cookie-compliance-banner {
+    background: #010101!important;
+    text-transform: uppercase;
+    letter-spacing: 1.9px!important;
+}
 /********************************
     Custom Styles - Footer
 *********************************/

@@ -9,6 +9,11 @@ targetEntityType: contact_message
 bundle: feedback
 mode: default
 content:
+  copy:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   mail:
     weight: 1
     region: content
@@ -36,5 +41,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  copy: true
   preview: true

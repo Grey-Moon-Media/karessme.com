@@ -37,7 +37,7 @@ third_party_settings:
 id: working_with_us
 theme: wosh
 region: content_wide
-weight: -22
+weight: -26
 provider: null
 plugin: 'block_content:452d65ce-7533-40e1-85b7-d34dc53d9cef'
 settings:

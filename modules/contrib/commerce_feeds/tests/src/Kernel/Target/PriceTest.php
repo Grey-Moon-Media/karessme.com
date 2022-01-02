@@ -21,7 +21,7 @@ class PriceTest extends CommerceFeedsKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  public function setUp(): void {
     parent::setUp();
 
     // Create feed type.

@@ -33,7 +33,7 @@ third_party_settings:
 id: fact_counter2
 theme: wosh
 region: content_wide
-weight: -36
+weight: -42
 provider: null
 plugin: 'block_content:5eae88d2-6c7b-4f14-87a0-68ddeb1be6cb'
 settings:

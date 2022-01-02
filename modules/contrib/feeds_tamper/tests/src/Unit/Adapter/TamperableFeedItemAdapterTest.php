@@ -50,10 +50,9 @@ class TamperableFeedItemAdapterTest extends UnitTestCase {
   public function testGetSourceProperty() {
     $this->feedItem->expects($this->once())
       ->method('get')
-      ->with('foo')
-      ->willReturn('bar');
+      ->with('foo');
 
-    $this->assertEquals('bar', $this->adapter->getSourceProperty('foo'));
+    $this->adapter->getSourceProperty('foo');
   }
 
   /**

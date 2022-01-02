@@ -15,13 +15,6 @@ dependencies:
 third_party_settings:
   feeds_tamper:
     tampers:
-      13da7d3e-6020-4e36-8510-4cfdddc2086e:
-        text: 'https://www.honeysplace.com[_self]'
-        uuid: 13da7d3e-6020-4e36-8510-4cfdddc2086e
-        plugin: rewrite
-        source: images_image_filename
-        weight: -9
-        label: Rewrite
       42780f5f-e1b7-473a-87f6-d4a2a21d2eb6:
         operation: multiplication
         flip: false
@@ -31,10 +24,17 @@ third_party_settings:
         source: price
         weight: 0
         label: Math
-      5af04c47-263d-4157-adb9-e5ef377f109c:
+      fd139e65-0c6c-459e-bd21-c6015fa0addc:
+        text: 'https://www.honeysplace.com[_self]'
+        uuid: fd139e65-0c6c-459e-bd21-c6015fa0addc
+        plugin: rewrite
+        source: images_image_filename
+        weight: -9
+        label: Rewrite
+      01d061fb-4bf2-4213-818c-6b45444cde0a:
         separator: ','
         limit: null
-        uuid: 5af04c47-263d-4157-adb9-e5ef377f109c
+        uuid: 01d061fb-4bf2-4213-818c-6b45444cde0a
         plugin: explode
         source: images_image_filename
         weight: -10
@@ -54,25 +54,25 @@ parser: xml
 parser_configuration:
   sources:
     sku:
-      label: sku
       value: sku
+      label: sku
     name:
-      label: name
       value: name
+      label: name
     price:
-      label: price
       value: price
+      label: price
     attributes_attribute_color_1:
-      label: Attributes/Attribute/Color
       value: Attributes/Attribute/Color
-    images_image_filename:
-      label: Images/Image/filename
-      value: Images/Image/filename
+      label: Attributes/Attribute/Color
     gross_weight:
-      label: gross_weight
       value: gross_weight
+      label: gross_weight
+    images_image_filename:
+      value: Images/Image/filename
+      label: Images/Image/filename
   context:
-    value: //Items/Item
+    value: /Items/Item
   source_encoding:
     - auto
   display_errors: false
@@ -179,19 +179,19 @@ mappings:
       reference_by: name
       autocreate: false
   -
-    target: field_image
-    map:
-      target_id: images_image_filename
-      alt: name
-      title: ''
-    settings:
-      language: ''
-      reference_by: filename
-      existing: '2'
-      autocreate: 0
-  -
     target: weight
     map:
       number: gross_weight
     settings:
       unit: kg
+  -
+    target: field_image
+    map:
+      target_id: images_image_filename
+      alt: images_image_filename
+      title: images_image_filename
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '1'
+      autocreate: 0

@@ -33,7 +33,7 @@ third_party_settings:
 id: home01_cta
 theme: wosh
 region: content_wide
-weight: -43
+weight: -48
 provider: null
 plugin: 'block_content:0501b135-3732-406b-997a-10542d01d0cc'
 settings:

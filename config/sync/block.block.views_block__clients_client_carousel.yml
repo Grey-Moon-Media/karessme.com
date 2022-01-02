@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__clients_client_carousel
 theme: wosh
 region: content_wide
-weight: -18
+weight: -22
 provider: null
 plugin: 'views_block:clients-client_carousel'
 settings:

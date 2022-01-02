@@ -21,7 +21,7 @@
   {% if thumbnails.images|length > 1 %}
     <div class="thumbnails">
       {% for key,image in thumbnails.images %}
-        <div class="thumb {{ thumbnails.class }}" style="width:{{ thumbnails.width }}%;" data-toggle="modal" data-slide-to="{{ key }}" data-target="#{{ modal.id }}">
+        <div class="thumb {{ thumbnails.class }}" style="width:{{ thumbnails.width }}%;" data-slide-to="{{ key }}" data-target="#{{ modal.id }}">
           {{ image }}
         </div>
       {% endfor %}

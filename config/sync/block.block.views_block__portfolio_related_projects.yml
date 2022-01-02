@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__portfolio_related_projects
 theme: wosh
 region: content_wide
-weight: -27
+weight: -33
 provider: null
 plugin: 'views_block:portfolio-related_projects'
 settings:

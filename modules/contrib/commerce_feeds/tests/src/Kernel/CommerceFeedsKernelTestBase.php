@@ -34,7 +34,7 @@ abstract class CommerceFeedsKernelTestBase extends CommerceKernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Install database schemes.

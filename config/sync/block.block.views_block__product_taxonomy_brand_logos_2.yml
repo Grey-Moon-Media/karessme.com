@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__product_taxonomy_brand_logos_2
 theme: wosh
 region: content_wide
-weight: -48
+weight: -54
 provider: null
 plugin: 'views_block:product_taxonomy-brand_logos'
 settings:

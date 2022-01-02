@@ -31,7 +31,7 @@ third_party_settings:
 id: mailchimpsignupform2
 theme: wosh
 region: content_wide
-weight: 0
+weight: -31
 provider: null
 plugin: 'simple_block:mail_chimp_sign_up_form_2'
 settings:

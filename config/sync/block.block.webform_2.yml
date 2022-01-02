@@ -1,0 +1,54 @@
+uuid: 91d61816-d820-40bd-9a00-592a3b604b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.return_request_form
+  module:
+    - block_visibility_groups
+    - hsblock
+    - system
+    - webform
+  theme:
+    - wosh
+third_party_settings:
+  hsblock:
+    id: ''
+    block_layout: norm-width
+    block_subtitle: ''
+    block_title_style: block-title-1
+    block_title_align: block-title-left
+    classes: km_block_title
+    block_padding_top: ''
+    block_padding_right: ''
+    block_padding_bottom: ''
+    block_padding_left: ''
+    block_text_color: ''
+    block_bg_color: ''
+    block_bg_image_path: ''
+    block_bg_repeat: ''
+    block_bg_position: ''
+    block_parallax_bg: ''
+id: webform_2
+theme: wosh
+region: content_wide
+weight: -53
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Return Request Form'
+  label_display: visible
+  provider: webform
+  webform_id: return_request_form
+  default_data: ''
+  redirect: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /return-request

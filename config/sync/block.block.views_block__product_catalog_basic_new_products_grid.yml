@@ -32,7 +32,7 @@ third_party_settings:
 id: views_block__product_catalog_basic_new_products_grid
 theme: wosh
 region: content_wide
-weight: -33
+weight: -39
 provider: null
 plugin: 'views_block:product_catalog_basic-new_products_grid'
 settings:
