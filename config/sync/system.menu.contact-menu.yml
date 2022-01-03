@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: contact-menu
 label: 'Contact Menu'
-description: ''
+description: 'Menu for all contact forms'
 locked: false

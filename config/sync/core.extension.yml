@@ -95,6 +95,7 @@ module:
   mandrill_reports: 0
   mandrill_template: 0
   media: 0
+  menu_link_config: 0
   menu_ui: 0
   metatag: 0
   metatag_facebook: 0
