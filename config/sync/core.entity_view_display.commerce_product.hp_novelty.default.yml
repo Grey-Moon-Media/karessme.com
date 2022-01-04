@@ -226,8 +226,10 @@ content:
     type: string
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
+      link_to_entity: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
     weight: 0
     region: content
   field_purpose:
@@ -328,8 +330,10 @@ content:
     type: string
     label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
+      link_to_entity: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
     weight: 18
     region: content
   variations:

@@ -12,7 +12,7 @@ dependencies:
     - field.field.commerce_product_variation.default.field_product_images
     - field.field.commerce_product_variation.default.field_sku
     - field.field.commerce_product_variation.default.weight
-    - image.style.640x480
+    - image.style.100x100
   module:
     - commerce_price
     - ds
@@ -33,7 +33,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: 640x480
+      image_style: 100x100
     third_party_settings:
       empty_fields:
         handler: ''

@@ -1,10 +1,11 @@
-uuid: b841959c-d9e0-4f2a-9e07-c63564708c6c
+uuid: fa588b71-5ae9-45f5-9b96-25851a608e6b
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.hp_novelty
-    - core.entity_view_mode.commerce_product.featured
+    - core.entity_view_mode.commerce_product.search
+    - facets.facet.category
     - field.field.commerce_product.hp_novelty.body
     - field.field.commerce_product.hp_novelty.feeds_item
     - field.field.commerce_product.hp_novelty.field_bulk
@@ -49,18 +50,32 @@ dependencies:
     - commerce_product
     - ds
     - empty_fields
+    - entity_reference_facet_link
     - layout_builder
+    - text
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
 _core:
   default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
-id: commerce_product.hp_novelty.featured
+id: commerce_product.hp_novelty.search
 targetEntityType: commerce_product
 bundle: hp_novelty
-mode: featured
+mode: search
 content:
+  field_category:
+    type: entity_reference_facet_link
+    label: above
+    settings:
+      facet: category
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      ds:
+        ds_limit: ''
+    weight: 6
+    region: content
   field_product_title:
     type: string
     label: hidden
@@ -69,16 +84,34 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_short_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  flag_compare:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  flag_recommended_products:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  flag_wishlist:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   variations:
     type: commerce_add_to_cart
     label: hidden
     settings:
       combine: true
-    third_party_settings:
-      empty_fields:
-        handler: ''
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -86,7 +119,6 @@ hidden:
   created: true
   feeds_item: true
   field_bulk: true
-  field_category: true
   field_coun: true
   field_date_released: true
   field_display: true
@@ -113,7 +145,6 @@ hidden:
   field_prop_65: true
   field_purpose: true
   field_q: true
-  field_short_description: true
   field_size: true
   field_size_ci: true
   field_size_len: true
@@ -122,9 +153,6 @@ hidden:
   field_updated_at: true
   field_video: true
   field_who: true
-  flag_compare: true
-  flag_recommended_products: true
-  flag_wishlist: true
   overall_rating: true
   search_api_excerpt: true
   stores: true

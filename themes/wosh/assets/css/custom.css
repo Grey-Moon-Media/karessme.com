@@ -912,6 +912,20 @@ div.spb-controls .spb_minimize {
    SEARCH
 ***********************/
 
+#block-wosh-content--2 .post-image .product-image .owl-stage-outer .owl-stage .owl-item .field-item img {
+    width: 25%!important;
+    margin: 0 auto;
+}
+#block-wosh-content--2 .product-post .product-title .field-field-product-title,
+#block-wosh-content--2 .product-post .product-price-wrap .product-price  {
+    font-size: 15px!important;
+}
+/*#block-wosh-content--2 .product-post .product-variation-wrap,
+#block-wosh-content--2 .product-post .product-attributes-heading,
+#block-wosh-content--2 .product-post .product-info {
+    display: none!important;
+}*/
+
 #block-wosh-content--2 h2{
     font-size: 25px;
     text-transform: uppercase;

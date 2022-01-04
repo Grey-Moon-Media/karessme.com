@@ -10,11 +10,16 @@ path: search
 clean_url: true
 show_all_when_no_keys: false
 index: db_search_index
-limit: 5
+limit: 15
 searched_fields:
   processed: processed
   title: title
-style: search_results
-view_mode_configuration: {  }
+style: view_modes
+view_mode_configuration:
+  'entity:commerce_product':
+    default: teaser
+    overrides:
+      default: ''
+      hp_novelty: ''
 show_search_form: true
 parse_mode: direct
