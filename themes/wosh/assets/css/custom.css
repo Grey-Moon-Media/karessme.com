@@ -933,8 +933,9 @@ div.spb-controls .spb_minimize {
     border: 1px solid #cccccc;
     border-radius: 30px;
 }
-#block-wosh-content--2 .search-block-form .form-item {
-    width: 100%;
+
+#search-modal .container-inline div {
+    width: 98.7%;
 }
 #block-wosh-content--2 form{
     width: 100%;
