@@ -16,7 +16,6 @@ namespace Drupal\metatag\Plugin\metatag\Tag;
  *   secure = FALSE,
  *   multiple = FALSE,
  *   long = TRUE,
- *   trimmable = TRUE
  * )
  */
 class Description extends MetaNameBase {

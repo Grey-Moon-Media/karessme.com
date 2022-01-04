@@ -1,0 +1,8 @@
+uuid: fcdaafc9-065e-417b-adf7-6d2ca23ce273
+langcode: en
+status: true
+dependencies: {  }
+id: hidden-menu
+label: 'Hidden Menu'
+description: ''
+locked: false

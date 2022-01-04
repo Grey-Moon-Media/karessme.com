@@ -14,8 +14,7 @@ namespace Drupal\metatag\Plugin\metatag\Tag;
  *   weight = -1,
  *   type = "label",
  *   secure = FALSE,
- *   multiple = FALSE,
- *   trimmable = TRUE
+ *   multiple = FALSE
  * )
  */
 class Title extends MetaNameBase {

@@ -39,7 +39,7 @@ class MetatagSettingsTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     $this->metatagManager = $this->container->get('metatag.manager');

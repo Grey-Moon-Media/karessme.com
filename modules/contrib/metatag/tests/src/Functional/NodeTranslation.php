@@ -42,7 +42,7 @@ class NodeTranslation extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     // Login.
@@ -54,7 +54,7 @@ class NodeTranslation extends BrowserTestBase {
     $edit = [
       'predefined_langcode' => 'hu',
     ];
-    $this->submitForm($edit, 'Add language');
+    $this->drupalPostForm(NULL, $edit, 'Add language');
 
     // Set up a content type.
     $this->drupalCreateContentType(['type' => 'article']);
@@ -63,7 +63,7 @@ class NodeTranslation extends BrowserTestBase {
     $edit = [
       'language_configuration[content_translation]' => TRUE,
     ];
-    $this->submitForm($edit, 'Save content type');
+    $this->drupalPostForm(NULL, $edit, 'Save content type');
   }
 
   /**
@@ -73,7 +73,7 @@ class NodeTranslation extends BrowserTestBase {
     $this->drupalGet('/admin/config/regional/content-language');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Content language');
-    $this->submitForm([], 'Save configuration');
+    $this->drupalPostForm(NULL, [], 'Save configuration');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Settings successfully updated.');
   }

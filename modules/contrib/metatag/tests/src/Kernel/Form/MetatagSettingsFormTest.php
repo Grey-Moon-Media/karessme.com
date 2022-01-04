@@ -43,7 +43,7 @@ class MetatagSettingsFormTest extends KernelTestBase {
    *
    * @covers ::__construct
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     $this->installConfig(static::$modules);

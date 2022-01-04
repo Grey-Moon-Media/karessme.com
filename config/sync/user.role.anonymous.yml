@@ -14,6 +14,7 @@ dependencies:
     - filter
     - flag
     - media
+    - search_api_page
     - simplenews
     - system
 id: anonymous
@@ -41,3 +42,4 @@ permissions:
   - 'view commerce_product_review'
   - 'view files'
   - 'view media'
+  - 'view search api pages'

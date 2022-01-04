@@ -80,8 +80,7 @@ class MetatagPageManagerTest extends BrowserTestBase {
       'title' => 'My title',
     ];
 
-    $this->drupalGet('/admin/config/search/metatag/add');
-    $this->submitForm($edit, 'Save');
+    $this->drupalPostForm('/admin/config/search/metatag/add', $edit, 'Save');
     $this->assertSession->pageTextContains('Page Variant: Metatag Page: Metatag Variant');
 
     // Clear caches to load the right metatags.
@@ -153,8 +152,7 @@ class MetatagPageManagerTest extends BrowserTestBase {
       'title' => 'My title',
     ];
 
-    $this->drupalGet('/admin/config/search/metatag/add');
-    $this->submitForm($edit, 'Save');
+    $this->drupalPostForm('/admin/config/search/metatag/add', $edit, 'Save');
     $this->assertSession->pageTextContains('Page Variant: Metatag Page: Metatag Variant');
 
     // Clear caches to load the right metatags.
@@ -182,8 +180,7 @@ class MetatagPageManagerTest extends BrowserTestBase {
       'title' => 'My title anonymous',
     ];
 
-    $this->drupalGet('/admin/config/search/metatag/add');
-    $this->submitForm($edit, 'Save');
+    $this->drupalPostForm('/admin/config/search/metatag/add', $edit, 'Save');
     // The first-weighted variant (Anonymous variant) will receive the Metatag
     // defaults.
     $this->assertSession->pageTextContains('Page Variant: Metatag Page: Anonymous variant');

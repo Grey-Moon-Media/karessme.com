@@ -56,7 +56,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
   /**
    * Setup basic environment.
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     $admin_permissions = [
@@ -85,7 +85,14 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
    * Tests the metatag value translations.
    */
   public function testMetatagValueTranslation() {
-    $save_label_i18n = 'Save (this translation)';
+    if (floatval(\Drupal::VERSION) <= 8.3) {
+      $save_label = $this->t('Save and publish');
+      $save_label_i18n = $this->t('Save and keep published (this translation)');
+    }
+    else {
+      $save_label = $this->t('Save');
+      $save_label_i18n = $this->t('Save (this translation)');
+    }
 
     // Set up a content type.
     $name = $this->randomMachineName() . ' ' . $this->randomMachineName();
@@ -102,7 +109,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
       'language_configuration[language_alterable]' => TRUE,
       'language_configuration[content_translation]' => TRUE,
     ];
-    $this->submitForm($edit, $this->t('Save content type'));
+    $this->drupalPostForm(NULL, $edit, $this->t('Save content type'));
     $session->statusCodeEquals(200);
 
     $this->drupalGet('admin/structure/types/manage/metatag_node/fields/add-field');
@@ -112,14 +119,14 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
       'field_name' => 'meta_tags',
       'new_storage_type' => 'metatag',
     ];
-    $this->submitForm($edit, $this->t('Save and continue'));
+    $this->drupalPostForm(NULL, $edit, $this->t('Save and continue'));
     $session->statusCodeEquals(200);
-    $this->submitForm([], $this->t('Save field settings'));
+    $this->drupalPostForm(NULL, [], $this->t('Save field settings'));
     $session->statusCodeEquals(200);
     $edit = [
       'translatable' => TRUE,
     ];
-    $this->submitForm($edit, $this->t('Save settings'));
+    $this->drupalPostForm(NULL, $edit, $this->t('Save settings'));
     $session->statusCodeEquals(200);
     $this->drupalGet('admin/structure/types/manage/metatag_node/fields/node.metatag_node.field_meta_tags');
     $session->statusCodeEquals(200);
@@ -140,7 +147,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
       'title[0][value]' => 'Node Français',
       'body[0][value]' => 'French summary.',
     ];
-    $this->submitForm($edit, 'Save');
+    $this->drupalPostForm(NULL, $edit, $save_label);
     $session->statusCodeEquals(200);
 
     $xpath = $this->xpath("//meta[@name='description']");
@@ -158,7 +165,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
       'title[0][value]' => 'Node Español',
       'body[0][value]' => 'Spanish summary.',
     ];
-    $this->submitForm($edit, $save_label_i18n);
+    $this->drupalPostForm(NULL, $edit, $save_label_i18n);
     $session->statusCodeEquals(200);
 
     $this->drupalGet('es/node/1');
@@ -182,7 +189,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
     $edit = [
       'field_meta_tags[0][basic][description]' => 'Overridden French description.',
     ];
-    $this->submitForm($edit, $save_label_i18n);
+    $this->drupalPostForm(NULL, $edit, $save_label_i18n);
     $session->statusCodeEquals(200);
 
     $xpath = $this->xpath("//meta[@name='description']");
@@ -197,7 +204,7 @@ class MetatagNodeTranslationTest extends BrowserTestBase {
     $edit = [
       'field_meta_tags[0][basic][description]' => 'Overridden Spanish description.',
     ];
-    $this->submitForm($edit, $save_label_i18n);
+    $this->drupalPostForm(NULL, $edit, $save_label_i18n);
     $session->statusCodeEquals(200);
 
     $xpath = $this->xpath("//meta[@name='description']");

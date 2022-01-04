@@ -79,6 +79,11 @@ class MetatagFieldNodeTest extends MetatagFieldTestBase {
    */
   protected function setUpEntityType() {
     $this->createContentType(['type' => 'page']);
+
+    // 8.3 has the label 'Save and publish'.
+    if ((floatval(\Drupal::VERSION) <= 8.3)) {
+      $this->entitySaveButtonLabel = 'Save and publish';
+    }
   }
 
 }

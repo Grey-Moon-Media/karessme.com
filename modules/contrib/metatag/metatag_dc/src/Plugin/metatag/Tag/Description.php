@@ -16,8 +16,7 @@ use Drupal\metatag\Plugin\metatag\Tag\MetaNameBase;
  *   weight = 4,
  *   type = "label",
  *   secure = FALSE,
- *   multiple = FALSE,
- *   trimmable = TRUE
+ *   multiple = FALSE
  * )
  */
 class Description extends MetaNameBase {

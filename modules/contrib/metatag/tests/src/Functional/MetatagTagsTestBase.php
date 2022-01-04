@@ -69,7 +69,7 @@ abstract class MetatagTagsTestBase extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     // Use the test page as the front page.
@@ -182,9 +182,7 @@ abstract class MetatagTagsTestBase extends BrowserTestBase {
 
       $values[$test_key] = $test_value;
       $all_values[$tag_name] = $test_value;
-      $this->submitForm($values, 'Save');
-      // Note: if this line fails then check that the failing meta tag has a
-      // definition in the relevant *.metatag_tag.schema.yml file.
+      $this->drupalPostForm(NULL, $values, 'Save');
       $session->pageTextContains($save_message);
 
       // Load the test page.

@@ -22,13 +22,12 @@ class MetatagEntitiesTest extends MigrateDrupal7TestBase {
   /**
    * {@inheritdoc}
    */
-  protected static $modules = [
+  public static $modules = [
     // Core modules.
     // @see testAvailableConfigEntities
     'comment',
     'content_translation',
     'datetime',
-    'datetime_range',
     'filter',
     'image',
     'language',
@@ -78,7 +77,10 @@ class MetatagEntitiesTest extends MigrateDrupal7TestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
+    if (version_compare(\Drupal::VERSION, '8.9', '<')) {
+      $this->markTestSkipped('This test requires at least Drupal 8.9');
+    }
     parent::setUp();
     $this->loadFixture(__DIR__ . '/../../../../fixtures/d7_metatag.php');
 
@@ -145,11 +147,9 @@ class MetatagEntitiesTest extends MigrateDrupal7TestBase {
     $user = User::load(2);
     $this->assertInstanceOf(UserInterface::class, $user);
     $this->assertTrue($user->hasField('field_metatag'));
-    // This should have the Utf8 converted description value.
     $expected = [
       'keywords' => 'a user',
       'canonical_url' => 'the-user',
-      'description' => 'Drupal™ user',
     ];
     $this->assertSame(serialize($expected), $user->field_metatag->value);
 

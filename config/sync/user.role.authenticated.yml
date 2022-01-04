@@ -14,6 +14,7 @@ dependencies:
     - flag
     - google_analytics
     - media
+    - search_api_page
     - shortcut
     - simplenews
     - system
@@ -45,3 +46,4 @@ permissions:
   - 'view commerce_product_review'
   - 'view files'
   - 'view media'
+  - 'view search api pages'

@@ -44,7 +44,7 @@ class DisabledDefaultTags extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp(): void {
+  protected function setUp() {
     parent::setUp();
 
     // Set the front page to the main /node page, so that the front page is not

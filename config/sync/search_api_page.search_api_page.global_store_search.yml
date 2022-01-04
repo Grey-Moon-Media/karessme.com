@@ -1,0 +1,20 @@
+uuid: 4cf6cccd-4a42-4d3b-bb2d-757dcd3dac7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.db_search_index
+id: global_store_search
+label: 'Global Store Search'
+path: search
+clean_url: true
+show_all_when_no_keys: false
+index: db_search_index
+limit: 5
+searched_fields:
+  processed: processed
+  title: title
+style: search_results
+view_mode_configuration: {  }
+show_search_form: true
+parse_mode: direct

@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.commerce_product_variation.attribute_color
     - field.storage.commerce_product.field_category
     - field.storage.commerce_product.field_manufacturer
     - field.storage.commerce_product.field_power
     - field.storage.commerce_product.field_product_brand
     - field.storage.commerce_product.field_product_category
-    - field.storage.commerce_product.body
     - field.storage.commerce_product.field_q
-    - field.storage.commerce_product_variation.attribute_color
+    - field.storage.commerce_product.body
     - search_api.server.db_search
   module:
     - commerce_product
@@ -183,4 +183,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
+  track_changes_in_references: false
 server: db_search

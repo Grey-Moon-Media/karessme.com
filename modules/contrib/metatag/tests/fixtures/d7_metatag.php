@@ -125,7 +125,6 @@ $connection->insert('metatag')
     'data' => serialize([
       'keywords' => ['value' => 'a user'],
       'canonical' => ['value' => 'the-user'],
-      'description' => ['value' => 'Drupal' . chr(0x99) . ' user'],
     ]),
   ])
   ->values([

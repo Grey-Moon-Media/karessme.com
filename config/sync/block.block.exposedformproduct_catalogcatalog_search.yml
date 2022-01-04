@@ -1,6 +1,6 @@
 uuid: 48537167-b1a8-48d4-8b4e-d97ae1bd1831
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.product_catalog
