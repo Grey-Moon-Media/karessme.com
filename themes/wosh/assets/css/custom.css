@@ -925,17 +925,16 @@ div.spb-controls .spb_minimize {
     line-height: 1;
     font-weight: 600;
 }
-/*#block-wosh-content--2 form .search-block-form input[type="submit"]{
-    border-radius: 30px!important;
-    margin-left: 15px!important;
-}*/
+#block-wosh-content--2 .container-inline div{
+   width: 100%;
+}
 #block-wosh-content--2 .search-block-form input[type=search] {
     border: 1px solid #cccccc;
     border-radius: 30px;
 }
 
-#search-modal .container-inline div {
-    width: 98.7%;
+#search-modal form.search-api-page-block-form-global-store-search .container-inline div {
+    width: 98.7%!important;
 }
 #block-wosh-content--2 form{
     width: 100%;
