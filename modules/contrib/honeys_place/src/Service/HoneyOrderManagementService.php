@@ -69,9 +69,8 @@ class HoneyOrderManagementService
     $isSandboxMode = $this->config->get('honeys_place_api_use_sandbox');
 
     $honeysPlaceShippingCode = $this->getHoneysPlaceShippingCode($commerceOrder);
-    $orderItems = $this->convertOrderItems($commerceOrder);
 
-    $this->loggerFactory->get('honeys_place')->error("outer items " . json_encode($orderItems));
+    $orderItems = $this->convertOrderItems($commerceOrder);
 
     $orderRequest = new HoneyOrder(
       $isSandboxMode ? 'TEST'.$commerceOrder->id() : $commerceOrder->id(),
@@ -130,8 +129,6 @@ class HoneyOrderManagementService
   private function convertOrderItems(OrderInterface $commerceOrder): array
   {
 	  $items = [];
-	  $jsonItems = json_encode($commerceOrder->getItems());
-    $this->loggerFactory->get('honeys_place')->error("items " . $jsonItems);
     foreach ($commerceOrder->getItems() as $item) {
 
       if (! $item->getPurchasedEntity()->hasField('sku') || ! $item->getPurchasedEntity()->sku->value) {
