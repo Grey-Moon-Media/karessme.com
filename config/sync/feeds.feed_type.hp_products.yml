@@ -73,12 +73,13 @@ label: 'HP Products'
 id: hp_products
 description: ''
 help: ''
-import_period: 86400
+import_period: 10800
 fetcher: directory
 fetcher_configuration:
   allowed_extensions: 'txt csv tsv xml opml'
   allowed_schemes:
     public: public
+    private: private
   recursive_scan: false
 parser: xml
 parser_configuration:
@@ -205,8 +206,8 @@ processor_configuration:
     type: hp_novelty
   langcode: en
   insert_new: 1
-  update_existing: 2
-  update_non_existent: _keep
+  update_existing: 1
+  update_non_existent: _delete
   skip_hash_check: false
   authorize: true
   expire: -1

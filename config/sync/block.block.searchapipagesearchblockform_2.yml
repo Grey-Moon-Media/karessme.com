@@ -13,11 +13,11 @@ dependencies:
 third_party_settings:
   hsblock:
     id: ''
-    block_layout: 'fullwidth framewidth'
+    block_layout: fullwidth
     block_subtitle: ''
-    block_title_style: block-title-1
+    block_title_style: block-title-2
     block_title_align: block-title-left
-    classes: ''
+    classes: km-search
     block_padding_top: ''
     block_padding_right: ''
     block_padding_bottom: ''

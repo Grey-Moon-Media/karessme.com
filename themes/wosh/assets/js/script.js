@@ -358,7 +358,7 @@ var $ = jquery = jQuery;
 
 $(document).ready(function() {
 	$('#edit-actions-next').click(function(){
-		$('#overlay').fadeIn().delay(4000).fadeOut();
+		$('#overlay').fadeIn().delay(7000).fadeOut();
 	});
 });
 

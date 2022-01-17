@@ -1,12 +1,6 @@
 # HoneysPlace
 A Drupal 8/9 Module for connecting to Honey's Place API
 
-- Place orders
-- Check order status
-- Query stock status
-
-https://www.honeysplace.com/
-
 # Install
 - Install with composer by adding to repository to composer.json. Example:
 
@@ -34,7 +28,3 @@ https://www.honeysplace.com/
          Commerce > Configuration > Orders > Order Types > Default > Edit Fields > Add Field > field_honey_order_created
 
 - Configure the API credentials on the configuration page
-
-# Developers
-
-Use service "honeys_place.honey_order_management" provided by \Drupal\honeys_place\Service\HoneyOrderManagementService

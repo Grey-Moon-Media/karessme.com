@@ -958,3 +958,13 @@ div.spb-controls .spb_minimize {
 form.search-api-page-block-form-global-store-search .search-block-form {
  width: 100%!important;
 }
+
+.km-search #search-api-page-block-form-global-store-search .container-wrap .clearfix .container-inline div  {
+    width: 100%!important;
+}
+.km-search .block-content {
+    width: 92%!important;
+}
+#search-api-page-block-form-global-store-search .container-wrap .clearfix .container-inline div {
+    width: 100%!important;
+}
