@@ -14,16 +14,17 @@ third_party_settings:
   commerce_checkout:
     checkout_flow: default
   commerce_shipping:
-    shipment_type: default
+    shipment_type: ''
 _core:
   default_config_hash: zf7YA-OOtWhhrphbf3YOlc49POwC9rePktH9cBavEiA
 id: default
 label: Default
-traits: {  }
+traits:
+  - order_events
 locked: false
 workflow: order_default
 numberPattern: order_default
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true
-receiptBcc: karessmestore@gmail.com
+receiptBcc: info@karessme.com

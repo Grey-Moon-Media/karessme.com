@@ -18,7 +18,7 @@ third_party_settings:
       42780f5f-e1b7-473a-87f6-d4a2a21d2eb6:
         operation: multiplication
         flip: false
-        value: !!float 2
+        value: !!float 3
         uuid: 42780f5f-e1b7-473a-87f6-d4a2a21d2eb6
         plugin: math
         source: price

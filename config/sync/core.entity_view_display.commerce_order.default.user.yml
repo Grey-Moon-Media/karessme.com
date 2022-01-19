@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.commerce_order.user
     - field.field.commerce_order.default.field_honey_order_created
     - field.field.commerce_order.default.field_usps_tracking_number
-    - field.field.commerce_order.default.shipments
   module:
     - commerce_order
     - entity_reference_revisions
@@ -91,7 +90,6 @@ hidden:
   field_usps_tracking_number: true
   ip_address: true
   search_api_excerpt: true
-  shipments: true
   store_id: true
   total_paid: true
   uid: true
