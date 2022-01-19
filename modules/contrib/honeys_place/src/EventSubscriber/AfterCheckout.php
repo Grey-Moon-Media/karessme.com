@@ -77,10 +77,7 @@ class AfterCheckout implements EventSubscriberInterface
   public function respondToCheckoutComplete(OrderEvent $event)
   {
 	  try {
-		  \Drupal::logger('honeys_place')->error('calling service create');
-      \Drupal::logger('honeys_place')->error('order number should be present ' . $event->getOrder()->id());
       $honeyOrder = $this->honeyOrderManagementService->createOrderInHoneysPlace($event->getOrder());
-      \Drupal::logger('honeys_place')->error('finished calling service create');
       if ($honeyOrder) {
         $order = Order::load($event->getOrder()->id());
         $order->set('field_honey_order_created', 1);
