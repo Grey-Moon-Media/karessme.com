@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_display.comment.reviews.default
     - core.entity_view_mode.commerce_product.quick_view
     - facets.facet.product_brand
-    - field.field.commerce_product.hp_novelty.body
     - field.field.commerce_product.hp_novelty.feeds_item
     - field.field.commerce_product.hp_novelty.field_bulk
     - field.field.commerce_product.hp_novelty.field_category
@@ -59,13 +58,6 @@ targetEntityType: commerce_product
 bundle: hp_novelty
 mode: quick_view
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_product_brand:
     type: entity_reference_facet_link
     label: hidden

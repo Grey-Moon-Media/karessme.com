@@ -7,17 +7,11 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.category
   content:
-    - 'taxonomy_term:category:0a7a3b0b-e78b-4b16-ae86-624bfb695e37'
-    - 'taxonomy_term:category:3c9337d0-d646-41ad-9931-0bada6349173'
-    - 'taxonomy_term:category:4261d469-84e7-4669-bea8-4a5ef422995b'
-    - 'taxonomy_term:category:452ef67f-2eee-4620-948b-bb20d4bf9c54'
-    - 'taxonomy_term:category:47249f44-e115-49ec-a1b8-793d806763fc'
-    - 'taxonomy_term:category:84149b9a-dbd1-4cf8-aec1-57b8b4eb891d'
-    - 'taxonomy_term:category:8a0d4f14-f7b7-47d9-a2a7-f55e1eed06bf'
-    - 'taxonomy_term:category:ccad5a34-2a02-4004-a068-0e7c68916359'
-    - 'taxonomy_term:category:d4559cb5-03d0-42ad-b347-1745f2630997'
-    - 'taxonomy_term:category:ece3f99a-5ea3-4828-8cff-d56e482d192d'
-    - 'taxonomy_term:category:f2b8466c-d68f-43ea-bdd1-feaad52cb4e7'
+    - 'taxonomy_term:category:1491caf5-19a5-4af9-a314-8288fe17a321'
+    - 'taxonomy_term:category:24c37b53-6287-4c52-8650-bb0925798939'
+    - 'taxonomy_term:category:4936c1f7-151b-4fa3-b789-556321058d9b'
+    - 'taxonomy_term:category:5aaed24b-1150-4504-ae16-9ac7d93d589a'
+    - 'taxonomy_term:category:c4d43539-ad76-4c95-8899-f8fafff2bf5b'
   module:
     - search_api
     - views_bootstrap_grid
@@ -210,17 +204,11 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
-            99: 99
-            52: 52
-            66: 66
-            73: 73
-            120: 120
-            54: 54
-            123: 123
-            105: 105
-            56: 56
-            108: 108
-            50: 50
+            1857: 1857
+            1915: 1915
+            1812: 1812
+            1820: 1820
+            1822: 1822
           group: 1
           exposed: false
           expose:

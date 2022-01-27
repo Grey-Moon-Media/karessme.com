@@ -7,7 +7,8 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.category
   content:
-    - 'taxonomy_term:category:66c64a89-3d92-40b2-a95b-4de8250822b0'
+    - 'taxonomy_term:category:1e2e44bb-bbb3-4162-b84e-a74adec948d8'
+    - 'taxonomy_term:category:8e5f7d45-85dd-497e-a9be-f4f2a2520d06'
   module:
     - search_api
     - views_bootstrap_grid
@@ -200,7 +201,8 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
-            98: 98
+            1838: 1838
+            1830: 1830
           group: 1
           exposed: false
           expose:

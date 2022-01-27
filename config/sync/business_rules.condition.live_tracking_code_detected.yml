@@ -1,0 +1,13 @@
+uuid: cdd10938-99b6-43f1-ac15-3503300d3002
+langcode: en
+status: true
+dependencies: {  }
+id: live_tracking_code_detected
+label: 'Order Entity Field Updated - Tracking Code '
+type: data_comparison
+description: 'Order Entity Field Updated - Tracking Code '
+target_entity_type: commerce_order
+target_bundle: default
+tags: {  }
+settings:
+  field: field_usps_tracking_number

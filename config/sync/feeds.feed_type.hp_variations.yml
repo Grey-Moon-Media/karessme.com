@@ -39,6 +39,14 @@ third_party_settings:
         source: images_image_filename
         weight: -10
         label: Explode
+      89a5179c-38fd-4a47-b532-1ab664ef9c2d:
+        separator: ','
+        limit: null
+        uuid: 89a5179c-38fd-4a47-b532-1ab664ef9c2d
+        plugin: explode
+        source: attributes_attribute_color_1
+        weight: 0
+        label: Explode
 label: 'HP Variations'
 id: hp_variations
 description: ''

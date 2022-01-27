@@ -1,0 +1,13 @@
+uuid: cab51b78-765c-445f-a40d-fbe3a3c819de
+langcode: en
+status: true
+dependencies: {  }
+id: order_entity_field_updated_tracking_code_
+label: 'Order Entity Field Updated - Tracking Code '
+description: 'Order Entity Field Updated - Tracking Code '
+reacts_on: form_field_alter
+target_entity_type: commerce_order
+target_bundle: default
+items: {  }
+tags: {  }
+enabled: null

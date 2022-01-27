@@ -6,7 +6,6 @@ dependencies:
     - commerce_product.commerce_product_type.hp_novelty
     - core.entity_view_mode.commerce_product.search
     - facets.facet.category
-    - field.field.commerce_product.hp_novelty.body
     - field.field.commerce_product.hp_novelty.feeds_item
     - field.field.commerce_product.hp_novelty.field_bulk
     - field.field.commerce_product.hp_novelty.field_category
@@ -115,7 +114,6 @@ content:
     weight: 0
     region: content
 hidden:
-  body: true
   created: true
   feeds_item: true
   field_bulk: true
